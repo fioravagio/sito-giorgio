@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Giorgio Fioravanti</title>
+
+    <!-- ✅ Tailwind Play CDN per sviluppo locale -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font + Theme -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Config Tailwind via CDN (dopo il CDN) -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: "#C8A14A",   // oro elegante
+              ink: "#111111",
+            },
+            fontFamily: {
+              display: ["Outfit", "Inter", "system-ui", "sans-serif"],
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
+            boxShadow: {
+              soft: "0 8px 30px rgba(0,0,0,0.06)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* --- Global Style Enhancements --- */
+      html, body {
+        font-family: Inter, system-ui, sans-serif;
+        background-color: #fafafa;
+      }
+      .accent-bar {
+        position: relative;
+        padding-left: 14px;
+      }
+      .accent-bar:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.4em;
+        bottom: 0.4em;
+        width: 4px;
+        border-radius: 999px;
+        background: linear-gradient(180deg, #EBD9A1, #C8A14A);
+      }
+
+      /* Scrollbar leggera */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #C8A14A;
+        border-radius: 4px;
+      }
+      ::selection {
+        background: #C8A14A55;
+      }
+    </style>
+  </head>
+
+  <body class="antialiased text-ink bg-gradient-to-b from-zinc-50 via-white to-zinc-50">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
