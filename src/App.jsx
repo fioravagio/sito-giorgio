@@ -81,6 +81,69 @@ const upcoming = [
     href: "#",
   },
 ];
+const experiencesTimeline = [
+  {
+    tag: "Mototurismo",
+    title: "Gran Sasso Bikers",
+    text: "Itinerari in moto tra Gran Sasso, Appennino e Dolomiti. Curve, passi di montagna e turismo lento.",
+  },
+  {
+    tag: "Montagna",
+    title: "Gran Sasso e trekking",
+    text: "Escursioni in quota, viste ampie e territori raccontati anche fuori dalla moto.",
+  },
+  {
+    tag: "Concerti",
+    title: "Live in tutta Italia",
+    text: "Concerti allo stadio, anfiteatri e festival: musica dal vivo e contenuti per YouTube.",
+  },
+  {
+    tag: "Tempo libero",
+    title: "Mercatini, stadio, città",
+    text: "Giorni più normali: mercatini di Natale, partite allo stadio, giri in città.",
+  },
+];
+
+// foto collegate alla timeline, usate nella galleria orizzontale
+const experiencePhotos = [
+  "exp-mercatino-brezel.jpg",
+  "exp-stadio-tifoso.jpg",
+  "exp-caseificio-vannulo.jpg",
+  "exp-montagna-selfie.jpg",
+];
+const liveConcertPhotos = [
+  "live-anfiteatro.jpg",
+  "live-festival-birra.jpg",
+  "live-laquila-scalinata.jpg",
+  "live-olimpico-scale.jpg",
+  "live-stadio-parterre.jpg",
+];
+const lifeTimeline = [
+  {
+    year: "Mototurismo",
+    title: "Itinerari e sapori",
+    desc: "Strade panoramiche, soste in caseifici e agriturismi, turismo lento in moto.",
+    img: "/assets/moto-vannulo-caseificio.jpg",
+  },
+  {
+    year: "Montagna",
+    title: "Gran Sasso e trekking",
+    desc: "Escursioni in quota, viste ampie e territori raccontati anche fuori dalla moto.",
+    img: "/assets/trekking-gransasso-sentiero.jpg",
+  },
+  {
+    year: "Concerti",
+    title: "Live in tutta Italia",
+    desc: "Concerti allo stadio, anfiteatri e festival: musica dal vivo e contenuti per YouTube.",
+    img: "/assets/concerto-anfiteatro-folla.jpg",
+  },
+  {
+    year: "Tempo libero",
+    title: "Mercatini, stadio, città",
+    desc: "Giorni più normali: mercatini di Natale, partite allo stadio, giri in città.",
+    img: "/assets/vita-mercatini-bretzel.jpg",
+  },
+];
 
 /* ---------- COMPONENTI ---------- */
 
@@ -94,7 +157,101 @@ function SectionTitle({ icon: Icon, children }) {
     </div>
   );
 }
+function ImageCarousel({ items }) {
+  // Normalizzo: accetto sia array di stringhe che di oggetti
+  const normalized = items.map((item) => {
+    if (typeof item === "string") {
+      return {
+        src: `/assets/${item}`,
+        label: "",
+        caption: "",
+      };
+    }
 
+    // oggetto { src, label, caption/alt }
+    const baseSrc = item.src?.startsWith("/assets")
+      ? item.src
+      : `/assets/${item.src}`;
+
+    return {
+      src: baseSrc,
+      label: item.label ?? "",
+      caption: item.caption ?? item.alt ?? "",
+    };
+  });
+
+  return (
+    <div className="mt-4 overflow-x-auto pb-4">
+      <div className="flex gap-4 min-w-max">
+        {normalized.map((photo) => (
+          <Card
+            key={photo.src}
+            className="w-72 shrink-0 rounded-2xl bg-white border border-zinc-200 hover:shadow-lg transition"
+          >
+            <div className="aspect-[4/3] overflow-hidden rounded-t-2xl bg-zinc-100">
+              <img
+                src={photo.src}
+                alt={photo.caption || photo.label || ""}
+                className="h-full w-full object-cover"
+              />
+            </div>
+            {(photo.label || photo.caption) && (
+              <CardContent className="p-4">
+                {photo.label && (
+                  <div className="font-medium text-zinc-900">
+                    {photo.label}
+                  </div>
+                )}
+                {photo.caption && (
+                  <div className="text-xs text-zinc-600 mt-1">
+                    {photo.caption}
+                  </div>
+                )}
+              </CardContent>
+            )}
+          </Card>
+        ))}
+      </div>
+      <div className="mt-2 text-xs text-zinc-500">
+        Scorri orizzontalmente per vedere tutte le foto.
+      </div>
+    </div>
+  );
+}
+
+function TimelineList({ items }) {
+  return (
+    <ol className="relative mt-6 border-l border-zinc-200 space-y-6">
+      {items.map((item) => (
+        <li key={item.title} className="ml-4">
+          <div className="absolute -left-1.5 mt-1 h-3 w-3 rounded-full border border-white bg-[#C8A14A]" />
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="md:w-1/3">
+              <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">
+                {item.year}
+              </p>
+              <h3 className="text-sm font-semibold text-zinc-900">
+                {item.title}
+              </h3>
+              <p className="mt-1 text-sm text-zinc-600">{item.desc}</p>
+            </div>
+            {item.img && (
+              <div className="md:flex-1">
+                <div className="rounded-2xl overflow-hidden ring-1 ring-zinc-200 bg-zinc-100">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-40 md:h-48 object-cover"
+                  />
+                </div>
+              </div>
+            )}
+          </div>
+        </li>
+      ))}
+    </ol>
+  );
+}
 /* ---------- PAGINA ---------- */
 
 export default function Homepage() {
@@ -468,62 +625,138 @@ export default function Homepage() {
       </section>
 
       {/* YOUTUBE */}
-      <section id="youtube" className="py-16 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionTitle icon={Youtube}>YouTube & Media</SectionTitle>
-          <p className="mt-3 text-zinc-600 max-w-prose">
-            Highlights da concerti e contenuti DJ. Iscriviti per supportare il
-            canale e scoprire nuovi video.
-          </p>
-          <div className="mt-6 grid md:grid-cols-2 gap-6">
-            <div className="aspect-video rounded-2xl overflow-hidden ring-1 ring-zinc-200 bg-zinc-100">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            </div>
-            <Card className="rounded-2xl bg-white border border-zinc-200">
-              <CardHeader>
-                <CardTitle className="text-base">Ultimi upload</CardTitle>
-              </CardHeader>
-              <CardContent className="text-sm text-zinc-600 space-y-3">
-                <div className="flex items-center justify-between">
-                  <span>Clip — Live DJ Set</span>
-                  <a
-                    className="text-sm font-medium text-[#C8A14A] hover:underline"
-                    href="#"
-                  >
-                    Guarda
-                  </a>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span>Concerto — Highlights</span>
-                  <a
-                    className="text-sm font-medium text-[#C8A14A] hover:underline"
-                    href="#"
-                  >
-                    Guarda
-                  </a>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span>Behind the Scenes</span>
-                  <a
-                    className="text-sm font-medium text-[#C8A14A] hover:underline"
-                    href="#"
-                  >
-                    Guarda
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
+<section id="youtube" className="py-16 bg-white">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <SectionTitle icon={Youtube}>YouTube &amp; Media</SectionTitle>
+    <p className="mt-3 text-zinc-600 max-w-prose">
+      Highlights da concerti e contenuti DJ. Iscriviti per supportare il canale{" "}
+      <span className="font-medium">@fioravanti81</span> e scoprire i video
+      della playlist{" "}
+      <span className="font-medium">“Live (concerti)”</span>.
+    </p>
+
+    <div className="mt-6 grid md:grid-cols-2 gap-6">
+      {/* Embed playlist YouTube corretta */}
+      <div className="aspect-video rounded-2xl overflow-hidden ring-1 ring-zinc-200 bg-zinc-100">
+        <iframe
+          className="w-full h-full"
+          src="https://www.youtube.com/embed/videoseries?list=PLccUvT8MuupAVZkBYqoqBoTU42b9Zy5sV"
+          title="Playlist Live (concerti) — fioravanti81"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        />
+      </div>
+
+      <Card className="rounded-2xl bg-white border border-zinc-200">
+        <CardHeader>
+          <CardTitle className="text-base">Ultimi contenuti</CardTitle>
+        </CardHeader>
+        <CardContent className="text-sm text-zinc-600 space-y-3">
+          <div className="flex items-center justify-between">
+            <span>Playlist “Live (concerti)”</span>
+            <a
+              className="text-sm font-medium text-[#C8A14A] hover:underline"
+              href="https://www.youtube.com/playlist?list=PLccUvT8MuupAVZkBYqoqBoTU42b9Zy5sV"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Apri playlist
+            </a>
           </div>
-          <div className="mt-6">
-            <Button className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-white">
-              Iscriviti al canale
-            </Button>
+          <div className="flex items-center justify-between">
+            <span>Canale YouTube @fioravanti81</span>
+            <a
+              className="text-sm font-medium text-[#C8A14A] hover:underline"
+              href="https://www.youtube.com/@fioravanti81"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Vai al canale
+            </a>
+          </div>
+          <div className="flex items-center justify-between">
+            <span>Clip dai DJ set</span>
+            <a
+              className="text-sm font-medium text-[#C8A14A] hover:underline"
+              href="https://www.youtube.com/@fioravanti81/videos"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Guarda i video
+            </a>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+
+    {/* Carousel foto concerti */}
+    <div className="mt-10">
+      <h3 className="font-display text-xl font-bold text-[#111111]">
+        Live (concerti) — galleria foto
+      </h3>
+      <p className="mt-1 text-sm text-zinc-600 max-w-prose">
+        Alcuni momenti dai concerti in Italia: anfiteatri, stadi e festival che
+        diventano contenuti video sul canale.
+      </p>
+      <ImageCarousel items={liveConcertPhotos} />
+    </div>
+  </div>
+</section>
+
+  {/* TIMELINE ESPERIENZE */}
+      <section id="timeline" className="py-16 bg-gradient-to-b from-white to-[#F7F5EF]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionTitle icon={Users}>Timeline — esperienze e passioni</SectionTitle>
+          <p className="mt-3 text-zinc-600 max-w-prose">
+            Una panoramica veloce di quello che faccio fuori dalle etichette:
+            mototurismo, montagna, concerti dal vivo e tempo libero. Ogni voce
+            racconta un pezzo dei progetti che poi finiscono in musica, video o
+            iniziative sul territorio.
+          </p>
+
+          {/* Timeline SOLO TESTO */}
+          <div className="mt-8 space-y-6">
+            {experiencesTimeline.map((item) => (
+              <div key={item.title} className="relative pl-6">
+                {/* linea verticale */}
+                <div className="absolute left-0 top-2 bottom-0 w-px bg-zinc-200" />
+                <div className="flex items-start gap-3">
+                  <div className="mt-2 h-2.5 w-2.5 rounded-full bg-[#C8A14A]" />
+                  <div className="bg-white rounded-2xl border border-zinc-200 p-4 w-full">
+                    <div className="text-[11px] tracking-[0.12em] uppercase text-zinc-500">
+                      {item.tag}
+                    </div>
+                    <div className="mt-1 font-semibold text-zinc-900">
+                      {item.title}
+                    </div>
+                    <p className="mt-1 text-sm text-zinc-600">
+                      {item.text}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Galleria esperienze & passioni (orizzontale) */}
+          <div className="mt-8">
+            <h3 className="text-sm font-semibold text-zinc-700 mb-2">
+              Galleria esperienze &amp; passioni
+            </h3>
+            <div className="-mx-4 px-4 pb-3 flex gap-4 overflow-x-auto">
+              {experiencePhotos.map((src) => (
+                <div
+                  key={src}
+                  className="flex-shrink-0 w-72 h-48 rounded-2xl overflow-hidden ring-1 ring-zinc-200 bg-zinc-100"
+                >
+                  <img
+                    src={`/assets/${src}`}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
