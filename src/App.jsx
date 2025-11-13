@@ -118,30 +118,76 @@ const liveConcertPhotos = [
   "live-olimpico-scale.jpg",
   "live-stadio-parterre.jpg",
 ];
-const lifeTimeline = [
+const politicsPhotos = [
   {
-    year: "Mototurismo",
-    title: "Itinerari e sapori",
-    desc: "Strade panoramiche, soste in caseifici e agriturismi, turismo lento in moto.",
-    img: "/assets/moto-vannulo-caseificio.jpg",
+    src: "politica-card-campo-imperatore.jpg",
+    label: "Campo Imperatore",
+    caption: "Lavoro politico sulla montagna e sul turismo in quota.",
   },
   {
-    year: "Montagna",
-    title: "Gran Sasso e trekking",
-    desc: "Escursioni in quota, viste ampie e territori raccontati anche fuori dalla moto.",
-    img: "/assets/trekking-gransasso-sentiero.jpg",
+    src: "politica-evento-arta.jpg",
+    label: "Eventi sul territorio",
+    caption: "Incontro istituzionale con gli enti regionali.",
   },
   {
-    year: "Concerti",
-    title: "Live in tutta Italia",
-    desc: "Concerti allo stadio, anfiteatri e festival: musica dal vivo e contenuti per YouTube.",
-    img: "/assets/concerto-anfiteatro-folla.jpg",
+    src: "politica-cena-gruppo.jpg",
+    label: "Campagna elettorale",
+    caption: "Cena di sostegno con militanti e simpatizzanti.",
   },
   {
-    year: "Tempo libero",
-    title: "Mercatini, stadio, città",
-    desc: "Giorni più normali: mercatini di Natale, partite allo stadio, giri in città.",
-    img: "/assets/vita-mercatini-bretzel.jpg",
+    src: "politica-serata-applausi.jpg",
+    label: "Credo negli Italiani",
+    caption: "Momenti di militanza e impegno nella sede di partito.",
+  },
+  {
+    src: "pol-card-biondi-sindaco.jpg",
+    label: "Con Biondi sindaco",
+    caption: "Materiale grafico per il sostegno alla coalizione.",
+  },
+  {
+    src: "pol-card-aperitivo-chiusura.jpg",
+    label: "Aperitivo di chiusura",
+    caption: "Invito ufficiale alla chiusura della campagna elettorale.",
+  },
+  {
+    src: "pol-camion-manifesto-centro.jpg",
+    label: "Camion vela in centro",
+    caption: "Promozione elettorale nelle principali vie della città.",
+  },
+  {
+    src: "pol-maxi-impianto-pubblicitario.jpg",
+    label: "Maxi impianto",
+    caption: "Manifesto stradale con il claim “L’Aquila che voglio”.",
+  },
+  {
+    src: "pol-torta-volantini.jpg",
+    label: "Torta elettorale",
+    caption: "Un modo diverso per far circolare biglietti e messaggi.",
+  },
+  {
+    src: "pol-card-sassa-scuola.jpg",
+    label: "Sassa – Scuola",
+    caption: "Comunicato sulla riqualificazione dell’area scolastica.",
+  },
+  {
+    src: "pol-riunione-lega-abruzzo.jpg",
+    label: "Lega Abruzzo",
+    caption: "Riunione di coordinamento nella sede provinciale.",
+  },
+  {
+    src: "politica-salvini-palco.jpg",
+    label: "Comizio serale",
+    caption: "Selfie dal palco durante un grande evento politico.",
+  },
+  {
+    src: "pol-card-candidatura-annuncio.jpg",
+    label: "Annuncio di candidatura",
+    caption: "Post ufficiale sulla candidatura al Consiglio comunale.",
+  },
+  {
+    src: "pol-trio-comizio-serale.jpg",
+    label: "Team sul territorio",
+    caption: "Serata di comizio con amministratori e amici.",
   },
 ];
 
@@ -466,47 +512,61 @@ export default function Homepage() {
       </section>
 
       {/* POLITICA / CIVICA */}
-      <section
-        id="civica"
-        className="py-16 bg-gradient-to-b from-[#F0EFEB] to-white"
+<section
+  id="civica"
+  className="py-16 bg-gradient-to-b from-[#F0EFEB] to-white"
+>
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <SectionTitle icon={Megaphone}>
+      Attività Civica/Politica
+    </SectionTitle>
+    <p className="mt-3 text-zinc-600 max-w-prose">
+      L’Aquila Città di Montagna: eventi sostenibili, sport, turismo,
+      spazi per giovani e cultura. Aggiornamenti, documenti e iniziative
+      con amministratori e rappresentanti politici.
+    </p>
+
+    {/* due immagini principali */}
+    <div className="mt-6 grid md:grid-cols-2 gap-6">
+      <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
+        <img
+          src="/assets/civica-conferenza.jpg"
+          alt="Conferenza stampa L'Aquila Città di Montagna"
+          className="w-full h-72 object-cover"
+        />
+      </div>
+      <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
+        <img
+          src="/assets/civica-gransasso-gruppo.jpg"
+          alt="Foto con rappresentanti politici sul territorio"
+          className="w-full h-72 object-cover"
+        />
+      </div>
+    </div>
+
+    {/* carosello campagne & incontri */}
+    <div className="mt-10">
+      <h3 className="font-display text-xl font-bold text-[#111111]">
+        Campagne, incontri e territorio
+      </h3>
+      <p className="mt-1 text-sm text-zinc-600 max-w-prose">
+        Alcuni momenti del lavoro politico: Campo Imperatore, incontri
+        con ministri e amministratori, campagne elettorali e riunioni di
+        partito.
+      </p>
+      <ImageCarousel items={politicsPhotos} />
+    </div>
+
+    <div className="mt-6">
+      <Button
+        variant="outline"
+        className="rounded-2xl !border-[#4A4A4A] !text-[#4A4A4A] hover:!border-[#C8A14A] hover:!text-[#C8A14A]"
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionTitle icon={Megaphone}>
-            Attività Civica/Politica
-          </SectionTitle>
-          <p className="mt-3 text-zinc-600 max-w-prose">
-            L’Aquila Città di Montagna: eventi sostenibili, sport, turismo,
-            spazi per giovani e cultura. Aggiornamenti, documenti e iniziative
-            con amministratori e rappresentanti politici.
-          </p>
-
-          <div className="mt-6 grid md:grid-cols-2 gap-6">
-            <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
-              <img
-                src="/assets/civica-conferenza.jpg"
-                alt="Conferenza stampa L'Aquila Città di Montagna"
-                className="w-full h-72 object-cover"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
-              <img
-                src="/assets/civica-gransasso-gruppo.jpg"
-                alt="Foto con rappresentanti politici sul territorio"
-                className="w-full h-72 object-cover"
-              />
-            </div>
-          </div>
-
-          <div className="mt-6">
-            <Button
-              variant="outline"
-              className="rounded-2xl !border-[#4A4A4A] !text-[#4A4A4A] hover:!border-[#C8A14A] hover:!text-[#C8A14A]"
-            >
-              Leggi tutte le iniziative
-            </Button>
-          </div>
-        </div>
-      </section>
+        Leggi tutte le iniziative
+      </Button>
+    </div>
+  </div>
+</section>
 
       {/* TERRITORIO & ASSOCIAZIONISMO */}
       <section id="associazionismo" className="py-16 bg-white">
