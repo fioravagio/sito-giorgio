@@ -27,14 +27,14 @@ const activities = [
   {
     icon: Megaphone,
     title: "Attività Politica",
-    desc: "Progetti per L'Aquila, partecipazione, idee concrete per la città.",
+    desc: "Progetti e proposte per L'Aquila: turismo, sport, spazi urbani, partecipazione.",
     cta: "Scopri iniziative",
     href: "#civica",
   },
   {
     icon: Users,
     title: "Territorio & Associazioni",
-    desc: "Community locali, prodotti tipici, montagna e turismo lento.",
+    desc: "Reti locali, comitati e progettazione dal basso per valorizzare il territorio.",
     cta: "Partecipa",
     href: "#associazionismo",
   },
@@ -82,72 +82,6 @@ const upcoming = [
   },
 ];
 
-/* ---------- GALLERIE ---------- */
-
-/* DJ & EVENTI */
-const djGallery = [
-  { src: "/assets/hero-dj.jpg", alt: "DJ set in club con la pista piena" },
-  { src: "/assets/dj-aperitivo-terrazza.jpg", alt: "Console all'aperto Yoichi" },
-  { src: "/assets/dj-spiaggia-amici.jpg", alt: "DJ set estivo con amici" },
-  { src: "/assets/grafica-dj-donna-zelinda.jpg", alt: "Locandina Donna Zelinda" },
-  { src: "/assets/grafica-dj-mamarita.jpg", alt: "Locandina MamaRita" },
-];
-
-/* POLITICA — nomi corretti */
-const politicaGallery = [
-  {
-    src: "/assets/civica-conferenza.jpg",
-    alt: "Conferenza stampa L'Aquila Città di Montagna",
-  },
-  {
-    src: "/assets/civica-gransasso-gruppo.jpg",
-    alt: "Evento politico con rappresentanti istituzionali",
-  },
-];
-
-/* TERRITORIO & ASSOCIAZIONI */
-const territorioGallery = [
-  {
-    src: "/assets/territorio-legumi-negozio.jpg",
-    alt: "Prodotti tipici e legumi in negozio",
-  },
-  {
-    src: "/assets/neve-altopiano-selfie.jpg",
-    alt: "Selfie sulla neve negli altipiani",
-  },
-];
-
-/* MOTOTURISMO */
-const mototurismoGallery = [
-  { src: "/assets/moto-appennino-strada.jpg", alt: "Moto in Appennino" },
-  { src: "/assets/moto-gruppo-bosco.jpg", alt: "Gruppo motociclisti nel bosco" },
-  { src: "/assets/moto-dolomiti.jpg", alt: "Dolomiti in moto" },
-  { src: "/assets/moto-stelvio.jpg", alt: "Stelvio in moto" },
-  { src: "/assets/moto-alpi-neve.jpg", alt: "Alpi con neve" },
-];
-
-/* YOUTUBE & SPORT */
-const youtubeGallery = [
-  { src: "/assets/tennis-foro-folla.jpg", alt: "Folla al Foro Italico" },
-  { src: "/assets/tennis-foro-campo.jpg", alt: "Campo Centrale Foro Italico" },
-];
-
-/* DESIGN & RETAIL */
-const designGallery = [
-  {
-    src: "/assets/retail-tigre-ingresso.jpg",
-    alt: "Inaugurazione Tigre",
-    title: "Tigre — Ingresso",
-    desc: "Shooting e comunicazione inaugurazione.",
-  },
-  {
-    src: "/assets/retail-tigre-taglio-nastro.jpg",
-    alt: "Taglio del nastro",
-    title: "Tigre — Taglio del nastro",
-    desc: "Documentazione fotografica istituzionale.",
-  },
-];
-
 /* ---------- COMPONENTI ---------- */
 
 function SectionTitle({ icon: Icon, children }) {
@@ -167,35 +101,53 @@ export default function Homepage() {
   const [email, setEmail] = useState("");
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#E6E0D6] via-white to-[#E6E0D6] text-[#111111]">
-
+    <div className="min-h-screen bg-gradient-to-b from-[#F1ECE2] via-white to-[#F1ECE2] text-[#111111]">
       {/* NAVBAR */}
-      <header className="sticky top-0 z-40 backdrop-blur bg-white/75 border-b border-zinc-200">
+      <header className="sticky top-0 z-40 backdrop-blur bg-white/80 border-b border-zinc-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <a href="#home" className="font-semibold tracking-tight text-xl">
+          <a
+            href="#home"
+            className="font-semibold tracking-tight text-xl"
+          >
             Giorgio Fioravanti
           </a>
           <nav className="hidden md:flex gap-6 text-sm text-zinc-700">
-            <a href="#dj">DJ & Eventi</a>
-            <a href="#civica">Politica</a>
-            <a href="#associazionismo">Territorio & Associazioni</a>
-            <a href="#mototurismo">Mototurismo</a>
-            <a href="#youtube">YouTube</a>
-            <a href="#design">Grafica</a>
-            <a href="#contatti">Contatti</a>
+            <a href="#dj" className="hover:text-zinc-900">
+              DJ & Eventi
+            </a>
+            <a href="#civica" className="hover:text-zinc-900">
+              Politica
+            </a>
+            <a href="#associazionismo" className="hover:text-zinc-900">
+              Territorio & Associazioni
+            </a>
+            <a href="#mototurismo" className="hover:text-zinc-900">
+              Mototurismo
+            </a>
+            <a href="#youtube" className="hover:text-zinc-900">
+              YouTube
+            </a>
+            <a href="#design" className="hover:text-zinc-900">
+              Grafica
+            </a>
+            <a href="#contatti" className="hover:text-zinc-900">
+              Contatti
+            </a>
           </nav>
-          <Button className="hidden md:block rounded-2xl bg-[#C8A14A] hover:bg-[#b48d39] text-white">
-            Prenota
-          </Button>
+          <div className="hidden md:block">
+            <Button className="rounded-2xl bg-[#3A3A3A] text-white hover:bg-[#C8A14A]">
+              Prenota
+            </Button>
+          </div>
         </div>
       </header>
 
       {/* HERO */}
       <section id="home" className="relative overflow-hidden">
+        {/* delicati bagliori dorati */}
         <div className="absolute inset-0 bg-[radial-gradient(900px_520px_at_80%_-10%,rgba(200,161,74,0.18),transparent),radial-gradient(900px_520px_at_10%_120%,rgba(200,161,74,0.12),transparent)] pointer-events-none" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24 relative">
           <div className="grid lg:grid-cols-12 gap-10 items-center">
-
             <div className="lg:col-span-7">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
@@ -205,32 +157,49 @@ export default function Homepage() {
               >
                 Musica, Territorio, Design.
               </motion.h1>
-
               <p className="mt-4 text-lg text-zinc-600 max-w-prose">
-                DJ & organizzatore di eventi, attivo nei progetti
-                dell'Aquila, creator su YouTube e graphic designer.
-                Un unico hub per tutto ciò che faccio: chiaro, rapido, di qualità.
+                DJ & organizzatore di eventi, attivo nei progetti politici e
+                civici dell&apos;Aquila, creator su YouTube e graphic designer.
+                Un unico hub per tutto ciò che faccio: chiaro, rapido, di
+                qualità.
               </p>
-
               <div className="mt-6 flex flex-wrap gap-3">
-                <Button className="rounded-2xl bg-[#C8A14A] hover:bg-[#b48d39] text-white">
-                  Prenota un DJ Set <ArrowRight className="ml-2 h-4 w-4" />
+                <Button
+                  size="lg"
+                  className="rounded-2xl bg-[#3A3A3A] text-white hover:bg-[#C8A14A]"
+                >
+                  Prenota un DJ Set{" "}
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
-                <Button variant="outline" className="rounded-2xl border-[#C8A14A] text-[#C8A14A] hover:bg-[#F2E4C4]">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="rounded-2xl border-[#3A3A3A] text-[#3A3A3A] hover:border-[#C8A14A] hover:text-[#C8A14A]"
+                >
                   Scrivimi
                 </Button>
               </div>
 
-              {/* cards attività */}
               <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
                 {activities.map((a) => (
-                  <Card key={a.title} className="rounded-2xl bg-white border border-zinc-200 hover:shadow-lg transition">
+                  <Card
+                    key={a.title}
+                    className="rounded-2xl bg-white border border-zinc-200 hover:shadow-lg hover:-translate-y-0.5 transition"
+                  >
                     <CardContent className="p-4">
                       <a.icon className="h-6 w-6 text-[#C8A14A]" />
-                      <div className="mt-2 font-semibold">{a.title}</div>
-                      <p className="text-sm text-zinc-600">{a.desc}</p>
-                      <a href={a.href} className="mt-2 inline-flex items-center text-sm font-medium text-[#C8A14A] hover:underline">
-                        {a.cta} <ArrowRight className="ml-1 h-4 w-4" />
+                      <div className="mt-2 font-semibold">
+                        {a.title}
+                      </div>
+                      <p className="text-sm text-zinc-600">
+                        {a.desc}
+                      </p>
+                      <a
+                        href={a.href}
+                        className="mt-2 inline-flex items-center text-sm font-medium text-[#C8A14A] hover:underline"
+                      >
+                        {a.cta}{" "}
+                        <ArrowRight className="ml-1 h-4 w-4" />
                       </a>
                     </CardContent>
                   </Card>
@@ -238,14 +207,24 @@ export default function Homepage() {
               </div>
             </div>
 
-            {/* HERO IMG */}
             <div className="lg:col-span-5">
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.08)] ring-1 ring-zinc-200 bg-zinc-100">
-                <img src="/assets/hero-dj.jpg" alt="DJ Set" className="absolute inset-0 h-full w-full object-cover" />
+                <img
+                  src="/assets/hero-dj.jpg"
+                  alt="Giorgio Fioravanti — DJ & Eventi"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-white/10 to-transparent" />
+                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-3 py-2 rounded-xl border border-zinc-200 shadow">
+                  <span className="text-xs font-medium">
+                    DJ &amp; Eventi
+                  </span>
+                </div>
+              </div>
+              <div className="mt-3 text-xs text-zinc-500">
+                Atmosfera elegante, accenti dorati leggeri.
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -253,38 +232,63 @@ export default function Homepage() {
       {/* DJ & EVENTI */}
       <section id="dj" className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionTitle icon={Headphones}>DJ & Eventi</SectionTitle>
-
+          <SectionTitle icon={Headphones}>DJ &amp; Eventi</SectionTitle>
           <p className="mt-3 text-zinc-600 max-w-prose">
-            Set House/Amapiano, format eleganti, gestione tecnica,
-            comunicazione e logistica eventi.
+            Set House/Amapiano, format eleganti, gestione calendario,
+            tecnica e comunicazione. Setup Denon Prime 4+ e luci
+            integrabili, eventi in locali, ristoranti e format privati.
           </p>
 
-          <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {djGallery.map((img) => (
-              <div key={img.src} className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
-                <img src={img.src} alt={img.alt} className="w-full h-56 object-cover" />
+          {/* mini gallery */}
+          <div className="mt-6 grid md:grid-cols-3 gap-4">
+            {[
+              "dj-aperitivo-terrazza.jpg",
+              "dj-club-folla.jpg",
+              "dj-spiaggia-amici.jpg",
+              "grafica-dj-mamarita.jpg",
+              "grafica-dj-donna-zelinda.jpg",
+            ].map((src) => (
+              <div
+                key={src}
+                className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200"
+              >
+                <img
+                  src={`/assets/${src}`}
+                  alt=""
+                  className="w-full h-56 object-cover"
+                />
               </div>
             ))}
           </div>
 
+          {/* eventi */}
           <div className="mt-8 grid md:grid-cols-3 gap-4">
             {upcoming.map((ev) => (
-              <Card key={ev.title} className="rounded-2xl bg-white border border-zinc-200">
+              <Card
+                key={ev.title}
+                className="rounded-2xl bg-white border border-zinc-200"
+              >
                 <CardHeader className="pb-2">
                   <CardTitle className="text-base flex items-center gap-2">
-                    <Calendar className="h-4 w-4 text-[#C8A14A]" /> {ev.title}
+                    <Calendar className="h-4 w-4 text-[#C8A14A]" />{" "}
+                    {ev.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="text-sm text-zinc-600">
                   <div className="flex items-center justify-between">
                     <div>
-                      <div className="font-medium text-zinc-900">{ev.place}</div>
-                      <a href="#" className="inline-flex items-center font-medium text-[#C8A14A] hover:underline">
-                        Dettagli <ArrowRight className="ml-1 h-4 w-4" />
+                      <div className="font-medium text-zinc-900">
+                        {ev.place}
+                      </div>
+                      <a
+                        href={ev.href}
+                        className="inline-flex items-center font-medium text-[#C8A14A] hover:underline"
+                      >
+                        Dettagli{" "}
+                        <ArrowRight className="ml-1 h-4 w-4" />
                       </a>
                     </div>
-                    <div className="px-2 py-1 rounded-lg bg-[rgba(200,161,74,0.15)] text-xs font-semibold">
+                    <div className="px-2 py-1 rounded-lg bg-[rgba(200,161,74,0.15)] text-[#111111] text-xs font-semibold text-center">
                       {ev.date}
                     </div>
                   </div>
@@ -292,192 +296,460 @@ export default function Homepage() {
               </Card>
             ))}
           </div>
+
+          <div className="mt-6 flex gap-3">
+            <Button className="rounded-2xl bg-[#3A3A3A] text-white hover:bg-[#C8A14A]">
+              Richiedi disponibilità
+            </Button>
+            <Button
+              variant="outline"
+              className="rounded-2xl border-[#3A3A3A] text-[#3A3A3A] hover:border-[#C8A14A] hover:text-[#C8A14A]"
+            >
+              Scarica Rider Tecnico
+            </Button>
+          </div>
         </div>
       </section>
 
       {/* POLITICA */}
-      <section id="civica" className="py-16 bg-gradient-to-b from-[#E6E0D6] to-white">
+      <section
+        id="civica"
+        className="py-16 bg-gradient-to-b from-[#F1ECE2] to-white"
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
           <SectionTitle icon={Megaphone}>Attività Politica</SectionTitle>
-
           <p className="mt-3 text-zinc-600 max-w-prose">
-            Proposte concrete per L'Aquila: città di montagna, turismo,
-            sport, spazi urbani, giovani.  
-            Conferenze stampa, incontri istituzionali e attività politiche.
+            Attività politica legata a L&apos;Aquila: conferenze stampa,
+            proposte, ascolto del territorio, partecipazione alle
+            iniziative istituzionali e di partito.
           </p>
 
           <div className="mt-6 grid md:grid-cols-2 gap-6">
-            {politicaGallery.map((img) => (
-              <div key={img.src} className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
-                <img src={img.src} alt={img.alt} className="w-full h-72 object-cover" />
-              </div>
-            ))}
+            <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
+              <img
+                src="/assets/civica-conferenza.jpg"
+                alt="Conferenza stampa"
+                className="w-full h-72 object-cover"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
+              <img
+                src="/assets/civica-gransasso-gruppo.jpg"
+                alt="Evento politico sul territorio"
+                className="w-full h-72 object-cover"
+              />
+            </div>
           </div>
 
+          <div className="mt-6">
+            <Button
+              variant="outline"
+              className="rounded-2xl border-[#3A3A3A] text-[#3A3A3A] hover:border-[#C8A14A] hover:text-[#C8A14A]"
+            >
+              Leggi tutte le iniziative
+            </Button>
+          </div>
         </div>
       </section>
 
-      {/* TERRITORIO & ASSOCIAZIONI */}
+      {/* TERRITORIO & ASSOCIAZIONISMO */}
       <section id="associazionismo" className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
-          <SectionTitle icon={Users}>Territorio & Associazioni</SectionTitle>
-
+          <SectionTitle icon={Users}>
+            Territorio &amp; Associazioni
+          </SectionTitle>
           <p className="mt-3 text-zinc-600 max-w-prose">
-            Progetti dal basso, comunità locali, eventi territoriali.
-            Valorizzazione di prodotti tipici, montagna e borghi.
+            Collaborazioni con associazioni, comitati e realtà locali:
+            progetti per lo sviluppo del territorio, promozione delle
+            eccellenze, sport, eventi e partecipazione attiva.
           </p>
 
-          <div className="mt-6 grid md:grid-cols-2 gap-6">
-            {territorioGallery.map((img) => (
-              <div key={img.src} className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
-                <img src={img.src} alt={img.alt} className="w-full h-72 object-cover" />
-              </div>
-            ))}
+          <div className="mt-6 grid md:grid-cols-3 gap-4">
+            <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
+              <img
+                src="/assets/territorio-legumi-negozio.jpg"
+                alt="Prodotti tipici e legumi del territorio"
+                className="w-full h-64 object-cover"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
+              <img
+                src="/assets/neve-altopiano-selfie.jpg"
+                alt="Neve e altopiano d'Abruzzo"
+                className="w-full h-64 object-cover"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
+              <img
+                src="/assets/tennis-foro-folla.jpg"
+                alt="Eventi sportivi e partecipazione"
+                className="w-full h-64 object-cover"
+              />
+            </div>
           </div>
 
+          <div className="mt-6 flex gap-3">
+            <Button className="rounded-2xl bg-[#3A3A3A] text-white hover:bg-[#C8A14A]">
+              Partecipa
+            </Button>
+            <Button
+              variant="outline"
+              className="rounded-2xl border-[#3A3A3A] text-[#3A3A3A] hover:border-[#C8A14A] hover:text-[#C8A14A]"
+            >
+              Scarica modulistica
+            </Button>
+          </div>
         </div>
       </section>
 
       {/* MOTOTURISMO */}
-      <section id="mototurismo" className="py-16 bg-gradient-to-b from-white to-[#E6E0D6]">
+      <section
+        id="mototurismo"
+        className="py-16 bg-gradient-to-b from-white to-[#F1ECE2]"
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
           <SectionTitle icon={Users}>Mototurismo</SectionTitle>
-
           <p className="mt-3 text-zinc-600 max-w-prose">
-            Fondatore della community <strong>Gran Sasso Bikers</strong>.  
-            Itinerari lenti, panorami, Dolomiti, Stelvio e viaggi in moto.
+            Il mototurismo come modo di vivere il territorio. Fondatore
+            della community{" "}
+            <span className="font-medium">Gran Sasso Bikers</span> —
+            itinerari, eventi e turismo lento sulle strade d&apos;Abruzzo e
+            non solo.
           </p>
 
-          <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {mototurismoGallery.map((img) => (
-              <div key={img.src} className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
-                <img src={img.src} alt={img.alt} className="w-full h-64 object-cover" />
+          <div className="mt-6 grid md:grid-cols-3 gap-4">
+            {[
+              "moto-appennino-strada.jpg",
+              "moto-dolomiti.jpg",
+              "moto-stelvio.jpg",
+            ].map((src) => (
+              <div
+                key={src}
+                className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200"
+              >
+                <img
+                  src={`/assets/${src}`}
+                  alt="Mototurismo"
+                  className="w-full h-64 object-cover"
+                />
               </div>
             ))}
           </div>
 
+          <div className="mt-6 flex gap-3">
+            <a
+              href="https://www.facebook.com/GranSassoBikers/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button className="rounded-2xl bg-[#3A3A3A] text-white hover:bg-[#C8A14A]">
+                Visita la community
+              </Button>
+            </a>
+            <Button
+              variant="outline"
+              className="rounded-2xl border-[#3A3A3A] text-[#3A3A3A] hover:border-[#C8A14A] hover:text-[#C8A14A]"
+            >
+              Unisciti ai prossimi tour
+            </Button>
+          </div>
         </div>
       </section>
 
       {/* YOUTUBE */}
       <section id="youtube" className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
-          <SectionTitle icon={Youtube}>YouTube & Media</SectionTitle>
-
+          <SectionTitle icon={Youtube}>YouTube &amp; Media</SectionTitle>
           <p className="mt-3 text-zinc-600 max-w-prose">
-            Storytelling tra concerti, DJ set e grandi eventi sportivi.
+            Highlights da concerti e contenuti DJ. Iscriviti per supportare
+            il canale e scoprire nuovi video.
           </p>
-
           <div className="mt-6 grid md:grid-cols-2 gap-6">
-
-            <div className="aspect-video rounded-2xl overflow-hidden ring-1 ring-zinc-200">
+            <div className="aspect-video rounded-2xl overflow-hidden ring-1 ring-zinc-200 bg-zinc-100">
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="YouTube video"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
             </div>
-
-            <div className="grid grid-cols-2 gap-3">
-              {youtubeGallery.map((img) => (
-                <div key={img.src} className="rounded-2xl overflow-hidden ring-1 ring-zinc-200 bg-white">
-                  <img src={img.src} alt={img.alt} className="w-full h-32 object-cover" />
+            <Card className="rounded-2xl bg-white border border-zinc-200">
+              <CardHeader>
+                <CardTitle className="text-base">
+                  Ultimi upload
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-zinc-600 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span>Clip — Live DJ Set</span>
+                  <a
+                    className="text-sm font-medium text-[#C8A14A] hover:underline"
+                    href="#"
+                  >
+                    Guarda
+                  </a>
                 </div>
-              ))}
-            </div>
-
+                <div className="flex items-center justify-between">
+                  <span>Concerto — Highlights</span>
+                  <a
+                    className="text-sm font-medium text-[#C8A14A] hover:underline"
+                    href="#"
+                  >
+                    Guarda
+                  </a>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span>Behind the Scenes</span>
+                  <a
+                    className="text-sm font-medium text-[#C8A14A] hover:underline"
+                    href="#"
+                  >
+                    Guarda
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="mt-6">
+            <Button className="rounded-2xl bg-[#3A3A3A] text-white hover:bg-[#C8A14A]">
+              Iscriviti al canale
+            </Button>
           </div>
         </div>
       </section>
 
       {/* DESIGN */}
-      <section id="design" className="py-16 bg-gradient-to-b from-[#E6E0D6] to-white">
+      <section
+        id="design"
+        className="py-16 bg-gradient-to-b from-[#F1ECE2] to-white"
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
-          <SectionTitle icon={Palette}>Grafica & Branding</SectionTitle>
-
+          <SectionTitle icon={Palette}>
+            Grafica &amp; Branding
+          </SectionTitle>
           <p className="mt-3 text-zinc-600 max-w-prose">
-            Volantini per supermercati, branding, prodotti editoriali e comunicazione visuale.
+            Volantini supermercati, loghi, layout social e stampa. Portfolio
+            selezionato e pacchetti su misura.
           </p>
-
           <div className="mt-6 grid md:grid-cols-3 gap-4">
-            {designGallery.map((item) => (
-              <Card key={item.src} className="rounded-2xl overflow-hidden bg-white border border-zinc-200">
+            {[
+              {
+                name: "Volantino Tigre",
+                src: "retail-tigre-ingresso.jpg",
+              },
+              {
+                name: "Inaugurazione punto vendita",
+                src: "retail-tigre-taglio-nastro.jpg",
+              },
+              {
+                name: "Visual DJ",
+                src: "grafica-dj-mamarita.jpg",
+              },
+            ].map((item) => (
+              <Card
+                key={item.name}
+                className="rounded-2xl overflow-hidden bg-white border border-zinc-200"
+              >
                 <CardContent className="p-0">
-                  <img src={item.src} alt={item.alt} className="w-full aspect-[4/5] object-cover" />
+                  <div className="aspect-[4/5] bg-zinc-100">
+                    <img
+                      src={`/assets/${item.src}`}
+                      alt={item.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <div className="p-4">
-                    <div className="font-semibold">{item.title}</div>
-                    <p className="text-sm text-zinc-600">{item.desc}</p>
+                    <div className="font-medium">{item.name}</div>
+                    <p className="text-sm text-zinc-600">
+                      Progetto grafico e coordinamento comunicazione.
+                    </p>
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
-
+          <div className="mt-6 flex gap-3">
+            <Button className="rounded-2xl bg-[#3A3A3A] text-white hover:bg-[#C8A14A]">
+              Richiedi un preventivo
+            </Button>
+            <Button
+              variant="outline"
+              className="rounded-2xl border-[#3A3A3A] text-[#3A3A3A] hover:border-[#C8A14A] hover:text-[#C8A14A]"
+            >
+              Scarica portfolio PDF
+            </Button>
+          </div>
         </div>
       </section>
 
       {/* CONTATTI */}
       <section id="contatti" className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="font-display text-2xl md:text-3xl font-bold">
                 Rimani aggiornato
               </h3>
               <p className="mt-2 text-zinc-600 max-w-prose">
-                Eventi, proposte, video e nuovi progetti.
+                Eventi, proposte per la città, video e progetti di design.
               </p>
-              <form className="mt-4 flex gap-2" onSubmit={(e)=>e.preventDefault()}>
-                <Input type="email" placeholder="La tua email" value={email} onChange={(e)=>setEmail(e.target.value)} className="rounded-2xl" />
-                <Button className="rounded-2xl bg-[#C8A14A] hover:bg-[#b48d39] text-white">Iscriviti</Button>
+              <form
+                className="mt-4 flex gap-2"
+                onSubmit={(e) => e.preventDefault()}
+              >
+                <Input
+                  type="email"
+                  placeholder="La tua email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="rounded-2xl"
+                />
+                <Button
+                  type="submit"
+                  className="rounded-2xl bg-[#3A3A3A] text-white hover:bg-[#C8A14A]"
+                >
+                  Iscriviti
+                </Button>
               </form>
+              <p className="mt-2 text-xs text-zinc-500">
+                Niente spam. Potrai disiscriverti in ogni momento.
+              </p>
             </div>
-
             <Card className="rounded-2xl bg-white border border-zinc-200">
-              <CardHeader><CardTitle>Contatti</CardTitle></CardHeader>
-              <CardContent className="space-y-2 text-sm">
-                <p>Email: <a className="text-[#C8A14A] hover:underline" href="mailto:info@example.com">info@example.com</a></p>
-                <p>WhatsApp: <a className="text-[#C8A14A] hover:underline" href="#">+39 3XX XXX XXXX</a></p>
-                <p>Instagram: <a className="text-[#C8A14A] hover:underline" href="https://www.instagram.com/fioravagio/" target="_blank" rel="noreferrer">@fioravagio</a></p>
-                <p>Facebook: <a className="text-[#C8A14A] hover:underline" href="https://www.facebook.com/giorgio.fioravanti/" target="_blank" rel="noreferrer">giorgio.fioravanti</a></p>
+              <CardHeader>
+                <CardTitle className="text-base">
+                  Contatti diretti
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-zinc-600 space-y-2">
+                <p>
+                  Email:{" "}
+                  <a
+                    className="hover:underline text-[#C8A14A]"
+                    href="mailto:info@example.com"
+                  >
+                    info@example.com
+                  </a>
+                </p>
+                <p>
+                  WhatsApp:{" "}
+                  <a
+                    className="hover:underline text-[#C8A14A]"
+                    href="#"
+                  >
+                    +39 3XX XXX XXXX
+                  </a>
+                </p>
+                <p>
+                  Instagram:{" "}
+                  <a
+                    className="hover:underline text-[#C8A14A]"
+                    href="https://www.instagram.com/fioravagio/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    @fioravagio
+                  </a>
+                </p>
+                <p>
+                  Facebook:{" "}
+                  <a
+                    className="hover:underline text-[#C8A14A]"
+                    href="https://www.facebook.com/giorgio.fioravanti/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    giorgio.fioravanti
+                  </a>
+                </p>
               </CardContent>
             </Card>
           </div>
-
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-zinc-200 bg-[#E6E0D6] text-sm text-zinc-700">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
-
+      <footer className="border-t border-zinc-200 bg-[#F1ECE2]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-sm text-zinc-600">
           <div className="grid md:grid-cols-3 gap-6">
             <div>
-              <div className="font-semibold">Giorgio Fioravanti</div>
-              <p className="mt-2 max-w-xs">Musica, territorio e design.</p>
+              <div className="font-semibold text-[#111111]">
+                Giorgio Fioravanti
+              </div>
+              <p className="mt-2 max-w-xs">
+                Musica, territorio e design — con chiarezza e sostanza.
+              </p>
             </div>
             <div>
-              <div className="font-semibold">Sezioni</div>
+              <div className="font-semibold text-[#111111]">
+                Sezioni
+              </div>
               <ul className="mt-2 space-y-1">
-                <li><a href="#dj" className="hover:underline">DJ & Eventi</a></li>
-                <li><a href="#civica" className="hover:underline">Politica</a></li>
-                <li><a href="#associazionismo" className="hover:underline">Territorio & Associazioni</a></li>
-                <li><a href="#mototurismo" className="hover:underline">Mototurismo</a></li>
-                <li><a href="#youtube" className="hover:underline">YouTube</a></li>
-                <li><a href="#design" className="hover:underline">Grafica</a></li>
+                <li>
+                  <a className="hover:underline" href="#dj">
+                    DJ &amp; Eventi
+                  </a>
+                </li>
+                <li>
+                  <a className="hover:underline" href="#civica">
+                    Politica
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="hover:underline"
+                    href="#associazionismo"
+                  >
+                    Territorio &amp; Associazioni
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="hover:underline"
+                    href="#mototurismo"
+                  >
+                    Mototurismo
+                  </a>
+                </li>
+                <li>
+                  <a className="hover:underline" href="#youtube">
+                    YouTube
+                  </a>
+                </li>
+                <li>
+                  <a className="hover:underline" href="#design">
+                    Grafica
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div className="font-semibold text-[#111111]">
+                Legale
+              </div>
+              <ul className="mt-2 space-y-1">
+                <li>
+                  <a className="hover:underline" href="#">
+                    Privacy
+                  </a>
+                </li>
+                <li>
+                  <a className="hover:underline" href="#">
+                    Cookie
+                  </a>
+                </li>
+                <li>
+                  <a className="hover:underline" href="#">
+                    Termini
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
-
           <div className="mt-6">
-            © {new Date().getFullYear()} Giorgio Fioravanti — Tutti i diritti riservati.
+            © {new Date().getFullYear()} Giorgio Fioravanti — Tutti i
+            diritti riservati.
           </div>
         </div>
       </footer>
