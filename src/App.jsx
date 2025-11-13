@@ -135,7 +135,7 @@ export default function Homepage() {
             </a>
           </nav>
           <div className="hidden md:block">
-            <Button className="rounded-2xl bg-[#3A3A3A] text-white hover:bg-[#C8A14A]">
+            <Button className="rounded-2xl bg-[#5A5A5A] text-white hover:bg-[#C8A14A]">
               Prenota
             </Button>
           </div>
@@ -165,16 +165,16 @@ export default function Homepage() {
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <Button
-                  size="lg"
-                  className="rounded-2xl bg-[#3A3A3A] text-white hover:bg-[#C8A14A]"
-                >
-                  Prenota un DJ Set{" "}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+  size="lg"
+  className="rounded-2xl bg-[#5A5A5A] text-white hover:bg-[#C8A14A]"
+>
+  Prenota SUBITO un DJ Set{" "}
+  <ArrowRight className="ml-2 h-4 w-4" />
+</Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="rounded-2xl border-[#3A3A3A] text-[#3A3A3A] hover:border-[#C8A14A] hover:text-[#C8A14A]"
+                  className="rounded-2xl border-[#5A5A5A] text-[#5A5A5A] hover:border-[#C8A14A] hover:text-[#C8A14A]"
                 >
                   Scrivimi
                 </Button>
@@ -298,12 +298,12 @@ export default function Homepage() {
           </div>
 
           <div className="mt-6 flex gap-3">
-            <Button className="rounded-2xl bg-[#3A3A3A] text-white hover:bg-[#C8A14A]">
+            <Button className="rounded-2xl bg-[#5A5A5A] text-white hover:bg-[#C8A14A]">
               Richiedi disponibilità
             </Button>
             <Button
               variant="outline"
-              className="rounded-2xl border-[#3A3A3A] text-[#3A3A3A] hover:border-[#C8A14A] hover:text-[#C8A14A]"
+              className="rounded-2xl border-[#5A5A5A] text-[#5A5A5A] hover:border-[#C8A14A] hover:text-[#C8A14A]"
             >
               Scarica Rider Tecnico
             </Button>
@@ -344,7 +344,7 @@ export default function Homepage() {
           <div className="mt-6">
             <Button
               variant="outline"
-              className="rounded-2xl border-[#3A3A3A] text-[#3A3A3A] hover:border-[#C8A14A] hover:text-[#C8A14A]"
+              className="rounded-2xl border-[#5A5A5A] text-[#5A5A5A] hover:border-[#C8A14A] hover:text-[#C8A14A]"
             >
               Leggi tutte le iniziative
             </Button>
@@ -389,12 +389,12 @@ export default function Homepage() {
           </div>
 
           <div className="mt-6 flex gap-3">
-            <Button className="rounded-2xl bg-[#3A3A3A] text-white hover:bg-[#C8A14A]">
+            <Button className="rounded-2xl bg-[#5A5A5A] text-white hover:bg-[#C8A14A]">
               Partecipa
             </Button>
             <Button
               variant="outline"
-              className="rounded-2xl border-[#3A3A3A] text-[#3A3A3A] hover:border-[#C8A14A] hover:text-[#C8A14A]"
+              className="rounded-2xl border-[#5A5A5A] text-[#5A5A5A] hover:border-[#C8A14A] hover:text-[#C8A14A]"
             >
               Scarica modulistica
             </Button>
@@ -442,13 +442,13 @@ export default function Homepage() {
               target="_blank"
               rel="noreferrer"
             >
-              <Button className="rounded-2xl bg-[#3A3A3A] text-white hover:bg-[#C8A14A]">
+              <Button className="rounded-2xl bg-[#5A5A5A] text-white hover:bg-[#C8A14A]">
                 Visita la community
               </Button>
             </a>
             <Button
               variant="outline"
-              className="rounded-2xl border-[#3A3A3A] text-[#3A3A3A] hover:border-[#C8A14A] hover:text-[#C8A14A]"
+              className="rounded-2xl border-[#5A5A5A] text-[#5A5A5A] hover:border-[#C8A14A] hover:text-[#C8A14A]"
             >
               Unisciti ai prossimi tour
             </Button>
@@ -512,7 +512,7 @@ export default function Homepage() {
             </Card>
           </div>
           <div className="mt-6">
-            <Button className="rounded-2xl bg-[#3A3A3A] text-white hover:bg-[#C8A14A]">
+            <Button className="rounded-2xl bg-[#5A5A5A] text-white hover:bg-[#C8A14A]">
               Iscriviti al canale
             </Button>
           </div>
@@ -570,12 +570,12 @@ export default function Homepage() {
             ))}
           </div>
           <div className="mt-6 flex gap-3">
-            <Button className="rounded-2xl bg-[#3A3A3A] text-white hover:bg-[#C8A14A]">
+            <Button className="rounded-2xl bg-[#5A5A5A] text-white hover:bg-[#C8A14A]">
               Richiedi un preventivo
             </Button>
             <Button
               variant="outline"
-              className="rounded-2xl border-[#3A3A3A] text-[#3A3A3A] hover:border-[#C8A14A] hover:text-[#C8A14A]"
+              className="rounded-2xl border-[#5A5A5A] text-[#5A5A5A] hover:border-[#C8A14A] hover:text-[#C8A14A]"
             >
               Scarica portfolio PDF
             </Button>
@@ -607,7 +607,7 @@ export default function Homepage() {
                 />
                 <Button
                   type="submit"
-                  className="rounded-2xl bg-[#3A3A3A] text-white hover:bg-[#C8A14A]"
+                  className="rounded-2xl bg-[#5A5A5A] text-white hover:bg-[#C8A14A]"
                 >
                   Iscriviti
                 </Button>
