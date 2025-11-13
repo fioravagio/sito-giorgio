@@ -18,13 +18,6 @@ import { Input } from "./components/ui/input";
 
 const activities = [
   {
-    icon: Headphones,
-    title: "DJ & Eventi",
-    desc: "Selezioni House/Amapiano, format eleganti, gestione tecnica e comunicazione.",
-    cta: "Prenota un DJ Set",
-    href: "#dj",
-  },
-  {
     icon: Megaphone,
     title: "Attività Civica/Politica",
     desc: "Progetti per L'Aquila: turismo, sport, spazi urbani, partecipazione.",
@@ -37,6 +30,13 @@ const activities = [
     desc: "Reti locali, comitati e progettazione dal basso per valorizzare il territorio.",
     cta: "Partecipa",
     href: "#associazionismo",
+  },
+  {
+    icon: Headphones,
+    title: "DJ & Eventi",
+    desc: "Selezioni House/Amapiano, format eleganti, gestione tecnica e comunicazione.",
+    cta: "Prenota un DJ Set",
+    href: "#dj",
   },
   {
     icon: Youtube,
@@ -428,7 +428,120 @@ export default function Homepage() {
           </div>
         </div>
       </section>
+      {/* POLITICA / CIVICA */}
+<section
+  id="civica"
+  className="py-16 bg-gradient-to-b from-[#F0EFEB] to-white"
+>
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <SectionTitle icon={Megaphone}>
+      Attività Civica/Politica
+    </SectionTitle>
+    <p className="mt-3 text-zinc-600 max-w-prose">
+      L’Aquila Città di Montagna: eventi sostenibili, sport, turismo,
+      spazi per giovani e cultura. Aggiornamenti, documenti e iniziative
+      con amministratori e rappresentanti politici.
+    </p>
 
+    {/* due immagini principali */}
+    <div className="mt-6 grid md:grid-cols-2 gap-6">
+      <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
+        <img
+          src="/assets/civica-conferenza.jpg"
+          alt="Conferenza stampa L'Aquila Città di Montagna"
+          className="w-full h-72 object-cover"
+        />
+      </div>
+      <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
+        <img
+          src="/assets/civica-gransasso-gruppo.jpg"
+          alt="Foto con rappresentanti politici sul territorio"
+          className="w-full h-72 object-cover"
+        />
+      </div>
+    </div>
+
+    {/* carosello campagne & incontri */}
+    <div className="mt-10">
+      <h3 className="font-display text-xl font-bold text-[#111111]">
+        Campagne, incontri e territorio
+      </h3>
+      <p className="mt-1 text-sm text-zinc-600 max-w-prose">
+        Alcuni momenti del lavoro politico: Campo Imperatore, incontri
+        con ministri e amministratori, campagne elettorali e riunioni di
+        partito.
+      </p>
+      <ImageCarousel items={politicsPhotos} />
+    </div>
+
+    <div className="mt-6">
+      <Button
+        variant="outline"
+        className="rounded-2xl !border-[#4A4A4A] !text-[#4A4A4A] hover:!border-[#C8A14A] hover:!text-[#C8A14A]"
+      >
+        Leggi tutte le iniziative
+      </Button>
+    </div>
+  </div>
+</section>
+{/* TERRITORIO & ASSOCIAZIONISMO */}
+      <section id="associazionismo" className="py-16 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionTitle icon={Users}>
+            Territorio &amp; Associazionismo
+          </SectionTitle>
+          <p className="mt-3 text-zinc-600 max-w-prose">
+            Collaborazioni con associazioni, comitati di quartiere e realtà
+            locali. Progetti, eventi, inaugurazioni e iniziative per valorizzare
+            il commercio di prossimità e gli spazi pubblici.
+          </p>
+
+          {/* GALLERY TERRITORIO + TIGRE */}
+          <div className="mt-6 grid md:grid-cols-4 gap-4">
+            <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
+              <img
+                src="/assets/territorio-legumi-negozio.jpg"
+                alt="Prodotti tipici e legumi"
+                className="w-full h-64 object-cover"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
+              <img
+                src="/assets/retail-tigre-ingresso.jpg"
+                alt="Ingresso inaugurazione Tigre"
+                className="w-full h-64 object-cover"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
+              <img
+                src="/assets/retail-tigre-taglio-nastro.jpg"
+                alt="Taglio del nastro Tigre"
+                className="w-full h-64 object-cover"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
+              <img
+                src="/assets/tennis-foro-folla.jpg"
+                alt="Eventi sportivi e partecipazione"
+                className="w-full h-64 object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="mt-6 flex gap-3">
+            <Button className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-white">
+              Partecipa
+            </Button>
+            <Button
+              variant="outline"
+              className="rounded-2xl !border-[#4A4A4A] !text-[#4A4A4A] hover:!border-[#C8A14A] hover:!text-[#C8A14A]"
+            >
+              Scarica modulistica
+            </Button>
+          </div>
+        </div>
+      </section>
+      
       {/* DJ & EVENTI */}
       <section id="dj" className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -506,121 +619,6 @@ export default function Homepage() {
               className="rounded-2xl !border-[#4A4A4A] !text-[#4A4A4A] hover:!border-[#C8A14A] hover:!text-[#C8A14A]"
             >
               Scarica Rider Tecnico
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* POLITICA / CIVICA */}
-<section
-  id="civica"
-  className="py-16 bg-gradient-to-b from-[#F0EFEB] to-white"
->
-  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <SectionTitle icon={Megaphone}>
-      Attività Civica/Politica
-    </SectionTitle>
-    <p className="mt-3 text-zinc-600 max-w-prose">
-      L’Aquila Città di Montagna: eventi sostenibili, sport, turismo,
-      spazi per giovani e cultura. Aggiornamenti, documenti e iniziative
-      con amministratori e rappresentanti politici.
-    </p>
-
-    {/* due immagini principali */}
-    <div className="mt-6 grid md:grid-cols-2 gap-6">
-      <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
-        <img
-          src="/assets/civica-conferenza.jpg"
-          alt="Conferenza stampa L'Aquila Città di Montagna"
-          className="w-full h-72 object-cover"
-        />
-      </div>
-      <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
-        <img
-          src="/assets/civica-gransasso-gruppo.jpg"
-          alt="Foto con rappresentanti politici sul territorio"
-          className="w-full h-72 object-cover"
-        />
-      </div>
-    </div>
-
-    {/* carosello campagne & incontri */}
-    <div className="mt-10">
-      <h3 className="font-display text-xl font-bold text-[#111111]">
-        Campagne, incontri e territorio
-      </h3>
-      <p className="mt-1 text-sm text-zinc-600 max-w-prose">
-        Alcuni momenti del lavoro politico: Campo Imperatore, incontri
-        con ministri e amministratori, campagne elettorali e riunioni di
-        partito.
-      </p>
-      <ImageCarousel items={politicsPhotos} />
-    </div>
-
-    <div className="mt-6">
-      <Button
-        variant="outline"
-        className="rounded-2xl !border-[#4A4A4A] !text-[#4A4A4A] hover:!border-[#C8A14A] hover:!text-[#C8A14A]"
-      >
-        Leggi tutte le iniziative
-      </Button>
-    </div>
-  </div>
-</section>
-
-      {/* TERRITORIO & ASSOCIAZIONISMO */}
-      <section id="associazionismo" className="py-16 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionTitle icon={Users}>
-            Territorio &amp; Associazionismo
-          </SectionTitle>
-          <p className="mt-3 text-zinc-600 max-w-prose">
-            Collaborazioni con associazioni, comitati di quartiere e realtà
-            locali. Progetti, eventi, inaugurazioni e iniziative per valorizzare
-            il commercio di prossimità e gli spazi pubblici.
-          </p>
-
-          {/* GALLERY TERRITORIO + TIGRE */}
-          <div className="mt-6 grid md:grid-cols-4 gap-4">
-            <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
-              <img
-                src="/assets/territorio-legumi-negozio.jpg"
-                alt="Prodotti tipici e legumi"
-                className="w-full h-64 object-cover"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
-              <img
-                src="/assets/retail-tigre-ingresso.jpg"
-                alt="Ingresso inaugurazione Tigre"
-                className="w-full h-64 object-cover"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
-              <img
-                src="/assets/retail-tigre-taglio-nastro.jpg"
-                alt="Taglio del nastro Tigre"
-                className="w-full h-64 object-cover"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
-              <img
-                src="/assets/tennis-foro-folla.jpg"
-                alt="Eventi sportivi e partecipazione"
-                className="w-full h-64 object-cover"
-              />
-            </div>
-          </div>
-
-          <div className="mt-6 flex gap-3">
-            <Button className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-white">
-              Partecipa
-            </Button>
-            <Button
-              variant="outline"
-              className="rounded-2xl !border-[#4A4A4A] !text-[#4A4A4A] hover:!border-[#C8A14A] hover:!text-[#C8A14A]"
-            >
-              Scarica modulistica
             </Button>
           </div>
         </div>
