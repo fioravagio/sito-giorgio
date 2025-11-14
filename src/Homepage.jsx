@@ -527,8 +527,8 @@ export default function Homepage() {
             il commercio di prossimità e gli spazi pubblici.
           </p>
 
-          {/* GALLERY TERRITORIO + TIGRE */}
-          <div className="mt-6 grid md:grid-cols-4 gap-4">
+          {/* GALLERY TERRITORIO */}
+         <div className="mt-6 grid md:grid-cols-3 gap-4">
             <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
               <img
                 src="/assets/territorio-legumi-negozio.jpg"
@@ -538,22 +538,15 @@ export default function Homepage() {
             </div>
             <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
               <img
-                src="/assets/retail-tigre-ingresso.jpg"
-                alt="Ingresso inaugurazione Tigre"
+                src="/assets/civica-gransasso-gruppo.jpg"
+                alt="Gruppo su Campo Imperatore"
                 className="w-full h-64 object-cover"
               />
             </div>
             <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
               <img
-                src="/assets/retail-tigre-taglio-nastro.jpg"
-                alt="Taglio del nastro Tigre"
-                className="w-full h-64 object-cover"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
-              <img
-                src="/assets/tennis-foro-folla.jpg"
-                alt="Eventi sportivi e partecipazione"
+                src="/assets/civica-conferenza.jpg"
+                alt="Conferenza sul territorio"
                 className="w-full h-64 object-cover"
               />
             </div>
@@ -583,14 +576,18 @@ export default function Homepage() {
             locali, ristoranti e format privati.
           </p>
 
-          {/* GALLERY DJ: SET + LOCANDINE */}
-          <div className="mt-6 grid md:grid-cols-3 gap-4">
+{/* GALLERY DJ: tutte le foto DJ */}
+          <div className="mt-6 grid sm:grid-cols-2 md:grid-cols-4 gap-4">
             {[
               "dj-aperitivo-terrazza.jpg",
               "dj-club-folla.jpg",
               "dj-spiaggia-amici.jpg",
+              "dj-indoor.jpg",
+              "dj-palco-amici.jpg",
+              "dj-pioneer.jpg",
               "grafica-dj-mamarita.jpg",
               "grafica-dj-donna-zelinda.jpg",
+              "hero-dj.jpg",
             ].map((src) => (
               <div
                 key={src}
@@ -668,6 +665,7 @@ export default function Homepage() {
             solo.
           </p>
 
+  {/* 3 foto hero */}
           <div className="mt-6 grid md:grid-cols-3 gap-4">
             <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
               <img
@@ -692,6 +690,24 @@ export default function Homepage() {
             </div>
           </div>
 
+          {/* Carousel con TUTTE le foto moto */}
+          <div className="mt-8">
+            <h3 className="text-sm font-semibold text-zinc-700 mb-2">
+              Galleria mototurismo
+            </h3>
+            <ImageCarousel
+              items={[
+                "moto-alpi-neve.jpg",
+                "moto-appennino-strada.jpg",
+                "moto-curve.jpg",
+                "moto-dolomiti.jpg",
+                "moto-gruppo-bosco.jpg",
+                "moto-selfie-montagna.jpg",
+                "moto-stelvio.jpg",
+                "neve-altopiano-selfie.jpg",
+              ]}
+            />
+          </div>
           <div className="mt-6 flex gap-3">
             <a
               href="https://www.facebook.com/GranSassoBikers/"
