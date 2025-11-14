@@ -14,6 +14,7 @@ import {
   CardHeader,
   CardTitle,
 } from "../components/ui/card";
+import { Link } from "react-router-dom";
 
 /* ---- DATI FOTO POLITICA ---- */
 
@@ -179,9 +180,9 @@ export default function CivicaPoliticaPage() {
           </a>
 
           <nav className="flex flex-1 justify-center gap-3 md:gap-6 text-xs md:text-sm text-zinc-700 flex-wrap">
-            <a href="/civica" className="hover:text-zinc-900">
-              Civica/Politica
-            </a>
+           <Link to="/civica" className="hover:text-zinc-900">
+  Civica/Politica
+</Link>
             <a href="/#associazionismo" className="hover:text-zinc-900">
               Territorio &amp; Associazionismo
             </a>

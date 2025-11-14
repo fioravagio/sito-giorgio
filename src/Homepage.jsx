@@ -13,6 +13,7 @@ import {
 import { Button } from "./components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "./components/ui/card";
 import { Input } from "./components/ui/input";
+import { Link } from "react-router-dom";
 
 /* ---------- DATI ---------- */
 
@@ -373,9 +374,9 @@ export default function Homepage() {
 
           {/* Nav SEMPRE visibile, in ordine come le sezioni */}
           <nav className="flex flex-1 justify-center gap-3 md:gap-6 text-xs md:text-sm text-zinc-700 flex-wrap">
-<a href="/civica" className="hover:text-zinc-900">
+<Link to="/civica" className="hover:text-zinc-900">
   Civica/Politica
-</a>
+</Link>
             <a href="#associazionismo" className="hover:text-zinc-900">
               Territorio &amp; Associazionismo
             </a>
