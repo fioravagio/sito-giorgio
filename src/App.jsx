@@ -359,21 +359,28 @@ export default function Homepage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#F0EFEB] via-white to-[#F0EFEB] text-[#111111]">
-      {/* NAVBAR */}
+    
+    {/* NAVBAR */}
       <header className="sticky top-0 z-40 backdrop-blur bg-white/75 border-b border-zinc-200">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <a href="#home" className="font-semibold tracking-tight text-xl">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center gap-4">
+          {/* Logo a sinistra */}
+          <a
+            href="#home"
+            className="font-semibold tracking-tight text-xl whitespace-nowrap"
+          >
             Giorgio Fioravanti
           </a>
-          <nav className="hidden md:flex gap-6 text-sm text-zinc-700">
-            <a href="#dj" className="hover:text-zinc-900">
-              DJ & Eventi
-            </a>
+
+          {/* Nav SEMPRE visibile, in ordine come le sezioni */}
+          <nav className="flex flex-1 justify-center gap-3 md:gap-6 text-xs md:text-sm text-zinc-700 flex-wrap">
             <a href="#civica" className="hover:text-zinc-900">
               Civica/Politica
             </a>
             <a href="#associazionismo" className="hover:text-zinc-900">
-              Territorio & Associazionismo
+              Territorio &amp; Associazionismo
+            </a>
+            <a href="#dj" className="hover:text-zinc-900">
+              DJ &amp; Eventi
             </a>
             <a href="#mototurismo" className="hover:text-zinc-900">
               Mototurismo
@@ -388,13 +395,18 @@ export default function Homepage() {
               Contatti
             </a>
           </nav>
-          <div className="hidden md:block">
-            <Button className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-white">
-              Prenota
-            </Button>
+
+          {/* Pulsante a destra → scroll a contatti, SEMPRE visibile */}
+          <div className="flex-shrink-0">
+            <a href="#contatti">
+              <Button className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-white text-xs md:text-sm px-3 md:px-4">
+                Contattami
+              </Button>
+            </a>
           </div>
         </div>
       </header>
+
 
       {/* HERO */}
       <section id="home" className="relative overflow-hidden">
