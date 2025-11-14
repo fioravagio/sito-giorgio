@@ -81,6 +81,7 @@ const upcoming = [
     href: "#",
   },
 ];
+
 const experiencesTimeline = [
   {
     tag: "Mototurismo",
@@ -111,6 +112,7 @@ const experiencePhotos = [
   "exp-caseificio-vannulo.jpg",
   "exp-montagna-selfie.jpg",
 ];
+
 const liveConcertPhotos = [
   "live-anfiteatro.jpg",
   "live-festival-birra.jpg",
@@ -118,76 +120,127 @@ const liveConcertPhotos = [
   "live-olimpico-scale.jpg",
   "live-stadio-parterre.jpg",
 ];
+
 const politicsPhotos = [
   {
     src: "politica-card-campo-imperatore.jpg",
     label: "Campo Imperatore",
-    caption: "Lavoro politico sulla montagna e sul turismo in quota.",
+    caption:
+      "Lavoro politico sulla montagna e sul turismo in quota: strategia per L'Aquila città di montagna.",
   },
   {
     src: "politica-evento-arta.jpg",
     label: "Eventi sul territorio",
-    caption: "Incontro istituzionale con gli enti regionali.",
+    caption:
+      "Incontro istituzionale con gli enti regionali su ambiente e sviluppo.",
   },
   {
     src: "politica-cena-gruppo.jpg",
-    label: "Campagna elettorale",
-    caption: "Cena di sostegno con militanti e simpatizzanti.",
+    label: "Cena con sostenitori",
+    caption:
+      "Serata di confronto e sostegno con militanti, amici e simpatizzanti.",
   },
   {
     src: "politica-serata-applausi.jpg",
-    label: "Credo negli Italiani",
-    caption: "Momenti di militanza e impegno nella sede di partito.",
+    label: "Serata di comizio",
+    caption:
+      "Applausi e partecipazione durante un evento pubblico in città.",
   },
   {
-    src: "pol-card-biondi-sindaco.jpg",
-    label: "Con Biondi sindaco",
-    caption: "Materiale grafico per il sostegno alla coalizione.",
+    src: "politica-montagna-incontro.jpg",
+    label: "Incontro in montagna",
+    caption:
+      "Sopralluoghi e confronti sulle politiche per la montagna aquilana.",
   },
   {
-    src: "pol-card-aperitivo-chiusura.jpg",
-    label: "Aperitivo di chiusura",
-    caption: "Invito ufficiale alla chiusura della campagna elettorale.",
+    src: "politica-montagna-sopralluogo.jpg",
+    label: "Sopralluogo Gran Sasso",
+    caption:
+      "Verifica sul campo delle criticità e delle opportunità turistiche.",
+  },
+  {
+    src: "politica-salvini-palco.jpg",
+    label: "Comizio nazionale",
+    caption:
+      "Selfie dal palco durante un grande evento politico con i vertici nazionali.",
+  },
+  {
+    src: "politica-incontro-elettorale-01.jpg",
+    label: "Incontro elettorale",
+    caption:
+      "Momenti di confronto diretto con i cittadini durante la campagna.",
+  },
+  {
+    src: "politica-incontro-elettorale-02.jpg",
+    label: "Incontro elettorale",
+    caption:
+      "Dialogo con amministratori e rappresentanti del territorio.",
+  },
+  {
+    src: "politica-incontro-elettorale-03.jpg",
+    label: "Incontro elettorale",
+    caption:
+      "Serata di campagna elettorale in centro città.",
+  },
+  {
+    src: "politica-camion-manifesto.jpg",
+    label: "Camion vela",
+    caption:
+      "Il messaggio elettorale in movimento tra quartieri e frazioni.",
   },
   {
     src: "pol-camion-manifesto-centro.jpg",
-    label: "Camion vela in centro",
-    caption: "Promozione elettorale nelle principali vie della città.",
+    label: "Camion in centro",
+    caption:
+      "Mezzo pubblicitario davanti ai luoghi simbolo della città.",
   },
   {
     src: "pol-maxi-impianto-pubblicitario.jpg",
     label: "Maxi impianto",
-    caption: "Manifesto stradale con il claim “L’Aquila che voglio”.",
+    caption:
+      "Manifesto stradale con il claim “L’Aquila che voglio”.",
   },
   {
-    src: "pol-torta-volantini.jpg",
-    label: "Torta elettorale",
-    caption: "Un modo diverso per far circolare biglietti e messaggi.",
+    src: "pol-card-biondi-sindaco.jpg",
+    label: "Con Biondi sindaco",
+    caption:
+      "Grafica ufficiale a sostegno della coalizione di centrodestra.",
   },
   {
-    src: "pol-card-sassa-scuola.jpg",
-    label: "Sassa – Scuola",
-    caption: "Comunicato sulla riqualificazione dell’area scolastica.",
-  },
-  {
-    src: "pol-riunione-lega-abruzzo.jpg",
-    label: "Lega Abruzzo",
-    caption: "Riunione di coordinamento nella sede provinciale.",
-  },
-  {
-    src: "politica-salvini-palco.jpg",
-    label: "Comizio serale",
-    caption: "Selfie dal palco durante un grande evento politico.",
+    src: "pol-card-aperitivo-chiusura.jpg",
+    label: "Aperitivo di chiusura",
+    caption:
+      "Invito per l’evento di chiusura della campagna elettorale.",
   },
   {
     src: "pol-card-candidatura-annuncio.jpg",
     label: "Annuncio di candidatura",
-    caption: "Post ufficiale sulla candidatura al Consiglio comunale.",
+    caption:
+      "Post ufficiale che presenta la candidatura al Consiglio comunale.",
+  },
+  {
+    src: "pol-card-sassa-scuola.jpg",
+    label: "Sassa – Scuola",
+    caption:
+      "Comunicato sulla riqualificazione dell’ex sito scolastico di Sassa.",
+  },
+  {
+    src: "pol-torta-volantini.jpg",
+    label: "Torta elettorale",
+    caption:
+      "Una torta scenografica per distribuire biglietti e messaggi.",
+  },
+  {
+    src: "pol-riunione-lega-abruzzo.jpg",
+    label: "Lega Abruzzo",
+    caption:
+      "Riunione operativa nella sede provinciale del partito.",
   },
   {
     src: "pol-trio-comizio-serale.jpg",
     label: "Team sul territorio",
-    caption: "Serata di comizio con amministratori e amici.",
+    caption:
+      "Serata di comizio insieme a colleghi e amministratori.",
   },
 ];
 
@@ -203,6 +256,7 @@ function SectionTitle({ icon: Icon, children }) {
     </div>
   );
 }
+
 function ImageCarousel({ items }) {
   // Normalizzo: accetto sia array di stringhe che di oggetti
   const normalized = items.map((item) => {
@@ -214,7 +268,6 @@ function ImageCarousel({ items }) {
       };
     }
 
-    // oggetto { src, label, caption/alt }
     const baseSrc = item.src?.startsWith("/assets")
       ? item.src
       : `/assets/${item.src}`;
@@ -298,6 +351,7 @@ function TimelineList({ items }) {
     </ol>
   );
 }
+
 /* ---------- PAGINA ---------- */
 
 export default function Homepage() {
@@ -358,7 +412,7 @@ export default function Homepage() {
               </motion.h1>
 
               <p className="mt-4 text-lg text-zinc-600 max-w-prose">
-                DJ & organizzatore di eventi, attivo nei progetti civici
+                DJ &amp; organizzatore di eventi, attivo nei progetti civici
                 dell&apos;Aquila, creator su YouTube e graphic designer. Un
                 unico hub per tutto ciò che faccio: chiaro, rapido, di qualità.
               </p>
@@ -406,85 +460,50 @@ export default function Homepage() {
               </div>
             </div>
 
-            {/* HERO IMAGE */}
+            {/* HERO IMAGE – POLITICA & GRAN SASSO */}
             <div className="lg:col-span-5">
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.08)] ring-1 ring-zinc-200 bg-zinc-100">
                 <img
-                  src="/assets/hero-dj.jpg"
-                  alt="Giorgio Fioravanti — DJ & Eventi"
+                  src="/assets/pol-hero-gransasso.jpg"
+                  alt="Giorgio Fioravanti a Campo Imperatore"
                   className="absolute inset-0 h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-white/10 to-transparent" />
                 <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-3 py-2 rounded-xl border border-zinc-200 shadow">
                   <span className="text-xs font-medium">
-                    DJ &amp; Eventi
+                    Attività politica &amp; civica
                   </span>
                 </div>
               </div>
               <div className="mt-3 text-xs text-zinc-500">
-                Atmosfera elegante, accenti dorati leggeri.
+                Campo Imperatore, L’Aquila — identità, territorio, futuro.
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* POLITICA / CIVICA */}
-<section
-  id="civica"
-  className="py-16 bg-gradient-to-b from-[#F0EFEB] to-white"
->
-  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <SectionTitle icon={Megaphone}>
-      Attività Civica/Politica
-    </SectionTitle>
-    <p className="mt-3 text-zinc-600 max-w-prose">
-      L’Aquila Città di Montagna: eventi sostenibili, sport, turismo,
-      spazi per giovani e cultura. Aggiornamenti, documenti e iniziative
-      con amministratori e rappresentanti politici.
-    </p>
 
-    {/* due immagini principali */}
-    <div className="mt-6 grid md:grid-cols-2 gap-6">
-      <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
-        <img
-          src="/assets/civica-conferenza.jpg"
-          alt="Conferenza stampa L'Aquila Città di Montagna"
-          className="w-full h-72 object-cover"
-        />
-      </div>
-      <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
-        <img
-          src="/assets/civica-gransasso-gruppo.jpg"
-          alt="Foto con rappresentanti politici sul territorio"
-          className="w-full h-72 object-cover"
-        />
-      </div>
-    </div>
+      {/* CIVICA / POLITICA */}
+      <section id="civica" className="py-16 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionTitle icon={Megaphone}>
+            Attività civica &amp; politica
+          </SectionTitle>
 
-    {/* carosello campagne & incontri */}
-    <div className="mt-10">
-      <h3 className="font-display text-xl font-bold text-[#111111]">
-        Campagne, incontri e territorio
-      </h3>
-      <p className="mt-1 text-sm text-zinc-600 max-w-prose">
-        Alcuni momenti del lavoro politico: Campo Imperatore, incontri
-        con ministri e amministratori, campagne elettorali e riunioni di
-        partito.
-      </p>
-      <ImageCarousel items={politicsPhotos} />
-    </div>
+          <p className="mt-3 text-zinc-600 max-w-prose">
+            Impegno per L&apos;Aquila tra montagna, quartieri e centro storico:
+            proposte per il turismo, lo sport, gli spazi urbani e la
+            partecipazione dei cittadini. Dalle campagne elettorali ai progetti
+            su Campo Imperatore e Gran Sasso.
+          </p>
 
-    <div className="mt-6">
-      <Button
-        variant="outline"
-        className="rounded-2xl !border-[#4A4A4A] !text-[#4A4A4A] hover:!border-[#C8A14A] hover:!text-[#C8A14A]"
-      >
-        Leggi tutte le iniziative
-      </Button>
-    </div>
-  </div>
-</section>
-{/* TERRITORIO & ASSOCIAZIONISMO */}
+          <div className="mt-6">
+            <ImageCarousel items={politicsPhotos} />
+          </div>
+        </div>
+      </section>
+
+      {/* TERRITORIO & ASSOCIAZIONISMO */}
       <section id="associazionismo" className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionTitle icon={Users}>
@@ -541,7 +560,7 @@ export default function Homepage() {
           </div>
         </div>
       </section>
-      
+
       {/* DJ & EVENTI */}
       <section id="dj" className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -583,8 +602,7 @@ export default function Homepage() {
               >
                 <CardHeader className="pb-2">
                   <CardTitle className="text-base flex items-center gap-2">
-                    <Calendar className="h-4 w-4 text-[#C8A14A]" />{" "}
-                    {ev.title}
+                    <Calendar className="h-4 w-4 text-[#C8A14A]" /> {ev.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="text-sm text-zinc-600">
@@ -683,88 +701,92 @@ export default function Homepage() {
       </section>
 
       {/* YOUTUBE */}
-<section id="youtube" className="py-16 bg-white">
-  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <SectionTitle icon={Youtube}>YouTube &amp; Media</SectionTitle>
-    <p className="mt-3 text-zinc-600 max-w-prose">
-      Highlights da concerti e contenuti DJ. Iscriviti per supportare il canale{" "}
-      <span className="font-medium">@fioravanti81</span> e scoprire i video
-      della playlist{" "}
-      <span className="font-medium">“Live (concerti)”</span>.
-    </p>
-
-    <div className="mt-6 grid md:grid-cols-2 gap-6">
-      {/* Embed playlist YouTube corretta */}
-      <div className="aspect-video rounded-2xl overflow-hidden ring-1 ring-zinc-200 bg-zinc-100">
-        <iframe
-          className="w-full h-full"
-          src="https://www.youtube.com/embed/videoseries?list=PLccUvT8MuupAVZkBYqoqBoTU42b9Zy5sV"
-          title="Playlist Live (concerti) — fioravanti81"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        />
-      </div>
-
-      <Card className="rounded-2xl bg-white border border-zinc-200">
-        <CardHeader>
-          <CardTitle className="text-base">Ultimi contenuti</CardTitle>
-        </CardHeader>
-        <CardContent className="text-sm text-zinc-600 space-y-3">
-          <div className="flex items-center justify-between">
-            <span>Playlist “Live (concerti)”</span>
-            <a
-              className="text-sm font-medium text-[#C8A14A] hover:underline"
-              href="https://www.youtube.com/playlist?list=PLccUvT8MuupAVZkBYqoqBoTU42b9Zy5sV"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Apri playlist
-            </a>
-          </div>
-          <div className="flex items-center justify-between">
-            <span>Canale YouTube @fioravanti81</span>
-            <a
-              className="text-sm font-medium text-[#C8A14A] hover:underline"
-              href="https://www.youtube.com/@fioravanti81"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Vai al canale
-            </a>
-          </div>
-          <div className="flex items-center justify-between">
-            <span>Clip dai DJ set</span>
-            <a
-              className="text-sm font-medium text-[#C8A14A] hover:underline"
-              href="https://www.youtube.com/@fioravanti81/videos"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Guarda i video
-            </a>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-
-    {/* Carousel foto concerti */}
-    <div className="mt-10">
-      <h3 className="font-display text-xl font-bold text-[#111111]">
-        Live (concerti) — galleria foto
-      </h3>
-      <p className="mt-1 text-sm text-zinc-600 max-w-prose">
-        Alcuni momenti dai concerti in Italia: anfiteatri, stadi e festival che
-        diventano contenuti video sul canale.
-      </p>
-      <ImageCarousel items={liveConcertPhotos} />
-    </div>
-  </div>
-</section>
-
-  {/* TIMELINE ESPERIENZE */}
-      <section id="timeline" className="py-16 bg-gradient-to-b from-white to-[#F7F5EF]">
+      <section id="youtube" className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionTitle icon={Users}>Timeline — esperienze e passioni</SectionTitle>
+          <SectionTitle icon={Youtube}>YouTube &amp; Media</SectionTitle>
+          <p className="mt-3 text-zinc-600 max-w-prose">
+            Highlights da concerti e contenuti DJ. Iscriviti per supportare il
+            canale{" "}
+            <span className="font-medium">@fioravanti81</span> e scoprire i
+            video della playlist{" "}
+            <span className="font-medium">“Live (concerti)”</span>.
+          </p>
+
+          <div className="mt-6 grid md:grid-cols-2 gap-6">
+            <div className="aspect-video rounded-2xl overflow-hidden ring-1 ring-zinc-200 bg-zinc-100">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/videoseries?list=PLccUvT8MuupAVZkBYqoqBoTU42b9Zy5sV"
+                title="Playlist Live (concerti) — fioravanti81"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+
+            <Card className="rounded-2xl bg-white border border-zinc-200">
+              <CardHeader>
+                <CardTitle className="text-base">Ultimi contenuti</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-zinc-600 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span>Playlist “Live (concerti)”</span>
+                  <a
+                    className="text-sm font-medium text-[#C8A14A] hover:underline"
+                    href="https://www.youtube.com/playlist?list=PLccUvT8MuupAVZkBYqoqBoTU42b9Zy5sV"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Apri playlist
+                  </a>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span>Canale YouTube @fioravanti81</span>
+                  <a
+                    className="text-sm font-medium text-[#C8A14A] hover:underline"
+                    href="https://www.youtube.com/@fioravanti81"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Vai al canale
+                  </a>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span>Clip dai DJ set</span>
+                  <a
+                    className="text-sm font-medium text-[#C8A14A] hover:underline"
+                    href="https://www.youtube.com/@fioravanti81/videos"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Guarda i video
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-10">
+            <h3 className="font-display text-xl font-bold text-[#111111]">
+              Live (concerti) — galleria foto
+            </h3>
+            <p className="mt-1 text-sm text-zinc-600 max-w-prose">
+              Alcuni momenti dai concerti in Italia: anfiteatri, stadi e
+              festival che diventano contenuti video sul canale.
+            </p>
+            <ImageCarousel items={liveConcertPhotos} />
+          </div>
+        </div>
+      </section>
+
+      {/* TIMELINE ESPERIENZE */}
+      <section
+        id="timeline"
+        className="py-16 bg-gradient-to-b from-white to-[#F7F5EF]"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionTitle icon={Users}>
+            Timeline — esperienze e passioni
+          </SectionTitle>
           <p className="mt-3 text-zinc-600 max-w-prose">
             Una panoramica veloce di quello che faccio fuori dalle etichette:
             mototurismo, montagna, concerti dal vivo e tempo libero. Ogni voce
@@ -772,11 +794,9 @@ export default function Homepage() {
             iniziative sul territorio.
           </p>
 
-          {/* Timeline SOLO TESTO */}
           <div className="mt-8 space-y-6">
             {experiencesTimeline.map((item) => (
               <div key={item.title} className="relative pl-6">
-                {/* linea verticale */}
                 <div className="absolute left-0 top-2 bottom-0 w-px bg-zinc-200" />
                 <div className="flex items-start gap-3">
                   <div className="mt-2 h-2.5 w-2.5 rounded-full bg-[#C8A14A]" />
@@ -787,16 +807,13 @@ export default function Homepage() {
                     <div className="mt-1 font-semibold text-zinc-900">
                       {item.title}
                     </div>
-                    <p className="mt-1 text-sm text-zinc-600">
-                      {item.text}
-                    </p>
+                    <p className="mt-1 text-sm text-zinc-600">{item.text}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Galleria esperienze & passioni (orizzontale) */}
           <div className="mt-8">
             <h3 className="text-sm font-semibold text-zinc-700 mb-2">
               Galleria esperienze &amp; passioni
@@ -886,7 +903,7 @@ export default function Homepage() {
                 />
                 <Button
                   type="submit"
-                  className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-white"
+                  className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-[#C8A14A]"
                 >
                   Iscriviti
                 </Button>
