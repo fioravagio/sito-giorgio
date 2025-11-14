@@ -21,42 +21,48 @@ const activities = [
   {
     icon: Megaphone,
     title: "Attività Civica/Politica",
-    desc: "Progetti per L'Aquila: turismo, sport, spazi urbani, partecipazione.",
+    desc:
+      "Progetti per L’Aquila, visione per il territorio, ascolto dei cittadini, iniziative nei quartieri e sulla montagna.",
     cta: "Scopri iniziative",
-    href: "#civica",
+    href: "/civica",
   },
   {
     icon: Users,
     title: "Territorio & Associazionismo",
-    desc: "Reti locali, comitati e progettazione dal basso per valorizzare il territorio.",
+    desc:
+      "Collaborazione con associazioni, comitati e realtà locali per eventi, spazi pubblici e iniziative di valore.",
     cta: "Partecipa",
     href: "#associazionismo",
   },
   {
     icon: Headphones,
     title: "DJ & Eventi",
-    desc: "Selezioni House/Amapiano, format eleganti, gestione tecnica e comunicazione.",
+    desc:
+      "Format eleganti, musica per ristoranti e locali, gestione tecnica e comunicazione per serate e iniziative.",
     cta: "Prenota un DJ Set",
     href: "#dj",
   },
   {
     icon: Youtube,
     title: "YouTube & Media",
-    desc: "Clip da concerti, DJ content e storytelling del territorio.",
+    desc:
+      "Racconti dal territorio, musica live, concerti e contenuti video che valorizzano identità e tradizioni.",
     cta: "Guarda i video",
     href: "#youtube",
   },
   {
     icon: Palette,
     title: "Grafica & Branding",
-    desc: "Volantini supermercati, loghi, layout social e stampa.",
+    desc:
+      "Volantini professionali per supermercati, branding aziendale, progetti di comunicazione e stampa.",
     cta: "Vedi portfolio",
     href: "#design",
   },
   {
     icon: Users,
     title: "Mototurismo",
-    desc: "Itinerari, eventi e turismo su due ruote. Community Gran Sasso Bikers.",
+    desc:
+      "Esperienze sulle strade d’Abruzzo e non solo: paesaggi, comunità e passione raccontati attraverso la guida.",
     cta: "Scopri la community",
     href: "#mototurismo",
   },
@@ -415,40 +421,35 @@ export default function Homepage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24 relative">
           <div className="grid lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7">
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="font-display text-4xl md:text-5xl font-extrabold leading-tight tracking-tight"
-              >
-                Musica, Territorio, Design.
-              </motion.h1>
+             <motion.h1
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  className="font-display text-4xl md:text-5xl font-extrabold leading-tight tracking-tight"
+>
+  Territorio, Eventi, Design.
+</motion.h1>
 
               <p className="mt-4 text-lg text-zinc-600 max-w-prose">
-                DJ &amp; organizzatore di eventi, attivo nei progetti civici
-                dell&apos;Aquila, creator su YouTube e graphic designer. Un
-                unico hub per tutto ciò che faccio: chiaro, rapido, di qualità.
-              </p>
+  Attivo nei progetti civici e politici per L’Aquila, impegnato nel 
+  territorio, nei quartieri e nelle iniziative associative. Mi occupo 
+  dell’organizzazione di eventi e format, unendo comunicazione, tecnica 
+  e gestione operativa. Lavoro nella grafica per supermercati e attività 
+  commerciali, sviluppando volantini, branding e materiali professionali. 
+  Racconto il territorio anche attraverso mototurismo, contenuti multimediali 
+  e attività culturali. Un unico hub che unisce responsabilità, creatività 
+  ed esperienza.
+</p>
 
               {/* BOTTONI HERO */}
-              <div className="mt-6 flex flex-wrap gap-3">
-                <Button
-                  size="lg"
-                  className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-white"
-                >
-                  Prenota SUBITO un DJ Set{" "}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="rounded-2xl !border-[#4A4A4A] !text-[#4A4A4A] hover:!border-[#C8A14A] hover:!text-[#C8A14A]"
-                >
-                  Scrivimi
-                </Button>
-              </div>
-
+            <div className="mt-6 flex flex-wrap gap-3">
+  <Button
+    size="lg"
+    className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-white"
+  >
+    Scrivimi
+  </Button>
+</div>
               {/* MINI GRID ATTIVITÀ */}
               <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
                 {activities.map((a) => (
