@@ -10,10 +10,10 @@ import {
   Youtube,
   Users,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "./components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "./components/ui/card";
 import { Input } from "./components/ui/input";
-import { Link } from "react-router-dom";
 
 /* ---------- DATI ---------- */
 
@@ -186,8 +186,7 @@ const politicsPhotos = [
   {
     src: "politica-incontro-elettorale-03.jpg",
     label: "Incontro elettorale",
-    caption:
-      "Serata di campagna elettorale in centro città.",
+    caption: "Serata di campagna elettorale in centro città.",
   },
   {
     src: "politica-camion-manifesto.jpg",
@@ -204,8 +203,7 @@ const politicsPhotos = [
   {
     src: "pol-maxi-impianto-pubblicitario.jpg",
     label: "Maxi impianto",
-    caption:
-      "Manifesto stradale con il claim “L’Aquila che voglio”.",
+    caption: "Manifesto stradale con il claim “L’Aquila che voglio”.",
   },
   {
     src: "pol-card-biondi-sindaco.jpg",
@@ -325,40 +323,6 @@ function ImageCarousel({ items }) {
   );
 }
 
-function TimelineList({ items }) {
-  return (
-    <ol className="relative mt-6 border-l border-zinc-200 space-y-6">
-      {items.map((item) => (
-        <li key={item.title} className="ml-4">
-          <div className="absolute -left-1.5 mt-1 h-3 w-3 rounded-full border border-white bg-[#C8A14A]" />
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="md:w-1/3">
-              <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">
-                {item.year}
-              </p>
-              <h3 className="text-sm font-semibold text-zinc-900">
-                {item.title}
-              </h3>
-              <p className="mt-1 text-sm text-zinc-600">{item.desc}</p>
-            </div>
-            {item.img && (
-              <div className="md:flex-1">
-                <div className="rounded-2xl overflow-hidden ring-1 ring-zinc-200 bg-zinc-100">
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    className="w-full h-40 md:h-48 object-cover"
-                  />
-                </div>
-              </div>
-            )}
-          </div>
-        </li>
-      ))}
-    </ol>
-  );
-}
-
 /* ---------- PAGINA ---------- */
 
 export default function Homepage() {
@@ -366,8 +330,7 @@ export default function Homepage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#F0EFEB] via-white to-[#F0EFEB] text-[#111111]">
-    
-    {/* NAVBAR */}
+      {/* NAVBAR */}
       <header className="sticky top-0 z-40 backdrop-blur bg-white/75 border-b border-zinc-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center gap-4">
           {/* Logo a sinistra */}
@@ -380,9 +343,9 @@ export default function Homepage() {
 
           {/* Nav SEMPRE visibile, in ordine come le sezioni */}
           <nav className="flex flex-1 justify-center gap-3 md:gap-6 text-xs md:text-sm text-zinc-700 flex-wrap">
-<Link to="/civica" className="hover:text-zinc-900">
-  Civica/Politica
-</Link>
+            <Link to="/civica" className="hover:text-zinc-900">
+              Civica/Politica
+            </Link>
             <a href="#associazionismo" className="hover:text-zinc-900">
               Territorio &amp; Associazionismo
             </a>
@@ -403,9 +366,13 @@ export default function Homepage() {
             </a>
           </nav>
 
-          {/* Pulsante a destra → scroll a contatti, SEMPRE visibile */}
+          {/* Pulsante a destra → Messenger */}
           <div className="flex-shrink-0">
-            <a href="#contatti">
+            <a
+              href="https://m.me/giorgio.fioravanti"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Button className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-white text-xs md:text-sm px-3 md:px-4">
                 Contattami
               </Button>
@@ -414,42 +381,45 @@ export default function Homepage() {
         </div>
       </header>
 
-
       {/* HERO */}
       <section id="home" className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(900px_520px_at_80%_-10%,rgba(200,161,74,0.18),transparent),radial-gradient(900px_520px_at_10%_120%,rgba(200,161,74,0.12),transparent)] pointer-events-none" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24 relative">
           <div className="grid lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7">
-             <motion.h1
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  className="font-display text-4xl md:text-5xl font-extrabold leading-tight tracking-tight"
->
-  Territorio, Eventi, Design.
-</motion.h1>
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="font-display text-4xl md:text-5xl font-extrabold leading-tight tracking-tight"
+              >
+                Territorio, Eventi, Design.
+              </motion.h1>
 
               <p className="mt-4 text-lg text-zinc-600 max-w-prose">
-  Attivo nei progetti civici e politici per L’Aquila, impegnato nel 
-  territorio, nei quartieri e nelle iniziative associative. Mi occupo 
-  dell’organizzazione di eventi e format, unendo comunicazione, tecnica 
-  e gestione operativa. Lavoro nella grafica per supermercati e attività 
-  commerciali, sviluppando volantini, branding e materiali professionali. 
-  Racconto il territorio anche attraverso mototurismo, contenuti multimediali 
-  e attività culturali. Un unico hub che unisce responsabilità, creatività 
-  ed esperienza.
-</p>
+                Attivo nei progetti civici e politici per L’Aquila, impegnato
+                nel territorio, nei quartieri e nelle iniziative associative.
+                Mi occupo dell’organizzazione di eventi e format, unendo
+                comunicazione, tecnica e gestione operativa. Lavoro nella
+                grafica per supermercati e attività commerciali, sviluppando
+                volantini, branding e materiali professionali. Racconto il
+                territorio anche attraverso mototurismo, contenuti
+                multimediali e attività culturali. Un unico hub che unisce
+                responsabilità, creatività ed esperienza.
+              </p>
 
               {/* BOTTONI HERO */}
-            <div className="mt-6 flex flex-wrap gap-3">
-  <Button
-    size="lg"
-    className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-white"
-  >
-    Scrivimi
-  </Button>
-</div>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a href="mailto:fioravagio@libero.it">
+                  <Button
+                    size="lg"
+                    className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-white"
+                  >
+                    Scrivimi
+                  </Button>
+                </a>
+              </div>
+
               {/* MINI GRID ATTIVITÀ */}
               <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
                 {activities.map((a) => (
@@ -465,7 +435,7 @@ export default function Homepage() {
                         href={a.href}
                         className="mt-2 inline-flex items-center text-sm font-medium text-[#C8A14A] hover:underline"
                       >
-                        {a.cta}{" "}
+                        {a.cta}
                         <ArrowRight className="ml-1 h-4 w-4" />
                       </a>
                     </CardContent>
@@ -529,8 +499,8 @@ export default function Homepage() {
             il commercio di prossimità e gli spazi pubblici.
           </p>
 
-          {/* GALLERY TERRITORIO */}
-         <div className="mt-6 grid md:grid-cols-3 gap-4">
+          {/* GALLERY TERRITORIO (solo territorio, niente Tigre / Foro) */}
+          <div className="mt-6 grid md:grid-cols-3 gap-4">
             <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
               <img
                 src="/assets/territorio-legumi-negozio.jpg"
@@ -541,7 +511,7 @@ export default function Homepage() {
             <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
               <img
                 src="/assets/civica-gransasso-gruppo.jpg"
-                alt="Gruppo su Campo Imperatore"
+                alt="Gruppo Gran Sasso"
                 className="w-full h-64 object-cover"
               />
             </div>
@@ -555,9 +525,11 @@ export default function Homepage() {
           </div>
 
           <div className="mt-6 flex gap-3">
-            <Button className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-white">
-              Partecipa
-            </Button>
+            <a href="mailto:fioravagio@libero.it">
+              <Button className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-white">
+                Partecipa
+              </Button>
+            </a>
             <Button
               variant="outline"
               className="rounded-2xl !border-[#4A4A4A] !text-[#4A4A4A] hover:!border-[#C8A14A] hover:!text-[#C8A14A]"
@@ -578,7 +550,7 @@ export default function Homepage() {
             locali, ristoranti e format privati.
           </p>
 
-{/* GALLERY DJ: tutte le foto DJ */}
+          {/* GALLERY DJ: tutte le foto DJ */}
           <div className="mt-6 grid sm:grid-cols-2 md:grid-cols-4 gap-4">
             {[
               "dj-aperitivo-terrazza.jpg",
@@ -626,7 +598,7 @@ export default function Homepage() {
                         href={ev.href}
                         className="inline-flex items-center font-medium text-[#C8A14A] hover:underline"
                       >
-                        Dettagli{" "}
+                        Dettagli
                         <ArrowRight className="ml-1 h-4 w-4" />
                       </a>
                     </div>
@@ -640,9 +612,11 @@ export default function Homepage() {
           </div>
 
           <div className="mt-6 flex gap-3">
-            <Button className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-white">
-              Richiedi disponibilità
-            </Button>
+            <a href="mailto:fioravagio@libero.it">
+              <Button className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-white">
+                Richiedi disponibilità
+              </Button>
+            </a>
             <Button
               variant="outline"
               className="rounded-2xl !border-[#4A4A4A] !text-[#4A4A4A] hover:!border-[#C8A14A] hover:!text-[#C8A14A]"
@@ -667,7 +641,7 @@ export default function Homepage() {
             solo.
           </p>
 
-  {/* 3 foto hero */}
+          {/* 3 FOTO HERO */}
           <div className="mt-6 grid md:grid-cols-3 gap-4">
             <div className="rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200">
               <img
@@ -692,7 +666,7 @@ export default function Homepage() {
             </div>
           </div>
 
-          {/* Carousel con TUTTE le foto moto */}
+          {/* CAROUSEL CON TUTTE LE FOTO MOTO */}
           <div className="mt-8">
             <h3 className="text-sm font-semibold text-zinc-700 mb-2">
               Galleria mototurismo
@@ -710,6 +684,7 @@ export default function Homepage() {
               ]}
             />
           </div>
+
           <div className="mt-6 flex gap-3">
             <a
               href="https://www.facebook.com/GranSassoBikers/"
@@ -720,12 +695,18 @@ export default function Homepage() {
                 Visita la community
               </Button>
             </a>
-            <Button
-              variant="outline"
-              className="rounded-2xl !border-[#4A4A4A] !text-[#4A4A4A] hover:!border-[#C8A14A] hover:!text-[#C8A14A]"
+            <a
+              href="https://m.me/GranSassoBikers"
+              target="_blank"
+              rel="noreferrer"
             >
-              Unisciti ai prossimi tour
-            </Button>
+              <Button
+                variant="outline"
+                className="rounded-2xl !border-[#4A4A4A] !text-[#4A4A4A] hover:!border-[#C8A14A] hover:!text-[#C8A14A]"
+              >
+                Unisciti ai prossimi tour
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -736,9 +717,8 @@ export default function Homepage() {
           <SectionTitle icon={Youtube}>YouTube &amp; Media</SectionTitle>
           <p className="mt-3 text-zinc-600 max-w-prose">
             Highlights da concerti e contenuti DJ. Iscriviti per supportare il
-            canale{" "}
-            <span className="font-medium">@fioravanti81</span> e scoprire i
-            video della playlist{" "}
+            canale <span className="font-medium">@fioravanti81</span> e
+            scoprire i video della playlist{" "}
             <span className="font-medium">“Live (concerti)”</span>.
           </p>
 
@@ -896,9 +876,11 @@ export default function Homepage() {
             ))}
           </div>
           <div className="mt-6 flex gap-3">
-            <Button className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-white">
-              Richiedi un preventivo
-            </Button>
+            <a href="mailto:fioravagio@libero.it">
+              <Button className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-white">
+                Richiedi un preventivo
+              </Button>
+            </a>
             <Button
               variant="outline"
               className="rounded-2xl !border-[#4A4A4A] !text-[#4A4A4A] hover:!border-[#C8A14A] hover:!text-[#C8A14A]"
@@ -951,9 +933,9 @@ export default function Homepage() {
                   Email:{" "}
                   <a
                     className="hover:underline text-[#C8A14A]"
-                    href="mailto:info@example.com"
+                    href="mailto:fioravagio@libero.it"
                   >
-                    info@example.com
+                    fioravagio@libero.it
                   </a>
                 </p>
                 <p>
