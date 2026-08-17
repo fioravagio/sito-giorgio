@@ -1,6 +1,6 @@
 export const SITE_NAME = "Giorgio Fioravanti";
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://sito-giorgio.vercel.app"
+  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://giorgiofioravanti.it"
 ).replace(/\/+$/, "");
 export const SITE_EMAIL = "fioravagio@libero.it";
 export const DEFAULT_SOCIAL_IMAGE = "/assets/pol-hero-gransasso.jpg";

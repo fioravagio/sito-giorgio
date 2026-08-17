@@ -26,7 +26,7 @@ Per configurare l’indirizzo pubblico e predisporre Search Console:
 cp .env.example .env.local
 ```
 
-`NEXT_PUBLIC_SITE_URL` deve contenere l’indirizzo pubblico definitivo senza
+`NEXT_PUBLIC_SITE_URL` deve contenere `https://giorgiofioravanti.it` senza
 barra finale. Le anteprime Vercel devono continuare a usare l’indirizzo canonico
 di produzione, per evitare duplicati nei motori di ricerca.
 
@@ -63,14 +63,12 @@ npm run images:optimize
 2. Scegliere la verifica tramite tag HTML e copiare soltanto il valore del
    campo `content` nella variabile Vercel `GOOGLE_SITE_VERIFICATION`.
 3. Pubblicare nuovamente il sito e completare la verifica in Search Console.
-4. Inviare `https://sito-giorgio.vercel.app/sitemap.xml`, oppure lo stesso
-   percorso sul futuro dominio personale.
+4. Inviare `https://giorgiofioravanti.it/sitemap.xml`.
 5. Controllare dopo alcuni giorni indicizzazione, usabilità mobile e Core Web
    Vitals.
 
-Se in futuro viene collegato un dominio personale, aggiornare `SITE_URL` in
-`src/lib/site.js`, configurare il redirect permanente dal dominio precedente e
-registrare il nuovo dominio in Search Console.
+L’indirizzo tecnico `sito-giorgio.vercel.app` viene reindirizzato in modo
+permanente al dominio personale per evitare contenuti duplicati.
 
 ## Protezioni e privacy
 

@@ -172,6 +172,17 @@ for (const page of pages) {
 if (nextConfig.trailingSlash !== true) {
   problems.push("Next.js non impone URL con barra finale");
 }
+const redirects = await nextConfig.redirects();
+const legacyDomainRedirect = redirects.find(
+  (redirect) =>
+    redirect.has?.some(
+      (condition) =>
+        condition.type === "host" && condition.value === "sito-giorgio.vercel.app",
+    ) && redirect.destination === `${SITE_URL}/:path*`,
+);
+if (!legacyDomainRedirect?.permanent) {
+  problems.push("redirect permanente dal dominio Vercel al dominio personale assente");
+}
 const headers = await nextConfig.headers();
 const securityHeaderNames = new Set(
   headers.flatMap((rule) => rule.headers || []).map((item) => item.key.toLowerCase()),

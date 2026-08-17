@@ -61,6 +61,21 @@ const nextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "sito-giorgio.vercel.app",
+          },
+        ],
+        destination: "https://giorgiofioravanti.it/:path*",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
