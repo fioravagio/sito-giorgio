@@ -1,0 +1,329 @@
+{
+  "version": 1,
+  "assets": {
+    "civica-conferenza.jpg": {
+      "sha256": "5882f7778e652128cd0eb8a1213230a4ae11989573772ef41914cf4349f77b81",
+      "bytes": 49538,
+      "width": 1159,
+      "height": 869
+    },
+    "civica-gransasso-gruppo.jpg": {
+      "sha256": "bc7141556e049d52453260894c17cc346e705bd40b0095128841b91c31204c19",
+      "bytes": 85575,
+      "width": 960,
+      "height": 720
+    },
+    "dj-aperitivo-terrazza.jpg": {
+      "sha256": "e78a86d3daa0b30d12b1eeb8b4a1895e8246dbdec3d18759954ac7006f6f8fcb",
+      "bytes": 630915,
+      "width": 2048,
+      "height": 1536
+    },
+    "dj-club-folla.jpg": {
+      "sha256": "4080bddc3b3a3038cefd8dcd2e44c3004200251c3474d79aae4bac3957d6c53f",
+      "bytes": 386953,
+      "width": 2048,
+      "height": 1536
+    },
+    "dj-indoor.jpg": {
+      "sha256": "f04e0149a22266245647397fcfc14f24e1206f70f8d109d535da363e641c13db",
+      "bytes": 125617,
+      "width": 1600,
+      "height": 720
+    },
+    "dj-palco-amici.jpg": {
+      "sha256": "5989a936a5342561eb2abb2454acb8c87b08ccc597ba95a79710baa241973a44",
+      "bytes": 306041,
+      "width": 2048,
+      "height": 1536
+    },
+    "dj-pioneer.jpg": {
+      "sha256": "86f5fec0e3f60638f861188dfd3ae42811c101d3745219b336e439c3976a048e",
+      "bytes": 231905,
+      "width": 2048,
+      "height": 1367
+    },
+    "dj-spiaggia-amici.jpg": {
+      "sha256": "b2fdcb8fa5faf8b06343662c75e5a33395fc6383ffc1f4a232f8e16c49a3437f",
+      "bytes": 349990,
+      "width": 2048,
+      "height": 1536
+    },
+    "exp-caseificio-vannulo.jpg": {
+      "sha256": "006da9595e0de18aeaa09ac4b66c1527e797709ea46e18b9d38e063e927c2ced",
+      "bytes": 94976,
+      "width": 1422,
+      "height": 640
+    },
+    "exp-mercatino-brezel.jpg": {
+      "sha256": "6ab2488aebd33d268552938abc64b46de84b58095ea60204a325b15da4c26a4d",
+      "bytes": 104362,
+      "width": 720,
+      "height": 960
+    },
+    "exp-montagna-selfie.jpg": {
+      "sha256": "47bc6d2b9d251ea8456dee1e6f417a1721c4c52d7d421ee6f824929ffd410cd3",
+      "bytes": 363383,
+      "width": 2048,
+      "height": 1536
+    },
+    "exp-stadio-tifoso.jpg": {
+      "sha256": "882aa81deda702c42e293502d5ba9360e7085436c943c35c2d774f8053922e7e",
+      "bytes": 323037,
+      "width": 2048,
+      "height": 1536
+    },
+    "grafica-dj-donna-zelinda.jpg": {
+      "sha256": "cc6938f160139e2d628818061ea4d76c1b577460232758bb960b8f766fc8404f",
+      "bytes": 191511,
+      "width": 1080,
+      "height": 1080
+    },
+    "grafica-dj-mamarita.jpg": {
+      "sha256": "99ced73ea8a524ea03dac7d400cd1e91180cda112527319ebf4bf270a74600a3",
+      "bytes": 97593,
+      "width": 1080,
+      "height": 1080
+    },
+    "hero-dj.jpg": {
+      "sha256": "613cb0f239528cdd55426e3911c747de01edce99e6019dd79267bc72c7684425",
+      "bytes": 447040,
+      "width": 2048,
+      "height": 1536
+    },
+    "live-anfiteatro.jpg": {
+      "sha256": "e0584e6f6b9199b78c46c10994096dd5254aa91e4e96997771068112c7655476",
+      "bytes": 265359,
+      "width": 1440,
+      "height": 1080
+    },
+    "live-festival-birra.jpg": {
+      "sha256": "aeee750dab11a810194538c0e19ea862c2ceef5cea5e0c25f5f8732297c49108",
+      "bytes": 376895,
+      "width": 2048,
+      "height": 1536
+    },
+    "live-laquila-scalinata.jpg": {
+      "sha256": "6968922c9211599957bb1e74653a81149337a2cb909ec3d8695fd10ac42eabc9",
+      "bytes": 256993,
+      "width": 1600,
+      "height": 1200
+    },
+    "live-olimpico-scale.jpg": {
+      "sha256": "2bfa4a42bd1a895b145442a63e1a12dfda22926e01b3bd64788386dd2d22506d",
+      "bytes": 450243,
+      "width": 2048,
+      "height": 1536
+    },
+    "live-stadio-parterre.jpg": {
+      "sha256": "aa8bfe15aab33664da2ae2df1a0beb6311ec6793d85c399540b250227ce89c2e",
+      "bytes": 385775,
+      "width": 2048,
+      "height": 1536
+    },
+    "moto-alpi-neve.jpg": {
+      "sha256": "9b781767c7e8dc4417b60eeac637fdd9e846f9f7036d003164ac6a57f01a12de",
+      "bytes": 493835,
+      "width": 2048,
+      "height": 1536
+    },
+    "moto-appennino-strada.jpg": {
+      "sha256": "bf4d063f295890895bfe8d4120c28fec96d4223bb195d43fcb14c0d55ad0f0bc",
+      "bytes": 710376,
+      "width": 1536,
+      "height": 2048
+    },
+    "moto-curve.jpg": {
+      "sha256": "05c58b00db7be504e4a5b20007f8dd981213e8fd925a1da618f5eb7f01890b24",
+      "bytes": 245076,
+      "width": 1151,
+      "height": 1140
+    },
+    "moto-dolomiti.jpg": {
+      "sha256": "f79ca3642bfa2f97568178910ac374e4d8718833528215ab68e07e11021f25a1",
+      "bytes": 388354,
+      "width": 2048,
+      "height": 1536
+    },
+    "moto-gruppo-bosco.jpg": {
+      "sha256": "9e8dbfd0180ae9f70b4b0349501f76e74b2e6f311b40179751594f5bfd19dec7",
+      "bytes": 653073,
+      "width": 2048,
+      "height": 1536
+    },
+    "moto-selfie-montagna.jpg": {
+      "sha256": "ab28b763e11a02cb21b2c68bb67087b724240e83ead5a7d483998c4a6e894d41",
+      "bytes": 140517,
+      "width": 960,
+      "height": 720
+    },
+    "moto-stelvio.jpg": {
+      "sha256": "46c0d8d3e998f32f660bc985b71b564148a54c4ef93b68b5a8416e0796a3817b",
+      "bytes": 434583,
+      "width": 2048,
+      "height": 1536
+    },
+    "neve-altopiano-selfie.jpg": {
+      "sha256": "866dae10f0697fba3d7939c32c836aa65bad72f69dab1238427734a3f5ff3d62",
+      "bytes": 316279,
+      "width": 2048,
+      "height": 1536
+    },
+    "pol-camion-manifesto-centro.jpg": {
+      "sha256": "e68aa2ef991eb3f61d8d4f9b8255af659a193e7794d552d92595f3b4f45235d0",
+      "bytes": 365349,
+      "width": 2000,
+      "height": 1500
+    },
+    "pol-card-aperitivo-chiusura.jpg": {
+      "sha256": "86708b9784fde3e9555b03451f7b025ce563b89a223a28f41182c1bb430be6c9",
+      "bytes": 204155,
+      "width": 1500,
+      "height": 1500
+    },
+    "pol-card-biondi-sindaco.jpg": {
+      "sha256": "00428189f60a04a29325022d6e17d70428015bff49e1d514d668c285f5565430",
+      "bytes": 82350,
+      "width": 1004,
+      "height": 650
+    },
+    "pol-card-candidatura-annuncio.jpg": {
+      "sha256": "27a1534e3117a098612815bf2165ffdc9c8d527966a587de8c9c34c382627cd6",
+      "bytes": 300123,
+      "width": 1500,
+      "height": 1500
+    },
+    "pol-card-sassa-scuola.jpg": {
+      "sha256": "764dc757925605a01eaded2c2531b1be824e15118be1a3278ca99ee4a014acd8",
+      "bytes": 173928,
+      "width": 1500,
+      "height": 1500
+    },
+    "pol-hero-gransasso.jpg": {
+      "sha256": "ef48748f1caf18a5549aca6cf52adede1856a6c8882e9666f38b3358b7c660b9",
+      "bytes": 156131,
+      "width": 2048,
+      "height": 1365
+    },
+    "pol-maxi-impianto-pubblicitario.jpg": {
+      "sha256": "9d01894c25148fb6ff095aa2812e50310ded2f8206fea703f9cb255171ce27b9",
+      "bytes": 87157,
+      "width": 828,
+      "height": 991
+    },
+    "pol-riunione-lega-abruzzo.jpg": {
+      "sha256": "51c88805d776c7524a166cd7946b8814703dbe29d171d433e87beb2f0452d3b8",
+      "bytes": 176071,
+      "width": 1600,
+      "height": 1202
+    },
+    "pol-torta-volantini.jpg": {
+      "sha256": "d385b2dd831246df4768d1522d56ae3b2e51982625a70237079045c3b123128a",
+      "bytes": 246046,
+      "width": 1200,
+      "height": 1600
+    },
+    "pol-trio-comizio-serale.jpg": {
+      "sha256": "e4b2a49b830dd269a938e8a1d529f1b85241b08bfb7357db4f9c3a3698ff9f22",
+      "bytes": 246866,
+      "width": 2048,
+      "height": 1536
+    },
+    "politica-camion-manifesto.jpg": {
+      "sha256": "62b7c920d7f397f64c62f2440782e074b114884f7790f78832ed4eb4ba23f6fa",
+      "bytes": 382809,
+      "width": 2048,
+      "height": 1536
+    },
+    "politica-card-campo-imperatore.jpg": {
+      "sha256": "df79193b4fba8cdd449e5b833972fd33a6ee453faedd5ddd04b79b1daff14cbd",
+      "bytes": 231011,
+      "width": 1440,
+      "height": 1440
+    },
+    "politica-cena-gruppo.jpg": {
+      "sha256": "12895ca3495ba33b767e9552eaa9171f220f0697621ca0d5b04e645639209ef4",
+      "bytes": 240247,
+      "width": 2048,
+      "height": 1536
+    },
+    "politica-evento-arta.jpg": {
+      "sha256": "32b9427178d11ae8cf405b39937e292da3ca1ef2a9ffec49f2d68410f6b630d1",
+      "bytes": 177023,
+      "width": 2048,
+      "height": 1536
+    },
+    "politica-incontro-elettorale-01.jpg": {
+      "sha256": "a104087ad6059794b124527e5131427d68087066accad61e024cbe4750c6d7d3",
+      "bytes": 258771,
+      "width": 2048,
+      "height": 1536
+    },
+    "politica-incontro-elettorale-02.jpg": {
+      "sha256": "6890dfd2a1d9c78b4abaf3076fa3ba1e4615f8e29456b7f58a05bd2d5d8e95bb",
+      "bytes": 291450,
+      "width": 2048,
+      "height": 1536
+    },
+    "politica-incontro-elettorale-03.jpg": {
+      "sha256": "da884fc67d7e9caef72ff3792e66e42f8d1eaec7a5dc571c90bd6977af23eff6",
+      "bytes": 388053,
+      "width": 2048,
+      "height": 1536
+    },
+    "politica-montagna-incontro.jpg": {
+      "sha256": "fc32a7a25017c0c2eb3639bfc0375bcaea894c3b83fc7e86690e4688765196fa",
+      "bytes": 104751,
+      "width": 960,
+      "height": 720
+    },
+    "politica-montagna-sopralluogo.jpg": {
+      "sha256": "b26ffc4f878a4e1fd7e2eb70f168b9e400838308f789d673e3a4fc38a275e006",
+      "bytes": 86822,
+      "width": 960,
+      "height": 720
+    },
+    "politica-salvini-palco.jpg": {
+      "sha256": "60c7831d0a2c6dd3fe12c17d16d3eb313a62d2b382024a4a4ce1af4f1911fe94",
+      "bytes": 252785,
+      "width": 2048,
+      "height": 1536
+    },
+    "politica-serata-applausi.jpg": {
+      "sha256": "fa18b1b6f87f78bd5b5b1a9f3dd84a25914500ce8bdc48120876ce660968fbeb",
+      "bytes": 225325,
+      "width": 1532,
+      "height": 2048
+    },
+    "retail-tigre-ingresso.jpg": {
+      "sha256": "317f04bbc29037003f93c42210b53800969bf702a2dff35b2e1867052fb3d8ce",
+      "bytes": 329916,
+      "width": 2048,
+      "height": 1365
+    },
+    "retail-tigre-taglio-nastro.jpg": {
+      "sha256": "fabbed69d5bd6ac3396e44a897eaaf69d347339e4684af3d2b63e5da582e5a9f",
+      "bytes": 294533,
+      "width": 2048,
+      "height": 1365
+    },
+    "tennis-foro-campo.jpg": {
+      "sha256": "5ce210b89cc4ade4e0299e7d99cd28bc11e66f73db4cdb19dab337f83d313422",
+      "bytes": 558079,
+      "width": 2048,
+      "height": 1536
+    },
+    "tennis-foro-folla.jpg": {
+      "sha256": "f9ac2329c04e5fa3dadd71ace1a93ee6bdf45c8182bd899bb4f2658511342b47",
+      "bytes": 453846,
+      "width": 2048,
+      "height": 1536
+    },
+    "territorio-legumi-negozio.jpg": {
+      "sha256": "c060f22cb7b5fcee9445353a1caebe0965807021a9b69b713213a4750aba11f8",
+      "bytes": 350233,
+      "width": 2048,
+      "height": 1536
+    }
+  }
+}

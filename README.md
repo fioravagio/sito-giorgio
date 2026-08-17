@@ -1,16 +1,79 @@
-# React + Vite
+# Sito personale di Giorgio Fioravanti
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sito realizzato con Next.js App Router e pubblicato su Vercel.
 
-Currently, two official plugins are available:
+## Struttura
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Il progetto usa Next.js 16 con App Router. Le pagine pubbliche sono generate
+staticamente e comprendono homepage, attività civica, territorio, DJ ed eventi,
+mototurismo, YouTube, grafica, contatti e privacy.
 
-## React Compiler
+## Sviluppo locale
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Richiede Node.js 22.12 o successivo.
 
-## Expanding the ESLint configuration
+```bash
+npm ci
+npm run check
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+L’anteprima è disponibile su `http://localhost:3000`.
+
+Per configurare l’indirizzo pubblico e predisporre Search Console:
+
+```bash
+cp .env.example .env.local
+```
+
+`NEXT_PUBLIC_SITE_URL` deve contenere l’indirizzo pubblico definitivo senza
+barra finale. Le anteprime Vercel devono continuare a usare l’indirizzo canonico
+di produzione, per evitare duplicati nei motori di ricerca.
+
+## Controlli prima della pubblicazione
+
+```bash
+npm run lint
+npm run build:verify
+npm audit
+```
+
+In alternativa, `npm run check` esegue insieme lint e verifica della build.
+
+`build:verify` controlla le immagini, genera tutte le pagine e verifica i
+principali segnali SEO nell’HTML prodotto.
+
+Quando vengono aggiunte o sostituite fotografie, eseguire prima:
+
+```bash
+npm run images:optimize
+```
+
+## Pubblicazione su Vercel
+
+1. Collegare a Vercel il repository GitHub `fioravagio/sito-giorgio`.
+2. Lasciare il framework Next.js rilevato automaticamente.
+3. Impostare `NEXT_PUBLIC_SITE_URL` con l’URL di produzione.
+4. Aggiungere `GOOGLE_SITE_VERIFICATION` quando Google fornisce il codice.
+5. Pubblicare e verificare che `/robots.txt` e `/sitemap.xml` rispondano.
+
+## Google Search Console
+
+1. Creare una proprietà con prefisso URL per l’indirizzo pubblico definitivo.
+2. Scegliere la verifica tramite tag HTML e copiare soltanto il valore del
+   campo `content` nella variabile Vercel `GOOGLE_SITE_VERIFICATION`.
+3. Pubblicare nuovamente il sito e completare la verifica in Search Console.
+4. Inviare `https://sito-giorgio.vercel.app/sitemap.xml`, oppure lo stesso
+   percorso sul futuro dominio personale.
+5. Controllare dopo alcuni giorni indicizzazione, usabilità mobile e Core Web
+   Vitals.
+
+Se in futuro viene collegato un dominio personale, aggiornare `SITE_URL` in
+`src/lib/site.js`, configurare il redirect permanente dal dominio precedente e
+registrare il nuovo dominio in Search Console.
+
+## Protezioni e privacy
+
+Il sito imposta Content Security Policy, HSTS, protezione anti-iframe,
+Referrer Policy e Permissions Policy. Il player YouTube usa il dominio
+`youtube-nocookie.com` e viene caricato soltanto dopo l’azione dell’utente.

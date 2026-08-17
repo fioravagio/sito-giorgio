@@ -3,6 +3,9 @@ export function Button({
   className = "",
   variant = "solid",
   size = "md",
+  href,
+  onClick,
+  type,
   ...props
 }) {
   const sizes = {
@@ -22,13 +25,18 @@ export function Button({
   const base =
     "inline-flex items-center justify-center transition font-medium focus:outline-none focus:ring-2 focus:ring-brand/40";
 
+  const Component = href ? "a" : onClick || type ? "button" : "span";
+
   return (
-    <button
+    <Component
+      href={href}
+      onClick={onClick}
+      type={type}
       className={[base, sizes[size], variants[variant], className].join(" ")}
       {...props}
     >
       {children}
-    </button>
+    </Component>
   );
 }
 

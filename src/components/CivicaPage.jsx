@@ -1,20 +1,15 @@
-import { motion } from "framer-motion";
 import {
   ArrowRight,
   Megaphone,
-  Users,
-  Headphones,
-  Youtube,
-  Palette,
 } from "lucide-react";
-import { Button } from "../components/ui/button";
+import { Button } from "./ui/button";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-} from "../components/ui/card";
-import { Link } from "react-router-dom";
+} from "./ui/card";
+import SiteImage from "./SiteImage";
 
 /* ---- DATI FOTO POLITICA ---- */
 
@@ -168,65 +163,18 @@ function SectionTitle({ children, icon: Icon }) {
 
 export default function CivicaPoliticaPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#F0EFEB] via-white to-[#F0EFEB] text-[#111111]">
-      {/* NAVBAR */}
-      <header className="sticky top-0 z-40 backdrop-blur bg-white/75 border-b border-zinc-200">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center gap-4">
-          <a
-            href="/"
-            className="font-semibold tracking-tight text-xl whitespace-nowrap"
-          >
-            Giorgio Fioravanti
-          </a>
-
-          <nav className="flex flex-1 justify-center gap-3 md:gap-6 text-xs md:text-sm text-zinc-700 flex-wrap">
-           <Link to="/civica" className="hover:text-zinc-900">
-  Civica/Politica
-</Link>
-            <a href="/#associazionismo" className="hover:text-zinc-900">
-              Territorio &amp; Associazionismo
-            </a>
-            <a href="/#dj" className="hover:text-zinc-900">
-              DJ &amp; Eventi
-            </a>
-            <a href="/#mototurismo" className="hover:text-zinc-900">
-              Mototurismo
-            </a>
-            <a href="/#youtube" className="hover:text-zinc-900">
-              YouTube
-            </a>
-            <a href="/#design" className="hover:text-zinc-900">
-              Grafica
-            </a>
-            <a href="/#contatti" className="hover:text-zinc-900">
-              Contatti
-            </a>
-          </nav>
-
-          <div className="flex-shrink-0">
-            <a href="/#contatti">
-              <Button className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-white text-xs md:text-sm px-3 md:px-4">
-                Contattami
-              </Button>
-            </a>
-          </div>
-        </div>
-      </header>
-
+    <main className="min-h-screen bg-gradient-to-b from-[#F0EFEB] via-white to-[#F0EFEB] text-[#111111]">
       {/* HERO POLITICA */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(900px_520px_at_80%_-10%,rgba(200,161,74,0.18),transparent),radial-gradient(900px_520px_at_10%_120%,rgba(200,161,74,0.12),transparent)] pointer-events-none" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
           <div className="grid lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-6">
-              <motion.h1
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+              <h1
                 className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight"
               >
                 Attività civica &amp; politica
-              </motion.h1>
+              </h1>
               <p className="mt-4 text-lg text-zinc-600 max-w-prose">
                 Impegno per L&apos;Aquila: visione, responsabilità e
                 progettualità. Una politica radicata nel territorio, tra
@@ -234,24 +182,30 @@ export default function CivicaPoliticaPage() {
                 giorno la città.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <Button className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-white">
-                  Scarica materiali &amp; comunicati
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-                <Button
-                  variant="outline"
-                  className="rounded-2xl !border-[#4A4A4A] !text-[#4A4A4A] hover:!border-[#C8A14A] hover:!text-[#C8A14A]"
-                >
-                  Contatta per attività istituzionali
-                </Button>
+                <a href="mailto:fioravagio@libero.it?subject=Materiali%20e%20comunicati">
+                  <Button className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-white">
+                    Richiedi materiali &amp; comunicati
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </a>
+                <a href="mailto:fioravagio@libero.it?subject=Attivit%C3%A0%20istituzionali">
+                  <Button
+                    variant="outline"
+                    className="rounded-2xl !border-[#4A4A4A] !text-[#4A4A4A] hover:!border-[#C8A14A] hover:!text-[#C8A14A]"
+                  >
+                    Contatta per attività istituzionali
+                  </Button>
+                </a>
               </div>
             </div>
 
             <div className="lg:col-span-6">
               <div className="relative aspect-[4/3] lg:aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_18px_45px_rgba(0,0,0,0.18)] ring-1 ring-zinc-200 bg-zinc-100">
-                <img
+                <SiteImage
                   src="/assets/pol-hero-gransasso.jpg"
                   alt="Campo Imperatore e Gran Sasso"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  preload
                   className="absolute inset-0 h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/15 to-transparent" />
@@ -268,7 +222,7 @@ export default function CivicaPoliticaPage() {
       </section>
 
       {/* CORPO TESTO PRINCIPALE */}
-      <main className="bg-white border-y border-zinc-200">
+      <div className="bg-white border-y border-zinc-200">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16 space-y-16">
           {/* INTRODUZIONE */}
           <section className="space-y-6">
@@ -307,9 +261,10 @@ export default function CivicaPoliticaPage() {
               <div className="md:col-span-1">
                 <Card className="rounded-2xl overflow-hidden bg-white border border-zinc-200">
                   <div className="aspect-[4/3] bg-zinc-100 overflow-hidden">
-                    <img
+                    <SiteImage
                       src="/assets/civica-conferenza.jpg"
                       alt="Intervento durante una conferenza"
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -418,9 +373,10 @@ export default function CivicaPoliticaPage() {
               <div className="space-y-4">
                 <Card className="rounded-2xl overflow-hidden bg-white border border-zinc-200">
                   <div className="aspect-[4/3] bg-zinc-100 overflow-hidden">
-                    <img
+                    <SiteImage
                       src="/assets/politica-card-campo-imperatore.jpg"
                       alt="Campo Imperatore"
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -469,9 +425,10 @@ export default function CivicaPoliticaPage() {
               <div className="order-1 md:order-2 space-y-4">
                 <Card className="rounded-2xl overflow-hidden bg-white border border-zinc-200">
                   <div className="aspect-[4/3] bg-zinc-100 overflow-hidden">
-                    <img
+                    <SiteImage
                       src="/assets/politica-cena-gruppo.jpg"
                       alt="Cena con sostenitori"
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -517,9 +474,10 @@ export default function CivicaPoliticaPage() {
               <div className="space-y-4">
                 <Card className="rounded-2xl overflow-hidden bg-white border border-zinc-200">
                   <div className="aspect-[4/3] bg-zinc-100 overflow-hidden">
-                    <img
+                    <SiteImage
                       src="/assets/politica-serata-applausi.jpg"
                       alt="Evento pubblico in città"
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -559,9 +517,10 @@ export default function CivicaPoliticaPage() {
               <div className="space-y-4">
                 <Card className="rounded-2xl overflow-hidden bg-white border border-zinc-200">
                   <div className="aspect-[4/3] bg-zinc-100 overflow-hidden">
-                    <img
+                    <SiteImage
                       src="/assets/pol-riunione-lega-abruzzo.jpg"
                       alt="Riunione politica"
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -600,9 +559,10 @@ export default function CivicaPoliticaPage() {
               <div className="order-1 md:order-2 space-y-4">
                 <Card className="rounded-2xl overflow-hidden bg-white border border-zinc-200">
                   <div className="aspect-[4/3] bg-zinc-100 overflow-hidden">
-                    <img
+                    <SiteImage
                       src="/assets/pol-trio-comizio-serale.jpg"
                       alt="Team sul territorio"
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -670,10 +630,10 @@ export default function CivicaPoliticaPage() {
                     <p>
                       Email:{" "}
                       <a
-                        href="mailto:info@example.com"
+                        href="mailto:fioravagio@libero.it"
                         className="text-[#C8A14A] hover:underline"
                       >
-                        info@example.com
+                        fioravagio@libero.it
                       </a>
                     </p>
                     <p>
@@ -681,7 +641,7 @@ export default function CivicaPoliticaPage() {
                       <a
                         href="https://www.instagram.com/fioravagio/"
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className="text-[#C8A14A] hover:underline"
                       >
                         @fioravagio
@@ -692,7 +652,7 @@ export default function CivicaPoliticaPage() {
                       <a
                         href="https://www.facebook.com/giorgio.fioravanti/"
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className="text-[#C8A14A] hover:underline"
                       >
                         giorgio.fioravanti
@@ -704,12 +664,12 @@ export default function CivicaPoliticaPage() {
             </div>
           </section>
         </div>
-      </main>
+      </div>
 
       {/* GALLERIA FINALE FOTO POLITICA */}
       <section className="bg-[#F7F5EF] border-t border-zinc-200 py-12 lg:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-4">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
             <SectionTitle icon={Megaphone}>
               Galleria attività civica &amp; politica
             </SectionTitle>
@@ -725,9 +685,10 @@ export default function CivicaPoliticaPage() {
                 className="rounded-2xl overflow-hidden bg-white border border-zinc-200 hover:shadow-lg transition"
               >
                 <div className="aspect-[4/3] bg-zinc-100 overflow-hidden">
-                  <img
+                  <SiteImage
                     src={`/assets/${item.src}`}
                     alt={item.label}
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -745,28 +706,6 @@ export default function CivicaPoliticaPage() {
         </div>
       </section>
 
-      {/* FOOTER SEMPLIFICATO */}
-      <footer className="border-t border-zinc-200 bg-[#F0EFEB]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-xs md:text-sm text-zinc-600 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-          <div>
-            <div className="font-semibold text-[#111111]">
-              Giorgio Fioravanti
-            </div>
-            <p>Impegno civico e politico per L&apos;Aquila.</p>
-          </div>
-          <div className="flex flex-wrap gap-4">
-            <a className="hover:underline" href="/#privacy">
-              Privacy
-            </a>
-            <a className="hover:underline" href="/#cookie">
-              Cookie
-            </a>
-            <a className="hover:underline" href="/#termini">
-              Termini
-            </a>
-          </div>
-        </div>
-      </footer>
-    </div>
+    </main>
   );
 }

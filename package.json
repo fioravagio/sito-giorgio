@@ -3,32 +3,32 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "build:verify": "npm run images:check && npm run build && npm run seo:check",
+    "check": "npm run lint && npm run build:verify",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "start": "next start",
+    "images:optimize": "node scripts/image-assets.mjs --apply",
+    "images:check": "node scripts/image-assets.mjs",
+    "seo:check": "node scripts/check-seo.mjs"
   },
   "dependencies": {
-    "framer-motion": "^12.23.24",
-    "lucide-react": "^0.553.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "react-router-dom": "^7.9.6"
+    "lucide-react": "0.553.0",
+    "next": "16.3.1",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.1",
-    "@tailwindcss/postcss": "^4.1.17",
-    "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.2",
-    "@vitejs/plugin-react": "^5.1.0",
-    "autoprefixer": "^10.4.22",
-    "eslint": "^9.39.1",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.24",
-    "globals": "^16.5.0",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.17",
-    "vite": "^7.2.2"
+    "@tailwindcss/postcss": "4.3.3",
+    "eslint": "9.39.1",
+    "eslint-config-next": "16.3.1",
+    "postcss": "8.5.26",
+    "sharp": "0.35.3",
+    "tailwindcss": "4.3.3"
   }
 }
