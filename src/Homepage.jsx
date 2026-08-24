@@ -69,7 +69,7 @@ export default function Homepage() {
         eyebrow="Giorgio Fioravanti · L’Aquila"
         title="Territorio, eventi, comunicazione."
         description="Un unico spazio per conoscere il mio impegno civico, le attività sul territorio, i progetti musicali e grafici, il mototurismo e i contenuti multimediali. Ogni area ha ora una pagina dedicata, più semplice da consultare e condividere."
-        image="/assets/pol-hero-gransasso.jpg"
+        image="/assets/pol-hero-gransasso-home.jpg"
         imageAlt="Giorgio Fioravanti a Campo Imperatore, sul Gran Sasso"
       >
         <Link

@@ -26,7 +26,7 @@ export const pageSeo = {
   civica: {
     title: "Attività civica e politica | Giorgio Fioravanti",
     description:
-      "L’impegno civico e politico di Giorgio Fioravanti per L’Aquila, il Gran Sasso, i quartieri, le frazioni e la partecipazione dei cittadini.",
+      "Il percorso civico e politico di Giorgio Fioravanti, oggi in Fratelli d’Italia: impegno per L’Aquila, il Gran Sasso e le aree interne.",
     path: "/civica/",
   },
   territorio: {

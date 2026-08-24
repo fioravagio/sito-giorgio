@@ -132,6 +132,10 @@ export const imageAssets = {
     "width": 1500,
     "height": 1500
   },
+  "pol-hero-gransasso-home.jpg": {
+    "width": 1600,
+    "height": 1200
+  },
   "pol-hero-gransasso.jpg": {
     "width": 2048,
     "height": 1365
@@ -167,6 +171,14 @@ export const imageAssets = {
   "politica-evento-arta.jpg": {
     "width": 2048,
     "height": 1536
+  },
+  "politica-giorgio-claudio-gregori-2026.jpg": {
+    "width": 1080,
+    "height": 1350
+  },
+  "politica-giorgio-guido-liris-2026.jpg": {
+    "width": 1200,
+    "height": 1600
   },
   "politica-incontro-elettorale-01.jpg": {
     "width": 2048,

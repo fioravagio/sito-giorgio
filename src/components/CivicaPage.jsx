@@ -1,5 +1,6 @@
 import {
   ArrowRight,
+  ExternalLink,
   Megaphone,
 } from "lucide-react";
 import { Button } from "./ui/button";
@@ -61,12 +62,6 @@ const politicsGallery = [
     label: "Sopralluogo Gran Sasso",
     caption:
       "Verifica diretta delle criticità e delle potenzialità del comprensorio.",
-  },
-  {
-    src: "politica-salvini-palco.jpg",
-    label: "Comizio nazionale",
-    caption:
-      "Presenza sul palco in occasione di un grande evento politico.",
   },
   {
     src: "politica-incontro-elettorale-01.jpg",
@@ -135,10 +130,16 @@ const politicsGallery = [
       "Una campagna che entra anche nei momenti conviviali, con creatività.",
   },
   {
-    src: "pol-riunione-lega-abruzzo.jpg",
-    label: "Riunione Lega Abruzzo",
+    src: "politica-giorgio-claudio-gregori-2026.jpg",
+    label: "Con Claudio Gregori",
     caption:
-      "Lavoro di coordinamento con la struttura regionale del partito.",
+      "L’ingresso in Fratelli d’Italia con il coordinatore provinciale Claudio Gregori, luglio 2026.",
+  },
+  {
+    src: "politica-giorgio-guido-liris-2026.jpg",
+    label: "Con il senatore Guido Liris",
+    caption:
+      "Un momento di confronto con il senatore di Fratelli d’Italia Guido Liris.",
   },
   {
     src: "pol-trio-comizio-serale.jpg",
@@ -273,6 +274,72 @@ export default function CivicaPoliticaPage() {
                     dell&apos;Aquila, tra istituzioni, associazioni e cittadini.
                   </CardContent>
                 </Card>
+              </div>
+            </div>
+          </section>
+
+          <section className="space-y-6">
+            <SectionTitle>Il percorso politico: un nuovo capitolo</SectionTitle>
+            <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+              <div className="space-y-4 text-sm leading-relaxed text-zinc-700 md:text-base">
+                <p>
+                  Il 7 luglio 2026 ho scelto di entrare in Fratelli d’Italia,
+                  aprendo una nuova fase del mio impegno politico al servizio
+                  dell’Aquila e del suo territorio.
+                </p>
+                <p>
+                  La decisione arriva dopo l’esperienza maturata come segretario
+                  cittadino della Lega e come responsabile del Dipartimento
+                  Politiche per le Aree Interne in Abruzzo. Un percorso che mi ha
+                  permesso di conoscere da vicino organizzazione politica,
+                  amministratori, comunità locali e bisogni delle zone interne.
+                </p>
+                <p>
+                  L’ingresso nella nuova squadra è stato annunciato da Claudio
+                  Gregori, coordinatore provinciale di Fratelli d’Italia, con il
+                  quale condivido l’attenzione per il territorio e la volontà di
+                  proseguire un lavoro concreto e responsabile.
+                </p>
+                <a
+                  href="https://www.abruzzoweb.it/laquila-fioravanti-lascia-la-lega-ed-entra-in-fdi-valore-aggiunto-per-la-squadra/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 font-semibold text-[#8A6A25] underline-offset-4 hover:underline"
+                >
+                  Leggi l’articolo di AbruzzoWeb
+                  <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                </a>
+              </div>
+
+              <div className="grid gap-5 sm:grid-cols-2">
+                <figure className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
+                  <div className="aspect-[4/5] overflow-hidden bg-zinc-100">
+                    <SiteImage
+                      src="/assets/politica-giorgio-claudio-gregori-2026.jpg"
+                      alt="Giorgio Fioravanti con Claudio Gregori, coordinatore provinciale di Fratelli d’Italia"
+                      sizes="(max-width: 640px) 100vw, 33vw"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <figcaption className="p-4 text-sm leading-relaxed text-zinc-600">
+                    Con Claudio Gregori, coordinatore provinciale di Fratelli
+                    d’Italia, in occasione dell’ingresso nel partito.
+                  </figcaption>
+                </figure>
+
+                <figure className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
+                  <div className="aspect-[4/5] overflow-hidden bg-zinc-100">
+                    <SiteImage
+                      src="/assets/politica-giorgio-guido-liris-2026.jpg"
+                      alt="Giorgio Fioravanti con il senatore Guido Liris"
+                      sizes="(max-width: 640px) 100vw, 33vw"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <figcaption className="p-4 text-sm leading-relaxed text-zinc-600">
+                    Con il senatore di Fratelli d’Italia Guido Liris.
+                  </figcaption>
+                </figure>
               </div>
             </div>
           </section>
