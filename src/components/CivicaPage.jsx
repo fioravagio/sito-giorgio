@@ -34,12 +34,6 @@ const politicsGallery = [
       "La montagna come risorsa strategica per turismo, sport e sviluppo.",
   },
   {
-    src: "politica-cena-gruppo.jpg",
-    label: "Cena con sostenitori",
-    caption:
-      "Momenti di confronto informale con sostenitori, amici e militanti.",
-  },
-  {
     src: "politica-serata-applausi.jpg",
     label: "Serata di comizio",
     caption:
@@ -417,8 +411,8 @@ export default function CivicaPoliticaPage() {
                 <Card className="rounded-2xl overflow-hidden bg-white border border-zinc-200">
                   <div className="aspect-[4/3] bg-zinc-100 overflow-hidden">
                     <SiteImage
-                      src="/assets/politica-card-campo-imperatore.jpg"
-                      alt="Campo Imperatore"
+                      src="/assets/politica-montagna-incontro.jpg"
+                      alt="Incontro sul territorio montano"
                       sizes="(max-width: 768px) 100vw, 33vw"
                       className="w-full h-full object-cover"
                     />
@@ -469,8 +463,8 @@ export default function CivicaPoliticaPage() {
                 <Card className="rounded-2xl overflow-hidden bg-white border border-zinc-200">
                   <div className="aspect-[4/3] bg-zinc-100 overflow-hidden">
                     <SiteImage
-                      src="/assets/politica-cena-gruppo.jpg"
-                      alt="Cena con sostenitori"
+                      src="/assets/civica-laquila-disegno.jpg"
+                      alt="Veduta illustrata del centro storico dell’Aquila con il nome Giorgio Fioravanti"
                       sizes="(max-width: 768px) 100vw, 33vw"
                       className="w-full h-full object-cover"
                     />
@@ -561,8 +555,8 @@ export default function CivicaPoliticaPage() {
                 <Card className="rounded-2xl overflow-hidden bg-white border border-zinc-200">
                   <div className="aspect-[4/3] bg-zinc-100 overflow-hidden">
                     <SiteImage
-                      src="/assets/pol-riunione-lega-abruzzo.jpg"
-                      alt="Riunione politica"
+                      src="/assets/civica-intervento-microfono-2026.jpg"
+                      alt="Giorgio Fioravanti durante un intervento pubblico al microfono"
                       sizes="(max-width: 768px) 100vw, 33vw"
                       className="w-full h-full object-cover"
                     />

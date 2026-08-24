@@ -8,6 +8,14 @@ export const imageAssets = {
     "width": 960,
     "height": 720
   },
+  "civica-intervento-microfono-2026.jpg": {
+    "width": 1600,
+    "height": 1200
+  },
+  "civica-laquila-disegno.jpg": {
+    "width": 1600,
+    "height": 1200
+  },
   "dj-aperitivo-terrazza.jpg": {
     "width": 2048,
     "height": 1536
