@@ -34,12 +34,6 @@ const politicsGallery = [
       "La montagna come risorsa strategica per turismo, sport e sviluppo.",
   },
   {
-    src: "politica-evento-arta.jpg",
-    label: "Evento istituzionale",
-    caption:
-      "Partecipazione a incontri con rappresentanti regionali e nazionali.",
-  },
-  {
     src: "politica-cena-gruppo.jpg",
     label: "Cena con sostenitori",
     caption:
@@ -64,22 +58,10 @@ const politicsGallery = [
       "Verifica diretta delle criticità e delle potenzialità del comprensorio.",
   },
   {
-    src: "politica-incontro-elettorale-01.jpg",
-    label: "Incontro elettorale",
-    caption:
-      "Campagna sul territorio, a contatto con i cittadini.",
-  },
-  {
     src: "politica-incontro-elettorale-02.jpg",
     label: "Incontro elettorale",
     caption:
       "Dialogo con amministratori e rappresentanti locali.",
-  },
-  {
-    src: "politica-incontro-elettorale-03.jpg",
-    label: "Incontro elettorale",
-    caption:
-      "Serata di confronto in centro storico.",
   },
   {
     src: "politica-camion-manifesto.jpg",
@@ -98,12 +80,6 @@ const politicsGallery = [
     label: "Maxi impianto",
     caption:
       "Campagna su grande formato con il claim dedicato a L'Aquila.",
-  },
-  {
-    src: "pol-card-biondi-sindaco.jpg",
-    label: "Con Biondi sindaco",
-    caption:
-      "Grafica ufficiale a sostegno della coalizione di centrodestra.",
   },
   {
     src: "pol-card-aperitivo-chiusura.jpg",
