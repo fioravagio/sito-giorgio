@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Proposta 4 — Quota</title>
+  <desc id="desc">Monogramma GF continuo con profilo montano astratto.</desc>
+  <rect width="1200" height="1200" rx="64" fill="#F7F5EF"/>
+  <text x="88" y="116" fill="#8A6A25" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" letter-spacing="5">PROPOSTA 04 · QUOTA</text>
+  <g transform="translate(600 482)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-294 116 C-228 50-192-8-134-68 C-86-118-48-138-4-92 C40-46 56-18 94-54 C126-84 162-130 216-116 C254-106 280-82 306-44" fill="none" stroke="#C8A14A" stroke-width="10"/>
+    <circle cx="-62" cy="0" r="222" fill="none" stroke="#18181B" stroke-width="17" stroke-dasharray="1150 245" transform="rotate(38 -62 0)"/>
+    <circle cx="-62" cy="0" r="176" fill="none" stroke="#18181B" stroke-width="7" stroke-dasharray="910 196" transform="rotate(38 -62 0)" opacity=".72"/>
+    <path d="M-94 52 H76 V166 M76-194 V204 M76-182 H250 M76-30 H220" fill="none" stroke="#18181B" stroke-width="17"/>
+  </g>
+  <text x="600" y="816" text-anchor="middle" fill="#18181B" font-family="Georgia, DejaVu Serif, serif" font-size="47" letter-spacing="3">Giorgio Fioravanti</text>
+  <text x="600" y="876" text-anchor="middle" fill="#71717A" font-family="DejaVu Sans, sans-serif" font-size="21" letter-spacing="5">L’AQUILA · ABRUZZO</text>
+  <g transform="translate(874 972)">
+    <rect width="238" height="140" rx="28" fill="#18181B"/>
+    <g transform="translate(61 72) scale(.19)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-230 72 C-180 22-140-48-92-82 C-42-116-12-28 34-56 C76-82 118-116 176-54" fill="none" stroke="#C8A14A" stroke-width="26"/>
+      <circle cx="-45" cy="0" r="174" fill="none" stroke="#FFFFFF" stroke-width="30" stroke-dasharray="900 193" transform="rotate(38 -45 0)"/>
+      <path d="M-78 36 H58 V124 M58-154 V154 M58-142 H206 M58-22 H184" fill="none" stroke="#FFFFFF" stroke-width="30"/>
+    </g>
+    <text x="136" y="82" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="18" letter-spacing="2">VERSIONE</text>
+    <text x="136" y="104" fill="#A1A1AA" font-family="DejaVu Sans, sans-serif" font-size="14" letter-spacing="2">NEGATIVA</text>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Proposta 1 — Orbita</title>
+  <desc id="desc">Monogramma GF a linee concentriche, evoluzione sobria del marchio DJ.</desc>
+  <rect width="1200" height="1200" rx="64" fill="#F7F5EF"/>
+  <text x="88" y="116" fill="#8A6A25" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" letter-spacing="5">PROPOSTA 01 · ORBITA</text>
+  <g transform="translate(600 492)" stroke="#18181B" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="-70" cy="0" r="230" fill="none" stroke-width="17" stroke-dasharray="1190 256" transform="rotate(38 -70 0)"/>
+    <circle cx="-70" cy="0" r="190" fill="none" stroke-width="11" stroke-dasharray="980 214" transform="rotate(38 -70 0)"/>
+    <circle cx="-70" cy="0" r="150" fill="none" stroke-width="7" stroke-dasharray="772 171" transform="rotate(38 -70 0)"/>
+    <path d="M-104 56 H76 V168" fill="none" stroke-width="17"/>
+    <path d="M76-210 V206 M76-194 H270 M76-22 H232" fill="none" stroke-width="17"/>
+    <path d="M104-194 V206 M104-166 H270 M104 6 H226" fill="none" stroke-width="7"/>
+  </g>
+  <circle cx="922" cy="282" r="9" fill="#C8A14A"/>
+  <text x="600" y="820" text-anchor="middle" fill="#18181B" font-family="DejaVu Sans, sans-serif" font-size="38" font-weight="600" letter-spacing="6">GIORGIO FIORAVANTI</text>
+  <path d="M390 864H810" stroke="#C8A14A" stroke-width="3"/>
+  <text x="600" y="916" text-anchor="middle" fill="#71717A" font-family="DejaVu Sans, sans-serif" font-size="22" letter-spacing="4">IDENTITÀ PERSONALE</text>
+  <g transform="translate(874 972)">
+    <rect width="238" height="140" rx="28" fill="#18181B"/>
+    <g transform="translate(64 70) scale(.18)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="-70" cy="0" r="230" fill="none" stroke-width="35" stroke-dasharray="1190 256" transform="rotate(38 -70 0)"/>
+      <path d="M-104 56 H76 V168 M76-210 V206 M76-194 H270 M76-22 H232" fill="none" stroke-width="35"/>
+    </g>
+    <text x="136" y="82" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="18" letter-spacing="2">VERSIONE</text>
+    <text x="136" y="104" fill="#A1A1AA" font-family="DejaVu Sans, sans-serif" font-size="14" letter-spacing="2">NEGATIVA</text>
+  </g>
+</svg>

@@ -1,4 +1,5 @@
 import { CalendarDays, Headphones, RadioTower } from "lucide-react";
+import Image from "next/image";
 import { ContactBand, PageHero, PageStructuredData, PhotoGrid, SectionHeading } from "../../components/PageElements";
 import { buildPageMetadata, pageSeo } from "../../lib/site";
 
@@ -37,6 +38,20 @@ export default function DjEventiPage() {
         description="DJ set, format musicali e gestione operativa per locali, ristoranti, eventi privati e iniziative pubbliche. Musica, tecnica e comunicazione lavorano insieme per dare identità a ogni appuntamento."
         image="/assets/hero-dj.jpg"
         imageAlt="Giorgio Fioravanti alla consolle durante un DJ set"
+        imageOverlay={
+          <div className="pointer-events-none absolute inset-0">
+            <div className="absolute right-4 top-4 rounded-2xl bg-black/35 p-2.5 shadow-2xl ring-1 ring-white/20 backdrop-blur-[1px] sm:right-5 sm:top-5 sm:p-3">
+              <Image
+                src="/assets/brand/gf-dj-logo-white.svg"
+                alt="Logo Giorgio Fioravanti DJ"
+                width={3143}
+                height={3071}
+                unoptimized
+                className="h-auto w-36 drop-shadow-[0_4px_14px_rgba(0,0,0,0.65)] sm:w-44 lg:w-52"
+              />
+            </div>
+          </div>
+        }
       />
 
       <section>

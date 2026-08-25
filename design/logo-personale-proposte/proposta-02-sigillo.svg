@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Proposta 2 — Sigillo</title>
+  <desc id="desc">Sigillo personale contemporaneo con monogramma GF editoriale.</desc>
+  <rect width="1200" height="1200" rx="64" fill="#F7F5EF"/>
+  <text x="88" y="116" fill="#8A6A25" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" letter-spacing="5">PROPOSTA 02 · SIGILLO</text>
+  <g transform="translate(600 474)">
+    <circle r="254" fill="none" stroke="#18181B" stroke-width="5"/>
+    <circle r="232" fill="none" stroke="#C8A14A" stroke-width="2"/>
+    <circle r="202" fill="none" stroke="#18181B" stroke-width="1.5" opacity=".45"/>
+    <circle cx="-52" cy="0" r="132" fill="none" stroke="#18181B" stroke-width="19" stroke-dasharray="680 150" transform="rotate(38 -52 0)"/>
+    <path d="M-86 40 H12 V126" fill="none" stroke="#18181B" stroke-width="19" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M50-144 V144 M50-130 H154 M50-14 H132" fill="none" stroke="#18181B" stroke-width="19" stroke-linecap="round"/>
+    <circle cx="184" cy="-172" r="8" fill="#C8A14A"/>
+  </g>
+  <text x="600" y="812" text-anchor="middle" fill="#18181B" font-family="Georgia, DejaVu Serif, serif" font-size="43" letter-spacing="4">GIORGIO FIORAVANTI</text>
+  <text x="600" y="872" text-anchor="middle" fill="#71717A" font-family="DejaVu Sans, sans-serif" font-size="21" letter-spacing="5">PROFILO · TERRITORIO · PROGETTI</text>
+  <g transform="translate(874 972)">
+    <rect width="238" height="140" rx="28" fill="#18181B"/>
+    <g transform="translate(62 70) scale(.20)">
+      <circle r="190" fill="none" stroke="#FFFFFF" stroke-width="22"/>
+      <circle cx="-35" cy="0" r="92" fill="none" stroke="#FFFFFF" stroke-width="24" stroke-dasharray="474 104" transform="rotate(38 -35 0)"/>
+      <path d="M-60 26 H8 V86 M36-100 V100 M36-90 H108 M36-8 H94" fill="none" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round"/>
+    </g>
+    <text x="136" y="82" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="18" letter-spacing="2">VERSIONE</text>
+    <text x="136" y="104" fill="#A1A1AA" font-family="DejaVu Sans, sans-serif" font-size="14" letter-spacing="2">NEGATIVA</text>
+  </g>
+</svg>

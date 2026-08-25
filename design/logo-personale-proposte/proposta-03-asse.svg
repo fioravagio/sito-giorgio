@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Proposta 3 — Asse</title>
+  <desc id="desc">Monogramma GF architettonico, essenziale e modulare.</desc>
+  <rect width="1200" height="1200" rx="64" fill="#F7F5EF"/>
+  <text x="88" y="116" fill="#8A6A25" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" letter-spacing="5">PROPOSTA 03 · ASSE</text>
+  <g transform="translate(600 478)" stroke="#18181B" stroke-linecap="square" stroke-linejoin="round">
+    <path d="M96-214 H-82 C-206-214-270-132-270 0 S-206 214-82 214 H88 V48 H-48" fill="none" stroke-width="20"/>
+    <path d="M78-174 H-70 C-166-174-218-108-218 0 S-166 174-70 174 H48 V88 H-44" fill="none" stroke-width="8" opacity=".72"/>
+    <path d="M136-214 V214 M136-214 H292 M136-32 H262" fill="none" stroke-width="20"/>
+    <path d="M174-174 V214 M174-174 H292 M174 6 H250" fill="none" stroke-width="8" opacity=".72"/>
+  </g>
+  <rect x="881" y="250" width="18" height="18" fill="#C8A14A"/>
+  <text x="600" y="812" text-anchor="middle" fill="#18181B" font-family="DejaVu Sans, sans-serif" font-size="38" font-weight="700" letter-spacing="7">GIORGIO FIORAVANTI</text>
+  <path d="M316 856H884" stroke="#18181B" stroke-width="1.5" opacity=".35"/>
+  <text x="600" y="906" text-anchor="middle" fill="#71717A" font-family="DejaVu Sans, sans-serif" font-size="21" letter-spacing="6">PERSONA · METODO · VISIONE</text>
+  <g transform="translate(874 972)">
+    <rect width="238" height="140" rx="28" fill="#18181B"/>
+    <g transform="translate(62 70) scale(.20)" fill="none" stroke="#FFFFFF" stroke-linecap="square" stroke-linejoin="round">
+      <path d="M70-160 H-55 C-150-160-200-95-200 0 S-150 160-55 160 H65 V36 H-34 M110-160 V160 M110-160 H220 M110-20 H198" fill="none" stroke-width="28"/>
+    </g>
+    <text x="136" y="82" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="18" letter-spacing="2">VERSIONE</text>
+    <text x="136" y="104" fill="#A1A1AA" font-family="DejaVu Sans, sans-serif" font-size="14" letter-spacing="2">NEGATIVA</text>
+  </g>
+</svg>
