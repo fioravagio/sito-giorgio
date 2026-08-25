@@ -7,18 +7,22 @@
 
   <!-- Marchio principale -->
   <g transform="translate(700 352)">
-    <circle r="224" fill="none" stroke="#B88A2C" stroke-width="15"/>
+    <circle r="224" fill="none" stroke="#B88A2C" stroke-width="3.5"/>
+    <circle r="216" fill="none" stroke="#B88A2C" stroke-width="3.5"/>
+    <circle r="208" fill="none" stroke="#B88A2C" stroke-width="3.5"/>
 
-    <!-- G disegnata su tracciato proprietario a tre linee -->
+    <!-- G e F con due linee interne e margini otticamente bilanciati -->
     <g transform="translate(10 0)" fill="none" stroke-linecap="square" stroke-linejoin="round">
-      <path d="M-42-120H-85C-139-120-170-72-170 0S-139 120-85 120H-32V40H-105" stroke="#18181B" stroke-width="30"/>
-      <path d="M-42-120H-85C-139-120-170-72-170 0S-139 120-85 120H-32V40H-105" stroke="#FFFFFF" stroke-width="18"/>
-      <path d="M-42-120H-85C-139-120-170-72-170 0S-139 120-85 120H-32V40H-105" stroke="#18181B" stroke-width="6"/>
+      <path d="M-42-120H-85C-132-120-160-72-160 0S-132 120-85 120H-32V40H-105" stroke="#18181B" stroke-width="36"/>
+      <path d="M-42-120H-85C-132-120-160-72-160 0S-132 120-85 120H-32V40H-105" stroke="#FFFFFF" stroke-width="28"/>
+      <path d="M-42-120H-85C-132-120-160-72-160 0S-132 120-85 120H-32V40H-105" stroke="#18181B" stroke-width="20"/>
+      <path d="M-42-120H-85C-132-120-160-72-160 0S-132 120-85 120H-32V40H-105" stroke="#FFFFFF" stroke-width="8"/>
 
       <!-- F indipendente, stessa altezza ottica della G -->
-      <path d="M18 120V-120H150M18-18H120" stroke="#18181B" stroke-width="30"/>
-      <path d="M18 120V-120H150M18-18H120" stroke="#FFFFFF" stroke-width="18"/>
-      <path d="M18 120V-120H150M18-18H120" stroke="#18181B" stroke-width="6"/>
+      <path d="M18 120V-120H140M18-18H112" stroke="#18181B" stroke-width="36"/>
+      <path d="M18 120V-120H140M18-18H112" stroke="#FFFFFF" stroke-width="28"/>
+      <path d="M18 120V-120H140M18-18H112" stroke="#18181B" stroke-width="20"/>
+      <path d="M18 120V-120H140M18-18H112" stroke="#FFFFFF" stroke-width="8"/>
     </g>
   </g>
 
@@ -26,10 +30,10 @@
   <text x="700" y="666" text-anchor="middle" fill="#18181B" font-family="DejaVu Sans, sans-serif" font-size="42" font-weight="700" letter-spacing="8">GIORGIO FIORAVANTI</text>
 
   <!-- Barra tricolore molto sottile e più lunga -->
-  <g transform="translate(310 710)">
-    <rect width="260" height="2.5" fill="#169B62"/>
-    <rect x="260" width="260" height="2.5" fill="#ECEBE6"/>
-    <rect x="520" width="260" height="2.5" fill="#CE2B37"/>
+  <g transform="translate(385 710)">
+    <rect width="210" height="2.5" fill="#169B62"/>
+    <rect x="210" width="210" height="2.5" fill="#ECEBE6"/>
+    <rect x="420" width="210" height="2.5" fill="#CE2B37"/>
   </g>
   <text x="700" y="768" text-anchor="middle" fill="#52525B" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="500" letter-spacing="7">POLITICA · EVENTI · GRAFICA</text>
 
@@ -39,24 +43,30 @@
 
   <!-- Versione semplificata per piccole dimensioni -->
   <g transform="translate(300 1020)">
-    <circle r="92" fill="none" stroke="#B88A2C" stroke-width="8"/>
+    <circle r="92" fill="none" stroke="#B88A2C" stroke-width="2.2"/>
+    <circle r="87" fill="none" stroke="#B88A2C" stroke-width="2.2"/>
+    <circle r="82" fill="none" stroke="#B88A2C" stroke-width="2.2"/>
     <g transform="translate(4 0) scale(.38)" fill="none" stroke="#18181B" stroke-width="30" stroke-linecap="square" stroke-linejoin="round">
-      <path d="M-42-120H-85C-139-120-170-72-170 0S-139 120-85 120H-32V40H-105"/>
-      <path d="M18 120V-120H150M18-18H120"/>
+      <path d="M-42-120H-85C-132-120-160-72-160 0S-132 120-85 120H-32V40H-105"/>
+      <path d="M18 120V-120H140M18-18H112"/>
     </g>
     <text x="0" y="130" text-anchor="middle" fill="#71717A" font-family="DejaVu Sans, sans-serif" font-size="13" letter-spacing="3">FAVICON</text>
   </g>
 
   <!-- Versione monocromatica -->
   <g transform="translate(700 1020)">
-    <circle r="92" fill="none" stroke="#18181B" stroke-width="8"/>
+    <circle r="92" fill="none" stroke="#18181B" stroke-width="2.2"/>
+    <circle r="87" fill="none" stroke="#18181B" stroke-width="2.2"/>
+    <circle r="82" fill="none" stroke="#18181B" stroke-width="2.2"/>
     <g transform="translate(4 0) scale(.38)" fill="none" stroke-linecap="square" stroke-linejoin="round">
-      <path d="M-42-120H-85C-139-120-170-72-170 0S-139 120-85 120H-32V40H-105" stroke="#18181B" stroke-width="30"/>
-      <path d="M-42-120H-85C-139-120-170-72-170 0S-139 120-85 120H-32V40H-105" stroke="#FFFFFF" stroke-width="18"/>
-      <path d="M-42-120H-85C-139-120-170-72-170 0S-139 120-85 120H-32V40H-105" stroke="#18181B" stroke-width="6"/>
-      <path d="M18 120V-120H150M18-18H120" stroke="#18181B" stroke-width="30"/>
-      <path d="M18 120V-120H150M18-18H120" stroke="#FFFFFF" stroke-width="18"/>
-      <path d="M18 120V-120H150M18-18H120" stroke="#18181B" stroke-width="6"/>
+      <path d="M-42-120H-85C-132-120-160-72-160 0S-132 120-85 120H-32V40H-105" stroke="#18181B" stroke-width="36"/>
+      <path d="M-42-120H-85C-132-120-160-72-160 0S-132 120-85 120H-32V40H-105" stroke="#FFFFFF" stroke-width="28"/>
+      <path d="M-42-120H-85C-132-120-160-72-160 0S-132 120-85 120H-32V40H-105" stroke="#18181B" stroke-width="20"/>
+      <path d="M-42-120H-85C-132-120-160-72-160 0S-132 120-85 120H-32V40H-105" stroke="#FFFFFF" stroke-width="8"/>
+      <path d="M18 120V-120H140M18-18H112" stroke="#18181B" stroke-width="36"/>
+      <path d="M18 120V-120H140M18-18H112" stroke="#FFFFFF" stroke-width="28"/>
+      <path d="M18 120V-120H140M18-18H112" stroke="#18181B" stroke-width="20"/>
+      <path d="M18 120V-120H140M18-18H112" stroke="#FFFFFF" stroke-width="8"/>
     </g>
     <text x="0" y="130" text-anchor="middle" fill="#71717A" font-family="DejaVu Sans, sans-serif" font-size="13" letter-spacing="3">MONOCROMO</text>
   </g>
@@ -64,10 +74,12 @@
   <!-- Versione negativa -->
   <g transform="translate(1100 1020)">
     <rect x="-112" y="-112" width="224" height="224" rx="28" fill="#18181B"/>
-    <circle r="92" fill="none" stroke="#FFFFFF" stroke-width="8"/>
+    <circle r="92" fill="none" stroke="#FFFFFF" stroke-width="2.2"/>
+    <circle r="87" fill="none" stroke="#FFFFFF" stroke-width="2.2"/>
+    <circle r="82" fill="none" stroke="#FFFFFF" stroke-width="2.2"/>
     <g transform="translate(4 0) scale(.38)" fill="none" stroke="#FFFFFF" stroke-width="30" stroke-linecap="square" stroke-linejoin="round">
-      <path d="M-42-120H-85C-139-120-170-72-170 0S-139 120-85 120H-32V40H-105"/>
-      <path d="M18 120V-120H150M18-18H120"/>
+      <path d="M-42-120H-85C-132-120-160-72-160 0S-132 120-85 120H-32V40H-105"/>
+      <path d="M18 120V-120H140M18-18H112"/>
     </g>
     <text x="0" y="150" text-anchor="middle" fill="#71717A" font-family="DejaVu Sans, sans-serif" font-size="13" letter-spacing="3">NEGATIVO</text>
   </g>
