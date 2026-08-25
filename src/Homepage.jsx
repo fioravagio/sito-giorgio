@@ -10,6 +10,7 @@ import {
 import Link from "next/link";
 import { Card, CardContent } from "./components/ui/card";
 import { PageHero, SectionHeading } from "./components/PageElements";
+import SiteBrand from "./components/SiteBrand";
 
 const activities = [
   {
@@ -66,7 +67,8 @@ export default function Homepage() {
   return (
     <main className="min-h-screen bg-white text-zinc-950">
       <PageHero
-        eyebrow="Giorgio Fioravanti · L’Aquila"
+        brand={<SiteBrand size="home" />}
+        eyebrow="L’Aquila"
         title="Territorio, eventi, comunicazione."
         description="Un unico spazio per conoscere il mio impegno civico, le attività sul territorio, i progetti musicali e grafici, il mototurismo e i contenuti multimediali. Ogni area ha ora una pagina dedicata, più semplice da consultare e condividere."
         image="/assets/pol-hero-gransasso-home.jpg"

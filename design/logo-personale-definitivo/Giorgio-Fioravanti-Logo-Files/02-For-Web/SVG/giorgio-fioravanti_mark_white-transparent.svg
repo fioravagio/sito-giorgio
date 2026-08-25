@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
   <title id="title">Giorgio Fioravanti — marchio master</title>
-  <desc id="desc">Identità personale GF con triplo cerchio e quattro linee uniformi; versione color-dark-bg.</desc>
-  <rect width="1000" height="1000" fill="#18181B"/>
-  <circle cx="500" cy="500" r="440" fill="none" stroke="#B88A2C" stroke-width="7"/>
-  <circle cx="500" cy="500" r="425" fill="none" stroke="#B88A2C" stroke-width="7"/>
-  <circle cx="500" cy="500" r="410" fill="none" stroke="#B88A2C" stroke-width="7"/>
+  <desc id="desc">Identità personale GF con triplo cerchio e quattro linee uniformi; versione white-transparent.</desc>
+  <circle cx="500" cy="500" r="440" fill="none" stroke="#FFFFFF" stroke-width="7"/>
+  <circle cx="500" cy="500" r="425" fill="none" stroke="#FFFFFF" stroke-width="7"/>
+  <circle cx="500" cy="500" r="410" fill="none" stroke="#FFFFFF" stroke-width="7"/>
   <g transform="translate(500 500) scale(1.75) translate(23 0)" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="square" stroke-linejoin="round">
     <path d="M-42-120H-84C-134-120-164-72-164 0S-134 120-84 120H-28V40H-100"/>
     <path d="M-42-112H-84C-129-112-156-68-156 0S-129 112-84 112H-36V48H-100"/>

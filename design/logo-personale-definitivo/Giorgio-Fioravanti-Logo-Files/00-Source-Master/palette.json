@@ -1,0 +1,15 @@
+{
+  "gold": "#B88A2C",
+  "ink": "#18181B",
+  "muted": "#52525B",
+  "tricolor": [
+    "#169B62",
+    "#ECEBE6",
+    "#CE2B37"
+  ],
+  "typeface": {
+    "name": "DejaVu Sans",
+    "wordmark": "Bold 700",
+    "subtitle": "Book 400"
+  }
+}

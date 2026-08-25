@@ -1,14 +1,21 @@
 import Link from "next/link";
 import { navigation, SITE_EMAIL } from "../lib/site";
+import SiteBrand from "./SiteBrand";
 
 export default function SiteFooter() {
   return (
     <footer className="border-t border-zinc-200 bg-[#F0EFEB]">
       <div className="mx-auto max-w-7xl px-4 py-10 text-sm text-zinc-600 sm:px-6 lg:px-8">
-        <div className="grid gap-8 md:grid-cols-[1fr_2fr_1fr]">
+        <div className="grid gap-8 lg:grid-cols-[minmax(230px,1fr)_2fr_1fr]">
           <div>
-            <p className="font-semibold text-zinc-950">Giorgio Fioravanti</p>
-            <p className="mt-2 max-w-xs leading-relaxed">
+            <Link
+              href="/"
+              aria-label="Giorgio Fioravanti — torna alla homepage"
+              className="inline-flex max-w-full rounded-sm"
+            >
+              <SiteBrand size="footer" />
+            </Link>
+            <p className="mt-4 max-w-xs leading-relaxed">
               Territorio, eventi e comunicazione, con radici a L&apos;Aquila.
             </p>
           </div>

@@ -57,6 +57,7 @@ export function PageStructuredData({ page, type = "WebPage" }) {
 }
 
 export function PageHero({
+  brand,
   eyebrow,
   title,
   description,
@@ -74,6 +75,7 @@ export function PageHero({
             image ? (betweenContent ? "lg:col-span-5" : "lg:col-span-6") : "lg:col-span-8"
           }
         >
+          {brand && <div className="mb-6 sm:mb-7">{brand}</div>}
           {eyebrow && (
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#8A6A25]">
               {eyebrow}

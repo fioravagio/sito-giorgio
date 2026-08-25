@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { navigation } from "../lib/site";
+import SiteBrand from "./SiteBrand";
 
 function isCurrent(pathname, href) {
   if (href === "/") return pathname === "/";
@@ -17,13 +18,14 @@ export default function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white/90 backdrop-blur-lg">
-      <div className="mx-auto flex min-h-16 max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex min-h-[72px] max-w-7xl items-center gap-4 px-4 sm:min-h-[76px] sm:px-6 lg:px-8">
         <Link
           href="/"
           onClick={() => setOpen(false)}
-          className="mr-auto whitespace-nowrap text-base font-semibold tracking-tight text-zinc-950 sm:text-lg"
+          aria-label="Giorgio Fioravanti — torna alla homepage"
+          className="mr-auto inline-flex shrink-0 rounded-sm"
         >
-          Giorgio Fioravanti
+          <SiteBrand size="header" preload />
         </Link>
 
         <nav aria-label="Navigazione principale" className="hidden xl:block">
