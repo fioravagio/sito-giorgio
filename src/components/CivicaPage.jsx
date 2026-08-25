@@ -41,9 +41,9 @@ const politicsGallery = [
   },
   {
     src: "politica-montagna-incontro.jpg",
-    label: "Incontro in montagna",
+    label: "Con il senatore Guido Liris",
     caption:
-      "Sopralluoghi sul territorio montano per ascoltare esigenze e proposte.",
+      "Sopralluogo sul territorio montano per ascoltare esigenze e proposte.",
   },
   {
     src: "politica-montagna-sopralluogo.jpg",
@@ -53,9 +53,9 @@ const politicsGallery = [
   },
   {
     src: "politica-incontro-elettorale-02.jpg",
-    label: "Incontro elettorale",
+    label: "Con Pierluigi Biondi",
     caption:
-      "Dialogo con amministratori e rappresentanti locali.",
+      "Con il sindaco dell’Aquila, in un momento di dialogo con amministratori e rappresentanti locali.",
   },
   {
     src: "politica-camion-manifesto.jpg",
@@ -89,7 +89,7 @@ const politicsGallery = [
   },
   {
     src: "pol-card-sassa-scuola.jpg",
-    label: "Sassa – Scuola",
+    label: "Con Rossano Sasso",
     caption:
       "Comunicazione dedicata alla riqualificazione di spazi pubblici e scolastici.",
   },
@@ -412,15 +412,16 @@ export default function CivicaPoliticaPage() {
                   <div className="aspect-[4/3] bg-zinc-100 overflow-hidden">
                     <SiteImage
                       src="/assets/politica-montagna-incontro.jpg"
-                      alt="Incontro sul territorio montano"
+                      alt="Giorgio Fioravanti con il senatore Guido Liris sul territorio montano"
                       sizes="(max-width: 768px) 100vw, 33vw"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <CardContent className="p-4 text-xs text-zinc-600">
-                    Campo Imperatore e il Gran Sasso come cardine di una
-                    strategia: turismo, sport, natura, mobilità e servizi
-                    integrati.
+                    Con il senatore Guido Liris, durante un sopralluogo
+                    dedicato a Campo Imperatore e al Gran Sasso, cardini di
+                    una strategia per turismo, sport, natura, mobilità e
+                    servizi integrati.
                   </CardContent>
                 </Card>
               </div>
