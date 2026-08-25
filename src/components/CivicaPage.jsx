@@ -3,6 +3,7 @@ import {
   ExternalLink,
   Megaphone,
 } from "lucide-react";
+import { SITE_EMAIL } from "../lib/site";
 import { Button } from "./ui/button";
 import {
   Card,
@@ -124,7 +125,7 @@ const politicsGallery = [
 function SectionTitle({ children, icon: Icon }) {
   return (
     <div className="flex items-center gap-3">
-      {Icon && <Icon className="h-6 w-6 text-[#C8A14A]" />}
+      {Icon && <Icon className="h-6 w-6 text-[#C8A14A]" aria-hidden="true" />}
       <h2 className="accent-bar font-display text-2xl md:text-3xl font-bold text-[#111111]">
         {children}
       </h2>
@@ -153,20 +154,20 @@ export default function CivicaPoliticaPage() {
                 giorno la città.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <a href="mailto:fioravagio@libero.it?subject=Materiali%20e%20comunicati">
-                  <Button className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#C8A14A] hover:!text-white">
-                    Richiedi materiali &amp; comunicati
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </a>
-                <a href="mailto:fioravagio@libero.it?subject=Attivit%C3%A0%20istituzionali">
-                  <Button
-                    variant="outline"
-                    className="rounded-2xl !border-[#4A4A4A] !text-[#4A4A4A] hover:!border-[#C8A14A] hover:!text-[#C8A14A]"
-                  >
-                    Contatta per attività istituzionali
-                  </Button>
-                </a>
+                <Button
+                  href={`mailto:${SITE_EMAIL}?subject=Materiali%20e%20comunicati`}
+                  className="rounded-2xl !bg-[#4A4A4A] !text-white hover:!bg-[#8A6A25] hover:!text-white"
+                >
+                  Richiedi materiali &amp; comunicati
+                  <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                </Button>
+                <Button
+                  href={`mailto:${SITE_EMAIL}?subject=Attivit%C3%A0%20istituzionali`}
+                  variant="outline"
+                  className="rounded-2xl !border-[#4A4A4A] !text-[#4A4A4A] hover:!border-[#8A6A25] hover:!text-[#8A6A25]"
+                >
+                  Contatta per attività istituzionali
+                </Button>
               </div>
             </div>
 
@@ -175,7 +176,7 @@ export default function CivicaPoliticaPage() {
                 <SiteImage
                   src="/assets/pol-hero-gransasso.jpg"
                   alt="Campo Imperatore e Gran Sasso"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  sizes="(max-width: 1023px) 100vw, 50vw"
                   preload
                   className="absolute inset-0 h-full w-full object-cover"
                 />
@@ -235,7 +236,7 @@ export default function CivicaPoliticaPage() {
                     <SiteImage
                       src="/assets/civica-conferenza.jpg"
                       alt="Intervento durante una conferenza"
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      sizes="(max-width: 767px) 100vw, 33vw"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -287,7 +288,7 @@ export default function CivicaPoliticaPage() {
                     <SiteImage
                       src="/assets/politica-giorgio-claudio-gregori-2026.jpg"
                       alt="Giorgio Fioravanti con Claudio Gregori, coordinatore provinciale di Fratelli d’Italia"
-                      sizes="(max-width: 640px) 100vw, 33vw"
+                      sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 28vw"
                       className="h-full w-full object-cover"
                     />
                   </div>
@@ -302,7 +303,7 @@ export default function CivicaPoliticaPage() {
                     <SiteImage
                       src="/assets/politica-giorgio-guido-liris-2026.jpg"
                       alt="Giorgio Fioravanti con il senatore Guido Liris"
-                      sizes="(max-width: 640px) 100vw, 33vw"
+                      sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 28vw"
                       className="h-full w-full object-cover"
                     />
                   </div>
@@ -413,7 +414,7 @@ export default function CivicaPoliticaPage() {
                     <SiteImage
                       src="/assets/politica-montagna-incontro.jpg"
                       alt="Giorgio Fioravanti con il senatore Guido Liris sul territorio montano"
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      sizes="(max-width: 767px) 100vw, 33vw"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -466,7 +467,7 @@ export default function CivicaPoliticaPage() {
                     <SiteImage
                       src="/assets/civica-laquila-disegno.jpg"
                       alt="Veduta illustrata del centro storico dell’Aquila con il nome Giorgio Fioravanti"
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      sizes="(max-width: 767px) 100vw, 33vw"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -515,7 +516,7 @@ export default function CivicaPoliticaPage() {
                     <SiteImage
                       src="/assets/politica-serata-applausi.jpg"
                       alt="Evento pubblico in città"
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      sizes="(max-width: 767px) 100vw, 33vw"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -558,7 +559,7 @@ export default function CivicaPoliticaPage() {
                     <SiteImage
                       src="/assets/civica-intervento-microfono-2026.jpg"
                       alt="Giorgio Fioravanti durante un intervento pubblico al microfono"
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      sizes="(max-width: 767px) 100vw, 33vw"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -600,7 +601,7 @@ export default function CivicaPoliticaPage() {
                     <SiteImage
                       src="/assets/pol-trio-comizio-serale.jpg"
                       alt="Team sul territorio"
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      sizes="(max-width: 767px) 100vw, 33vw"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -668,10 +669,10 @@ export default function CivicaPoliticaPage() {
                     <p>
                       Email:{" "}
                       <a
-                        href="mailto:fioravagio@libero.it"
-                        className="text-[#C8A14A] hover:underline"
+                        href={`mailto:${SITE_EMAIL}`}
+                        className="text-[#8A6A25] hover:underline"
                       >
-                        fioravagio@libero.it
+                        {SITE_EMAIL}
                       </a>
                     </p>
                     <p>
@@ -680,7 +681,7 @@ export default function CivicaPoliticaPage() {
                         href="https://www.instagram.com/fioravagio/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#C8A14A] hover:underline"
+                        className="text-[#8A6A25] hover:underline"
                       >
                         @fioravagio
                       </a>
@@ -691,7 +692,7 @@ export default function CivicaPoliticaPage() {
                         href="https://www.facebook.com/giorgio.fioravanti/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#C8A14A] hover:underline"
+                        className="text-[#8A6A25] hover:underline"
                       >
                         giorgio.fioravanti
                       </a>
@@ -711,7 +712,7 @@ export default function CivicaPoliticaPage() {
             <SectionTitle icon={Megaphone}>
               Galleria attività civica &amp; politica
             </SectionTitle>
-            <span className="text-xs text-zinc-500">
+            <span className="text-xs text-zinc-600">
               Una selezione di momenti dal territorio, dalle campagne e dagli
               eventi pubblici.
             </span>
@@ -725,8 +726,8 @@ export default function CivicaPoliticaPage() {
                 <div className="aspect-[4/3] bg-zinc-100 overflow-hidden">
                   <SiteImage
                     src={`/assets/${item.src}`}
-                    alt={item.label}
-                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
+                    alt={item.alt || ""}
+                    sizes="(max-width: 639px) 100vw, (max-width: 767px) 50vw, (max-width: 1023px) 33vw, 25vw"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -734,7 +735,7 @@ export default function CivicaPoliticaPage() {
                   <div className="text-xs font-semibold text-zinc-900">
                     {item.label}
                   </div>
-                  <div className="mt-1 text-[11px] text-zinc-600">
+                  <div className="mt-1 text-xs text-zinc-600">
                     {item.caption}
                   </div>
                 </CardContent>

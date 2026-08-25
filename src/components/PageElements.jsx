@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { absoluteUrl, SITE_URL } from "../lib/site";
+import { absoluteUrl, SITE_EMAIL, SITE_URL } from "../lib/site";
 import SiteImage from "./SiteImage";
 
 export function PageStructuredData({ page, type = "WebPage" }) {
@@ -16,7 +16,18 @@ export function PageStructuredData({ page, type = "WebPage" }) {
     inLanguage: "it-IT",
     isPartOf: { "@id": `${SITE_URL}/#website` },
     about: { "@id": `${SITE_URL}/#person` },
-    ...(page.image ? { primaryImageOfPage: absoluteUrl(page.image) } : {}),
+    ...(page.image
+      ? {
+          primaryImageOfPage: {
+            "@type": "ImageObject",
+            url: absoluteUrl(page.image),
+            contentUrl: absoluteUrl(page.image),
+            ...(page.imageWidth ? { width: page.imageWidth } : {}),
+            ...(page.imageHeight ? { height: page.imageHeight } : {}),
+            ...(page.imageAlt ? { caption: page.imageAlt } : {}),
+          },
+        }
+      : {}),
     ...(page.path === "/" ? { mainEntity: { "@id": `${SITE_URL}/#person` } } : {}),
     ...(page.path !== "/" ? { breadcrumb: { "@id": breadcrumbId } } : {}),
   };
@@ -100,7 +111,7 @@ export function PageHero({
               <SiteImage
                 src={image}
                 alt={imageAlt}
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1023px) 100vw, 50vw"
                 preload
                 className="h-full w-full object-cover"
               />
@@ -128,7 +139,12 @@ export function SectionHeading({ eyebrow, title, description }) {
   );
 }
 
-export function PhotoGrid({ items, className = "md:grid-cols-3", aspect = "aspect-[4/3]" }) {
+export function PhotoGrid({
+  items,
+  className = "md:grid-cols-3",
+  aspect = "aspect-[4/3]",
+  sizes = "(max-width: 639px) 100vw, (max-width: 767px) 50vw, 33vw",
+}) {
   return (
     <div className={`mt-8 grid gap-4 sm:grid-cols-2 ${className}`}>
       {items.map((item) => (
@@ -139,15 +155,19 @@ export function PhotoGrid({ items, className = "md:grid-cols-3", aspect = "aspec
           <div className={`${aspect} overflow-hidden bg-zinc-100`}>
             <SiteImage
               src={item.src.startsWith("/") ? item.src : `/assets/${item.src}`}
-              alt={item.alt || item.title || ""}
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              alt={item.alt || ""}
+              sizes={sizes}
               className="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.02]"
             />
           </div>
           {(item.title || item.caption) && (
             <figcaption className="p-4">
               {item.title && <p className="font-semibold text-zinc-950">{item.title}</p>}
-              {item.caption && <p className="mt-1 text-sm leading-relaxed text-zinc-600">{item.caption}</p>}
+              {item.caption && (
+                <p className="mt-1 text-sm leading-relaxed text-zinc-600">
+                  {item.caption}
+                </p>
+              )}
             </figcaption>
           )}
         </figure>
@@ -156,7 +176,11 @@ export function PhotoGrid({ items, className = "md:grid-cols-3", aspect = "aspec
   );
 }
 
-export function ContactBand({ title, text }) {
+export function ContactBand({ title, text, subject }) {
+  const contactHref = subject
+    ? `mailto:${SITE_EMAIL}?subject=${encodeURIComponent(subject)}`
+    : "/contatti/";
+
   return (
     <section className="bg-zinc-950 text-white">
       <div className="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-12 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
@@ -165,7 +189,7 @@ export function ContactBand({ title, text }) {
           <p className="mt-2 max-w-2xl text-zinc-300">{text}</p>
         </div>
         <Link
-          href="/contatti/"
+          href={contactHref}
           className="inline-flex shrink-0 items-center gap-2 self-start rounded-2xl bg-[#C8A14A] px-5 py-3 text-sm font-semibold text-zinc-950 transition-colors hover:bg-[#E0C273] md:self-auto"
         >
           Contattami <ArrowRight className="h-4 w-4" aria-hidden="true" />

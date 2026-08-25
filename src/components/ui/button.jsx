@@ -22,8 +22,7 @@ export function Button({
     ghost: "bg-transparent hover:bg-zinc-100 text-ink",
   };
 
-  const base =
-    "inline-flex items-center justify-center transition font-medium focus:outline-none focus:ring-2 focus:ring-brand/40";
+  const base = "inline-flex items-center justify-center transition font-medium";
 
   const Component = href ? "a" : onClick || type ? "button" : "span";
 

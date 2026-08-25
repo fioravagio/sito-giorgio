@@ -40,14 +40,19 @@ npm audit
 
 In alternativa, `npm run check` esegue insieme lint e verifica della build.
 
-`build:verify` controlla le immagini, genera tutte le pagine e verifica i
-principali segnali SEO nell’HTML prodotto.
+`npm run check` verifica anche i contratti responsive concordati per telefono,
+tablet e iPad. `build:verify` controlla le immagini, genera tutte le pagine e
+verifica i principali segnali SEO nell’HTML prodotto.
 
 Quando vengono aggiunte o sostituite fotografie, eseguire prima:
 
 ```bash
 npm run images:optimize
 ```
+
+Le immagini già registrate nel manifest non vengono ricompresse inutilmente.
+Usare l’opzione `--force` sullo script soltanto quando è davvero necessario
+rigenerare tutti i file.
 
 ## Pubblicazione su Vercel
 

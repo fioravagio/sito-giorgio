@@ -23,9 +23,24 @@ const djPhotos = [
 ];
 
 const archivedEvents = [
-  ["22 novembre 2025", "Yoichi — Vanity Friday", "L’Aquila"],
-  ["29 novembre 2025", "Private Event — DJ Set", "Gran Sasso"],
-  ["14 dicembre 2025", "Christmas Aperitivo — Live DJ", "Centro storico"],
+  {
+    date: "22 novembre 2025",
+    dateTime: "2025-11-22",
+    title: "Yoichi — Vanity Friday",
+    place: "L’Aquila",
+  },
+  {
+    date: "29 novembre 2025",
+    dateTime: "2025-11-29",
+    title: "Private Event — DJ Set",
+    place: "Gran Sasso",
+  },
+  {
+    date: "14 dicembre 2025",
+    dateTime: "2025-12-14",
+    title: "Christmas Aperitivo — Live DJ",
+    place: "Centro storico",
+  },
 ];
 
 export default function DjEventiPage() {
@@ -68,7 +83,11 @@ export default function DjEventiPage() {
       <section className="border-y border-zinc-200 bg-[#F7F5EF]">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <SectionHeading eyebrow="Galleria" title="Serate, consolle e comunicazione" />
-          <PhotoGrid items={djPhotos} className="lg:grid-cols-4" />
+          <PhotoGrid
+            items={djPhotos}
+            className="lg:grid-cols-4"
+            sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
+          />
         </div>
       </section>
 
@@ -80,9 +99,14 @@ export default function DjEventiPage() {
             description="Eventi già conclusi, conservati come riferimento delle esperienze e dei format realizzati."
           />
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {archivedEvents.map(([date, title, place]) => (
+            {archivedEvents.map(({ date, dateTime, title, place }) => (
               <article key={title} className="rounded-2xl border border-zinc-200 p-5">
-                <time className="text-xs font-semibold uppercase tracking-wider text-[#8A6A25]">{date}</time>
+                <time
+                  dateTime={dateTime}
+                  className="text-xs font-semibold uppercase tracking-wider text-[#8A6A25]"
+                >
+                  {date}
+                </time>
                 <h2 className="mt-2 font-bold text-zinc-950">{title}</h2>
                 <p className="mt-1 text-sm text-zinc-600">{place} · Evento concluso</p>
               </article>

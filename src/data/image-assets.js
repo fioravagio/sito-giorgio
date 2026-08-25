@@ -40,22 +40,6 @@ export const imageAssets = {
     "width": 2048,
     "height": 1536
   },
-  "exp-caseificio-vannulo.jpg": {
-    "width": 1422,
-    "height": 640
-  },
-  "exp-mercatino-brezel.jpg": {
-    "width": 720,
-    "height": 960
-  },
-  "exp-montagna-selfie.jpg": {
-    "width": 2048,
-    "height": 1536
-  },
-  "exp-stadio-tifoso.jpg": {
-    "width": 2048,
-    "height": 1536
-  },
   "grafica-dj-donna-zelinda.jpg": {
     "width": 1080,
     "height": 1080
@@ -128,10 +112,6 @@ export const imageAssets = {
     "width": 1500,
     "height": 1500
   },
-  "pol-card-biondi-sindaco.jpg": {
-    "width": 1004,
-    "height": 650
-  },
   "pol-card-candidatura-annuncio.jpg": {
     "width": 1500,
     "height": 1500
@@ -152,10 +132,6 @@ export const imageAssets = {
     "width": 828,
     "height": 991
   },
-  "pol-riunione-lega-abruzzo.jpg": {
-    "width": 1600,
-    "height": 1202
-  },
   "pol-torta-volantini.jpg": {
     "width": 1200,
     "height": 1600
@@ -172,14 +148,6 @@ export const imageAssets = {
     "width": 1440,
     "height": 1440
   },
-  "politica-cena-gruppo.jpg": {
-    "width": 2048,
-    "height": 1536
-  },
-  "politica-evento-arta.jpg": {
-    "width": 2048,
-    "height": 1536
-  },
   "politica-giorgio-claudio-gregori-2026.jpg": {
     "width": 1080,
     "height": 1350
@@ -188,15 +156,7 @@ export const imageAssets = {
     "width": 1200,
     "height": 1600
   },
-  "politica-incontro-elettorale-01.jpg": {
-    "width": 2048,
-    "height": 1536
-  },
   "politica-incontro-elettorale-02.jpg": {
-    "width": 2048,
-    "height": 1536
-  },
-  "politica-incontro-elettorale-03.jpg": {
     "width": 2048,
     "height": 1536
   },
@@ -207,10 +167,6 @@ export const imageAssets = {
   "politica-montagna-sopralluogo.jpg": {
     "width": 960,
     "height": 720
-  },
-  "politica-salvini-palco.jpg": {
-    "width": 2048,
-    "height": 1536
   },
   "politica-serata-applausi.jpg": {
     "width": 1532,
@@ -225,10 +181,6 @@ export const imageAssets = {
     "height": 1365
   },
   "tennis-foro-campo.jpg": {
-    "width": 2048,
-    "height": 1536
-  },
-  "tennis-foro-folla.jpg": {
     "width": 2048,
     "height": 1536
   },

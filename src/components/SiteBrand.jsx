@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const sizeStyles = {
   header: {
-    root: "w-[178px] gap-2 sm:w-[218px] sm:gap-2.5 lg:w-[232px]",
+    root: "w-[178px] gap-2 sm:w-[228px] sm:gap-2.5 lg:w-[240px]",
     mark: "h-11 w-11 sm:h-[50px] sm:w-[50px] lg:h-[54px] lg:w-[54px]",
     name: "text-[8px] tracking-[0.167em] sm:text-[11px] lg:text-[11.5px]",
     flag: "mt-1 h-px w-[92%]",
@@ -10,13 +10,14 @@ const sizeStyles = {
       "mt-1 text-[4.75px] tracking-[0.318em] sm:text-[6px] lg:text-[6.25px]",
   },
   home: {
-    root: "w-full max-w-[540px] gap-3 sm:gap-5",
+    root: "w-full max-w-[540px] gap-3 sm:gap-5 lg:gap-4 xl:gap-5",
     mark:
-      "h-[76px] w-[76px] sm:h-[112px] sm:w-[112px] lg:h-[124px] lg:w-[124px]",
-    name: "text-[clamp(0.78rem,4.2vw,1.6rem)] tracking-[0.167em]",
+      "h-[76px] w-[76px] sm:h-[112px] sm:w-[112px] xl:h-[124px] xl:w-[124px]",
+    name:
+      "text-[clamp(0.78rem,4.2vw,1.6rem)] tracking-[0.16em] sm:tracking-[0.167em] lg:text-[1.15rem] xl:text-[1.6rem]",
     flag: "mt-2 h-[1.5px] w-[92%]",
     tagline:
-      "mt-2 text-[clamp(0.42rem,1.5vw,0.68rem)] tracking-[0.318em]",
+      "mt-2 text-[clamp(0.42rem,1.5vw,0.68rem)] tracking-[0.318em] lg:text-[0.5rem] xl:text-[0.68rem]",
   },
   footer: {
     root: "w-full max-w-[270px] gap-3",

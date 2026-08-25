@@ -11,7 +11,7 @@ export default function YouTubeEmbed() {
   if (enabled) {
     return (
       <iframe
-        className="h-full w-full"
+        className="min-h-[220px] w-full sm:h-full sm:min-h-0"
         src={`https://www.youtube-nocookie.com/embed/videoseries?list=${PLAYLIST_ID}&autoplay=1`}
         title="Playlist Live (concerti) — fioravanti81"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -22,7 +22,7 @@ export default function YouTubeEmbed() {
   }
 
   return (
-    <div className="flex h-full flex-col items-center justify-center bg-zinc-950 px-6 text-center text-white">
+    <div className="flex min-h-[220px] flex-col items-center justify-center bg-zinc-950 px-6 py-6 text-center text-white sm:h-full sm:min-h-0 sm:py-0">
       <Youtube className="h-10 w-10 text-[#C8A14A]" aria-hidden="true" />
       <p className="mt-3 text-sm font-semibold">Playlist Live (concerti)</p>
       <p className="mt-2 max-w-sm text-xs leading-relaxed text-zinc-300">

@@ -66,7 +66,11 @@ export default function SiteHeader() {
           aria-label={open ? "Chiudi il menu" : "Apri il menu"}
           onClick={() => setOpen((value) => !value)}
         >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {open ? (
+            <X className="h-5 w-5" aria-hidden="true" />
+          ) : (
+            <Menu className="h-5 w-5" aria-hidden="true" />
+          )}
         </button>
       </div>
 
@@ -74,7 +78,7 @@ export default function SiteHeader() {
         <nav
           id="mobile-navigation"
           aria-label="Navigazione principale mobile"
-          className="border-t border-zinc-200 bg-white px-4 py-4 xl:hidden"
+          className="max-h-[calc(100dvh-72px)] overflow-y-auto overscroll-contain border-t border-zinc-200 bg-white px-4 py-4 sm:max-h-[calc(100dvh-76px)] xl:hidden"
         >
           <ul className="mx-auto grid max-w-7xl gap-1 sm:grid-cols-2">
             {navigation.map((item) => {

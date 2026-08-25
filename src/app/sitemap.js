@@ -1,6 +1,6 @@
 import { absoluteUrl, pageSeo } from "../lib/site";
 
-const lastModified = new Date("2026-08-17T00:00:00+02:00");
+const lastModified = new Date("2026-08-25T00:00:00+02:00");
 
 export default function sitemap() {
   return [
@@ -9,7 +9,7 @@ export default function sitemap() {
       lastModified,
       changeFrequency: "monthly",
       priority: 1,
-      images: [absoluteUrl("/assets/pol-hero-gransasso.jpg")],
+      images: [absoluteUrl("/assets/pol-hero-gransasso-home.jpg")],
     },
     {
       url: absoluteUrl(pageSeo.civica.path),

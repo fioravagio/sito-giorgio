@@ -44,7 +44,7 @@ export default function YoutubeMediaPage() {
               </a>
             </div>
           </div>
-          <div className="aspect-video overflow-hidden rounded-3xl bg-zinc-950 ring-1 ring-zinc-200">
+          <div className="min-h-[220px] overflow-hidden rounded-3xl bg-zinc-950 ring-1 ring-zinc-200 sm:aspect-video sm:min-h-0">
             <YouTubeEmbed />
           </div>
         </div>

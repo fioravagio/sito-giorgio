@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "DejaVu Sans";
-  src: url("/assets/fonts/DejaVuSans.ttf") format("truetype");
+  src: url("/assets/fonts/DejaVuSans-subset.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "DejaVu Sans";
-  src: url("/assets/fonts/DejaVuSans-Bold.ttf") format("truetype");
+  src: url("/assets/fonts/DejaVuSans-Bold-subset.woff2") format("woff2");
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -37,7 +37,6 @@ html {
 }
 
 body {
-  min-width: 320px;
   margin: 0;
   background: linear-gradient(to bottom, #fafafa, #ffffff, #fafafa);
   color: #111111;
@@ -50,7 +49,7 @@ input {
 }
 
 :focus-visible {
-  outline: 3px solid rgb(200 161 74 / 55%);
+  outline: 3px solid #8a6a25;
   outline-offset: 3px;
 }
 

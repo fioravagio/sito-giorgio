@@ -55,6 +55,12 @@ for (const page of pages) {
     "<h1",
   ];
   if (page.seo.path !== "/") expected.push('"@type":"BreadcrumbList"');
+  if (page.seo.image) {
+    expected.push(
+      '"primaryImageOfPage":{"@type":"ImageObject"',
+      `"contentUrl":"${new URL(page.seo.image, SITE_URL)}"`,
+    );
+  }
   if (googleVerification) {
     expected.push(
       `<meta name="google-site-verification" content="${googleVerification}"`,
@@ -95,6 +101,13 @@ for (const page of pages) {
   const mainCount = (html.match(/<main\b/g) || []).length;
   if (mainCount !== 1) {
     problems.push(`${page.filename}: trovati ${mainCount} elementi main invece di uno`);
+  }
+
+  const timeTags = html.match(/<time\b[^>]*>/g) || [];
+  for (const timeTag of timeTags) {
+    if (attribute(timeTag, "datetime") === null) {
+      problems.push(`${page.filename}: elemento time senza data leggibile dalle macchine`);
+    }
   }
 
   const anchorTags = html.match(/<a\b[^>]*>/g) || [];
@@ -138,10 +151,45 @@ for (const page of pages) {
   }
 }
 
-const [robots, sitemap] = await Promise.all([
+const [robots, sitemap, manifestText] = await Promise.all([
   readFile(path.join(APP_OUTPUT, "robots.txt.body"), "utf8"),
   readFile(path.join(APP_OUTPUT, "sitemap.xml.body"), "utf8"),
+  readFile(path.join(APP_OUTPUT, "manifest.webmanifest.body"), "utf8"),
 ]);
+
+const manifest = JSON.parse(manifestText);
+const maskableIcons = (manifest.icons || []).filter((icon) =>
+  String(icon.purpose || "").split(/\s+/).includes("maskable"),
+);
+if (!maskableIcons.length) {
+  problems.push("manifest web app senza icona maskable");
+}
+for (const icon of manifest.icons || []) {
+  if (!icon.src?.startsWith("/")) {
+    problems.push(`manifest web app con percorso icona non valido: ${icon.src}`);
+    continue;
+  }
+
+  const iconPath =
+    icon.src === "/icon.svg"
+      ? path.join(ROOT, "src", "app", "icon.svg")
+      : path.join(ROOT, "public", icon.src.replace(/^\/+/, ""));
+  try {
+    const iconMetadata = await sharp(iconPath).metadata();
+    const declaredSize = String(icon.sizes || "").match(/^(\d+)x(\d+)$/);
+    if (
+      declaredSize &&
+      (iconMetadata.width !== Number(declaredSize[1]) ||
+        iconMetadata.height !== Number(declaredSize[2]))
+    ) {
+      problems.push(
+        `manifest web app: ${icon.src} non corrisponde alla misura dichiarata`,
+      );
+    }
+  } catch {
+    problems.push(`manifest web app: icona non leggibile ${icon.src}`);
+  }
+}
 
 if (!robots.includes("User-Agent: *") || !robots.includes("Allow: /")) {
   problems.push("robots.txt non consente la scansione pubblica");

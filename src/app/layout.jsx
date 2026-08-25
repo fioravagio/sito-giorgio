@@ -95,7 +95,7 @@ export default function RootLayout({ children }) {
           }}
         />
         <SiteHeader />
-        <div id="main-content" tabIndex="-1">
+        <div id="main-content" tabIndex="-1" className="scroll-mt-24">
           {children}
         </div>
         <SiteFooter />

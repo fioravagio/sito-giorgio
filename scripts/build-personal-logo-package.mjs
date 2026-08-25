@@ -679,14 +679,13 @@ function writeDocumentation() {
     copyFileSync(source, join(folders.source, filename));
   }
 
-  const fontSources = [
-    "/Users/giorgio.fioravanti/Library/Fonts/DejaVuSans-Bold.ttf",
-    "/Users/giorgio.fioravanti/Library/Fonts/DejaVuSans.ttf",
-  ];
   const fontsFolder = join(folders.source, "Fonts");
   mkdirSync(fontsFolder, { recursive: true });
-  for (const fontSource of fontSources) {
-    if (existsSync(fontSource)) copyFileSync(fontSource, join(fontsFolder, fontSource.split("/").at(-1)));
+  for (const fontName of ["DejaVuSans-Bold.ttf", "DejaVuSans.ttf"]) {
+    const fontSource = join(fontsFolder, fontName);
+    if (!existsSync(fontSource)) {
+      throw new Error(`Font sorgente mancante: ${fontSource}`);
+    }
   }
 
   writeFileSync(

@@ -4,7 +4,7 @@ import { imageAssets } from "../data/image-assets";
 export default function SiteImage({
   src,
   alt,
-  sizes = "(max-width: 768px) 100vw, 33vw",
+  sizes = "(max-width: 767px) 100vw, 33vw",
   preload = false,
   quality = 75,
   ...props

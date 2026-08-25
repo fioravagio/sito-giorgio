@@ -10,11 +10,12 @@
     "dev": "next dev",
     "build": "next build --webpack",
     "build:verify": "npm run images:check && npm run build && npm run seo:check",
-    "check": "npm run lint && npm run build:verify",
+    "check": "npm run lint && npm run responsive:check && npm run build:verify",
     "lint": "eslint .",
     "start": "next start",
     "images:optimize": "node scripts/image-assets.mjs --apply",
     "images:check": "node scripts/image-assets.mjs",
+    "responsive:check": "node scripts/check-responsive.mjs",
     "seo:check": "node scripts/check-seo.mjs"
   },
   "dependencies": {

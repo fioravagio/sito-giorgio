@@ -9,6 +9,7 @@ const ASSET_ROOT = path.join(ROOT, "public", "assets");
 const MANIFEST_PATH = path.join(ROOT, "tests", "image-assets-manifest.json");
 const SOURCE_MAP_PATH = path.join(ROOT, "src", "data", "image-assets.js");
 const APPLY = process.argv.includes("--apply");
+const FORCE = process.argv.includes("--force");
 const VERSION = 1;
 const MAX_DIMENSION = 2048;
 const MAX_FILE_SIZE = 2 * 1024 * 1024;
@@ -52,10 +53,17 @@ async function record(filename) {
   };
 }
 
-async function optimize(filename) {
+async function optimize(filename, previousManifest) {
   const filePath = path.join(ASSET_ROOT, filename);
   const extension = path.extname(filename).toLowerCase();
   const source = await readFile(filePath);
+  if (
+    !FORCE &&
+    previousManifest?.assets?.[filename]?.sha256 === hash(source)
+  ) {
+    return { changed: false, before: source.length, after: source.length };
+  }
+
   let pipeline = sharp(source, { failOn: "warning" })
     .rotate()
     .resize({
@@ -91,10 +99,13 @@ async function optimize(filename) {
 
 const files = await imageFiles();
 const changes = [];
+const previousManifest = (await exists(MANIFEST_PATH))
+  ? JSON.parse(await readFile(MANIFEST_PATH, "utf8"))
+  : null;
 
 if (APPLY) {
   for (const filename of files) {
-    const result = await optimize(filename);
+    const result = await optimize(filename, previousManifest);
     if (result.changed) changes.push({ filename, ...result });
   }
 }

@@ -60,7 +60,11 @@ export default function MototurismoPage() {
       <section className="border-y border-zinc-200 bg-[#F7F5EF]">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <SectionHeading eyebrow="Galleria" title="Dall’Appennino alle Alpi" />
-          <PhotoGrid items={motoPhotos} className="lg:grid-cols-4" />
+          <PhotoGrid
+            items={motoPhotos}
+            className="lg:grid-cols-4"
+            sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
+          />
         </div>
       </section>
 
