@@ -3,6 +3,27 @@
   <desc id="desc">Marchio personale con iniziali GF separate e chiaramente leggibili, costruite con linee concentriche derivate dal logo DJ.</desc>
   <rect width="1400" height="1200" fill="#FFFFFF"/>
 
+  <defs>
+    <!-- Quattro binari reali: stesso spessore e distanza costante in ogni segmento. -->
+    <g id="gf-linear" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="round">
+      <!-- G: quattro tracciati indipendenti e concentrici. -->
+      <path d="M-42-120H-84C-134-120-164-72-164 0S-134 120-84 120H-28V40H-100"/>
+      <path d="M-42-112H-84C-129-112-156-68-156 0S-129 112-84 112H-36V48H-100"/>
+      <path d="M-42-104H-84C-124-104-148-64-148 0S-124 104-84 104H-44V56H-100"/>
+      <path d="M-42-96H-84C-119-96-140-60-140 0S-119 96-84 96H-52V64H-100"/>
+
+      <!-- F: quattro aste e quattro bracci, tutti dello stesso spessore. -->
+      <path d="M0 120V-120H118"/>
+      <path d="M8 120V-112H118"/>
+      <path d="M16 120V-104H118"/>
+      <path d="M24 120V-96H118"/>
+      <path d="M24-24H96"/>
+      <path d="M24-16H96"/>
+      <path d="M24-8H96"/>
+      <path d="M24 0H96"/>
+    </g>
+  </defs>
+
   <text x="700" y="68" text-anchor="middle" fill="#71717A" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="600" letter-spacing="6">IDENTITÀ PERSONALE · PROPOSTA GF</text>
 
   <!-- Marchio principale -->
@@ -11,19 +32,8 @@
     <circle r="216" fill="none" stroke="#B88A2C" stroke-width="3.5"/>
     <circle r="208" fill="none" stroke="#B88A2C" stroke-width="3.5"/>
 
-    <!-- G e F con due linee interne e margini otticamente bilanciati -->
-    <g transform="translate(10 0)" fill="none" stroke-linecap="square" stroke-linejoin="round">
-      <path d="M-42-120H-85C-132-120-160-72-160 0S-132 120-85 120H-32V40H-105" stroke="#18181B" stroke-width="36"/>
-      <path d="M-42-120H-85C-132-120-160-72-160 0S-132 120-85 120H-32V40H-105" stroke="#FFFFFF" stroke-width="28"/>
-      <path d="M-42-120H-85C-132-120-160-72-160 0S-132 120-85 120H-32V40H-105" stroke="#18181B" stroke-width="20"/>
-      <path d="M-42-120H-85C-132-120-160-72-160 0S-132 120-85 120H-32V40H-105" stroke="#FFFFFF" stroke-width="8"/>
-
-      <!-- F indipendente, stessa altezza ottica della G -->
-      <path d="M18 120V-120H140M18-18H112" stroke="#18181B" stroke-width="36"/>
-      <path d="M18 120V-120H140M18-18H112" stroke="#FFFFFF" stroke-width="28"/>
-      <path d="M18 120V-120H140M18-18H112" stroke="#18181B" stroke-width="20"/>
-      <path d="M18 120V-120H140M18-18H112" stroke="#FFFFFF" stroke-width="8"/>
-    </g>
+    <!-- La F è accorciata e l'intero gruppo è centrato sui propri limiti reali. -->
+    <use href="#gf-linear" transform="translate(23 0)" color="#18181B"/>
   </g>
 
   <!-- Firma -->
@@ -46,10 +56,7 @@
     <circle r="92" fill="none" stroke="#B88A2C" stroke-width="2.2"/>
     <circle r="87" fill="none" stroke="#B88A2C" stroke-width="2.2"/>
     <circle r="82" fill="none" stroke="#B88A2C" stroke-width="2.2"/>
-    <g transform="translate(4 0) scale(.38)" fill="none" stroke="#18181B" stroke-width="30" stroke-linecap="square" stroke-linejoin="round">
-      <path d="M-42-120H-85C-132-120-160-72-160 0S-132 120-85 120H-32V40H-105"/>
-      <path d="M18 120V-120H140M18-18H112"/>
-    </g>
+    <use href="#gf-linear" transform="translate(9 0) scale(.38)" color="#18181B"/>
     <text x="0" y="130" text-anchor="middle" fill="#71717A" font-family="DejaVu Sans, sans-serif" font-size="13" letter-spacing="3">FAVICON</text>
   </g>
 
@@ -58,16 +65,7 @@
     <circle r="92" fill="none" stroke="#18181B" stroke-width="2.2"/>
     <circle r="87" fill="none" stroke="#18181B" stroke-width="2.2"/>
     <circle r="82" fill="none" stroke="#18181B" stroke-width="2.2"/>
-    <g transform="translate(4 0) scale(.38)" fill="none" stroke-linecap="square" stroke-linejoin="round">
-      <path d="M-42-120H-85C-132-120-160-72-160 0S-132 120-85 120H-32V40H-105" stroke="#18181B" stroke-width="36"/>
-      <path d="M-42-120H-85C-132-120-160-72-160 0S-132 120-85 120H-32V40H-105" stroke="#FFFFFF" stroke-width="28"/>
-      <path d="M-42-120H-85C-132-120-160-72-160 0S-132 120-85 120H-32V40H-105" stroke="#18181B" stroke-width="20"/>
-      <path d="M-42-120H-85C-132-120-160-72-160 0S-132 120-85 120H-32V40H-105" stroke="#FFFFFF" stroke-width="8"/>
-      <path d="M18 120V-120H140M18-18H112" stroke="#18181B" stroke-width="36"/>
-      <path d="M18 120V-120H140M18-18H112" stroke="#FFFFFF" stroke-width="28"/>
-      <path d="M18 120V-120H140M18-18H112" stroke="#18181B" stroke-width="20"/>
-      <path d="M18 120V-120H140M18-18H112" stroke="#FFFFFF" stroke-width="8"/>
-    </g>
+    <use href="#gf-linear" transform="translate(9 0) scale(.38)" color="#18181B"/>
     <text x="0" y="130" text-anchor="middle" fill="#71717A" font-family="DejaVu Sans, sans-serif" font-size="13" letter-spacing="3">MONOCROMO</text>
   </g>
 
@@ -77,10 +75,7 @@
     <circle r="92" fill="none" stroke="#FFFFFF" stroke-width="2.2"/>
     <circle r="87" fill="none" stroke="#FFFFFF" stroke-width="2.2"/>
     <circle r="82" fill="none" stroke="#FFFFFF" stroke-width="2.2"/>
-    <g transform="translate(4 0) scale(.38)" fill="none" stroke="#FFFFFF" stroke-width="30" stroke-linecap="square" stroke-linejoin="round">
-      <path d="M-42-120H-85C-132-120-160-72-160 0S-132 120-85 120H-32V40H-105"/>
-      <path d="M18 120V-120H140M18-18H112"/>
-    </g>
+    <use href="#gf-linear" transform="translate(9 0) scale(.38)" color="#FFFFFF"/>
     <text x="0" y="150" text-anchor="middle" fill="#71717A" font-family="DejaVu Sans, sans-serif" font-size="13" letter-spacing="3">NEGATIVO</text>
   </g>
 </svg>
