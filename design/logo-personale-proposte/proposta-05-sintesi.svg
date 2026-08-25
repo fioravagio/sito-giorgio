@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Proposta 5 — Sintesi Sigillo e Asse</title>
+  <desc id="desc">Logo personale lineare con monogramma GF, cerchio oro e firma tricolore.</desc>
+  <rect width="1200" height="1200" rx="64" fill="#F7F5EF"/>
+  <text x="88" y="116" fill="#8A6A25" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" letter-spacing="5">REVISIONE 01 · SINTESI SIGILLO / ASSE</text>
+
+  <g transform="translate(600 440)">
+    <circle r="210" fill="none" stroke="#B68A32" stroke-width="13"/>
+
+    <g fill="none" stroke="#18181B" stroke-linecap="square" stroke-linejoin="miter">
+      <path d="M-18-91 H-66 C-120-91-150-50-150 0 S-120 91-66 91 H-18 V30 H-70" stroke-width="17"/>
+      <path d="M30-91 V91 M30-91 H151 M30-8 H132" stroke-width="17"/>
+    </g>
+  </g>
+
+  <text x="600" y="738" text-anchor="middle" fill="#18181B" font-family="DejaVu Sans, sans-serif" font-size="38" font-weight="700" letter-spacing="7">GIORGIO FIORAVANTI</text>
+
+  <g transform="translate(459 780)">
+    <rect width="94" height="6" rx="3" fill="#169B62"/>
+    <rect x="94" width="94" height="6" fill="#FFFFFF" stroke="#D4D4D8" stroke-width="1"/>
+    <rect x="188" width="94" height="6" rx="3" fill="#CE2B37"/>
+  </g>
+
+  <text x="600" y="842" text-anchor="middle" fill="#52525B" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="500" letter-spacing="6">POLITICA · EVENTI · GRAFICA</text>
+
+  <g transform="translate(600 1016)">
+    <circle r="82" fill="none" stroke="#B68A32" stroke-width="7"/>
+    <g transform="scale(.39)" fill="none" stroke="#18181B" stroke-linecap="square" stroke-linejoin="miter">
+      <path d="M-18-91 H-66 C-120-91-150-50-150 0 S-120 91-66 91 H-18 V30 H-70" stroke-width="17"/>
+      <path d="M30-91 V91 M30-91 H151 M30-8 H132" stroke-width="17"/>
+    </g>
+  </g>
+  <text x="600" y="1137" text-anchor="middle" fill="#71717A" font-family="DejaVu Sans, sans-serif" font-size="16" letter-spacing="4">RIDUZIONE PER FAVICON</text>
+</svg>

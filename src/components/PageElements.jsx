@@ -62,14 +62,18 @@ export function PageHero({
   description,
   image,
   imageAlt,
-  imageOverlay,
+  betweenContent,
   children,
 }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-[#F7F5EF] via-white to-[#EFE8D7]">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(700px_400px_at_85%_0%,rgba(200,161,74,0.2),transparent)]" />
-      <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-12 lg:px-8 lg:py-20">
-        <div className={image ? "lg:col-span-6" : "lg:col-span-8"}>
+      <div className="relative mx-auto grid max-w-7xl items-center gap-8 px-4 py-14 sm:px-6 lg:grid-cols-12 lg:gap-6 lg:px-8 lg:py-20">
+        <div
+          className={
+            image ? (betweenContent ? "lg:col-span-5" : "lg:col-span-6") : "lg:col-span-8"
+          }
+        >
           {eyebrow && (
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#8A6A25]">
               {eyebrow}
@@ -84,8 +88,12 @@ export function PageHero({
           {children && <div className="mt-7 flex flex-wrap gap-3">{children}</div>}
         </div>
 
+        {image && betweenContent && (
+          <div className="flex items-center justify-center lg:col-span-2">{betweenContent}</div>
+        )}
+
         {image && (
-          <div className="lg:col-span-6">
+          <div className={betweenContent ? "lg:col-span-5" : "lg:col-span-6"}>
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-zinc-100 shadow-[0_18px_45px_rgba(0,0,0,0.12)] ring-1 ring-zinc-200">
               <SiteImage
                 src={image}
@@ -94,7 +102,6 @@ export function PageHero({
                 preload
                 className="h-full w-full object-cover"
               />
-              {imageOverlay}
             </div>
           </div>
         )}
