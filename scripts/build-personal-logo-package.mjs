@@ -101,9 +101,22 @@ const compositions = {
     pngHeight: 1800,
     mark: { x: 300, y: 300, radii: [270, 260, 250], ringWidth: 4.75, scale: 1.2 },
     textLeft: 650,
-    name: { font: "DejaVu Sans Bold", size: 60, tracking: 10, top: 195, align: "left" },
-    flag: { top: 300, height: 3.5, widthRatio: 0.92, align: "left" },
-    subtitle: { font: "DejaVu Sans", size: 25, tracking: 8, top: 345, align: "left" },
+    textCenter: 1100,
+    name: {
+      font: "DejaVu Sans Bold",
+      size: 60,
+      tracking: 10,
+      top: 195,
+      align: "right-center",
+    },
+    flag: { top: 300, height: 3.5, widthRatio: 0.92, align: "right-center" },
+    subtitle: {
+      font: "DejaVu Sans",
+      size: 25,
+      tracking: 8,
+      top: 345,
+      align: "right-center",
+    },
   },
 };
 
@@ -189,7 +202,9 @@ function namespaceOutline(fragment, prefix, color) {
 }
 
 function textX(composition, fragment, align) {
-  return align === "left" ? composition.textLeft : (composition.width - fragment.width) / 2;
+  if (align === "left") return composition.textLeft;
+  if (align === "right-center") return composition.textCenter - fragment.width / 2;
+  return (composition.width - fragment.width) / 2;
 }
 
 function markSvg(mark, colors) {
@@ -210,7 +225,12 @@ function flagSvg(composition, nameOutline, colors) {
     nameOutline.width * composition.flag.widthRatio,
     composition.width - (composition.textLeft ?? 0) - 40,
   );
-  const x = composition.flag.align === "left" ? composition.textLeft : (composition.width - width) / 2;
+  const x =
+    composition.flag.align === "left"
+      ? composition.textLeft
+      : composition.flag.align === "right-center"
+        ? composition.textCenter - width / 2
+        : (composition.width - width) / 2;
   const third = width / 3;
   return `<g>
     <rect x="${x}" y="${composition.flag.top}" width="${third}" height="${composition.flag.height}" fill="${colors.tricolor[0]}"/>
@@ -486,7 +506,12 @@ function flagPs(composition, nameOutline, colors) {
     nameOutline.width * composition.flag.widthRatio,
     composition.width - (composition.textLeft ?? 0) - 40,
   );
-  const x = composition.flag.align === "left" ? composition.textLeft : (composition.width - width) / 2;
+  const x =
+    composition.flag.align === "left"
+      ? composition.textLeft
+      : composition.flag.align === "right-center"
+        ? composition.textCenter - width / 2
+        : (composition.width - width) / 2;
   const third = width / 3;
   const y = composition.height - composition.flag.top - composition.flag.height;
   return colors.tricolor

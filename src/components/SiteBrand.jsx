@@ -52,14 +52,14 @@ export default function SiteBrand({
         className={`shrink-0 object-contain ${styles.mark} ${dark ? "brightness-0 invert" : ""}`}
       />
 
-      <span className="min-w-0 flex-1 font-brand">
+      <span className="min-w-0 flex-1 text-center font-brand">
         <span
           className={`block whitespace-nowrap font-bold leading-none ${styles.name} ${nameColor}`}
         >
           GIORGIO FIORAVANTI
         </span>
 
-        <span className={`flex overflow-hidden ${styles.flag}`} aria-hidden="true">
+        <span className={`mx-auto flex overflow-hidden ${styles.flag}`} aria-hidden="true">
           <span className="h-full flex-1 bg-[#169B62]" />
           <span className={dark ? "h-full flex-1 bg-white" : "h-full flex-1 bg-[#F4F4F2]"} />
           <span className="h-full flex-1 bg-[#CE2B37]" />
