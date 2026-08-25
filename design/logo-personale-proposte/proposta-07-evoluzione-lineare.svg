@@ -17,10 +17,10 @@
       <path d="M8 120V-112H118"/>
       <path d="M16 120V-104H118"/>
       <path d="M24 120V-96H118"/>
-      <path d="M24-24H96"/>
-      <path d="M24-16H96"/>
-      <path d="M24-8H96"/>
-      <path d="M24 0H96"/>
+      <path d="M32-24H96"/>
+      <path d="M32-16H96"/>
+      <path d="M32-8H96"/>
+      <path d="M32 0H96"/>
     </g>
   </defs>
 
