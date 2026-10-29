@@ -12,8 +12,10 @@ const googleVerification = process.env.GOOGLE_SITE_VERIFICATION?.trim();
 
 const pages = [
   { filename: "index.html", seo: pageSeo.home },
+  { filename: "chi-sono.html", seo: pageSeo.chiSono },
   { filename: "civica.html", seo: pageSeo.civica },
   { filename: "territorio.html", seo: pageSeo.territorio },
+  { filename: "organizzazione-eventi.html", seo: pageSeo.organizzazioneEventi },
   { filename: "dj-eventi.html", seo: pageSeo.djEventi },
   { filename: "mototurismo.html", seo: pageSeo.mototurismo },
   { filename: "youtube-media.html", seo: pageSeo.youtubeMedia },
@@ -80,6 +82,17 @@ for (const page of pages) {
     if (html.includes(forbidden)) {
       problems.push(`${page.filename}: contiene il segnaposto ${forbidden}`);
     }
+  }
+
+  const visibleText = html
+    .replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ");
+  const editorialPlaceholder = visibleText.match(
+    /\b(?:qui\s+(?:va|andrà|deve|inserire|inserisci)|lorem\s+ipsum|testo\s+(?:segnaposto|provvisorio|da\s+inserire)|(?:foto|immagine|descrizione|contenuto|data|luogo)\s+da\s+(?:inserire|sostituire|completare|definire|confermare)|inserire\s+(?:qui|il\s+testo|la\s+(?:foto|descrizione))|in\s+costruzione|coming\s+soon)\b/i,
+  );
+  if (editorialPlaceholder) {
+    problems.push(`${page.filename}: istruzione redazionale visibile: ${editorialPlaceholder[0]}`);
   }
 
   const imageTags = html.match(/<img\b[^>]*>/g) || [];

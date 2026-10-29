@@ -13,6 +13,7 @@ const contacts = [
 ];
 
 const requestTypes = [
+  ["Organizzazione di eventi", "Organizzazione%20di%20eventi"],
   ["DJ set ed eventi", "DJ%20set%20ed%20eventi"],
   ["Progetto grafico", "Progetto%20grafico"],
   ["Territorio e associazioni", "Territorio%20e%20associazioni"],

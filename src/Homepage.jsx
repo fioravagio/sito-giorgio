@@ -11,6 +11,7 @@ import Link from "next/link";
 import { Card, CardContent } from "./components/ui/card";
 import { PageHero, SectionHeading } from "./components/PageElements";
 import SiteBrand from "./components/SiteBrand";
+import SiteImage from "./components/SiteImage";
 
 const activities = [
   {
@@ -31,9 +32,9 @@ const activities = [
   },
   {
     icon: Headphones,
-    title: "DJ ed eventi",
+    title: "DJ set e musica",
     description:
-      "Musica, tecnica e organizzazione per locali, ristoranti, format ed eventi privati.",
+      "Selezione musicale, consolle e atmosfera per locali, ristoranti ed eventi privati.",
     href: "/dj-eventi/",
     cta: "Scopri i DJ set",
   },
@@ -55,11 +56,11 @@ const activities = [
   },
   {
     icon: Palette,
-    title: "Grafica e branding",
+    title: "Grafica e pubblicità",
     description:
       "Materiali per eventi, attività commerciali, social, campagne e stampa.",
     href: "/grafica-branding/",
-    cta: "Vedi i progetti",
+    cta: "Scopri l’attività",
   },
 ];
 
@@ -70,7 +71,7 @@ export default function Homepage() {
         brand={<SiteBrand size="home" />}
         eyebrow="L’Aquila"
         title="Territorio, eventi, comunicazione."
-        description="Un unico spazio per conoscere il mio impegno civico, le attività sul territorio, i progetti musicali e grafici, il mototurismo e i contenuti multimediali. Ogni area ha ora una pagina dedicata, più semplice da consultare e condividere."
+        description="L’Aquila è il punto di partenza del mio impegno: ascoltare le persone, lavorare sul territorio e creare occasioni di incontro. La politica, l’organizzazione di eventi, la musica e la grafica sono parti di un percorso fatto di relazioni e lavoro concreto."
         image="/assets/pol-hero-gransasso-home.jpg"
         imageAlt="Giorgio Fioravanti a Campo Imperatore, sul Gran Sasso"
       >
@@ -82,19 +83,86 @@ export default function Homepage() {
           <ArrowRight className="h-4 w-4" aria-hidden="true" />
         </Link>
         <Link
-          href="/contatti/"
+          href="/organizzazione-eventi/"
           className="inline-flex items-center rounded-2xl border border-zinc-400 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 transition-colors hover:border-[#8A6A25] hover:text-[#76591D]"
         >
-          Contattami
+          Scopri gli eventi
         </Link>
       </PageHero>
+
+      <section className="border-y border-zinc-200 bg-white">
+        <div className="mx-auto grid max-w-7xl gap-7 px-4 py-12 sm:px-6 md:grid-cols-[1.5fr_1fr] md:items-center lg:gap-14 lg:px-8">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8A6A25]">Chi sono</p>
+            <h2 className="mt-3 font-display text-2xl font-bold sm:text-3xl">Competenze diverse, un legame con la città.</h2>
+            <p className="mt-4 leading-relaxed text-zinc-600">
+              La mia formazione è nella progettazione e gestione degli eventi.
+              Il percorso lavorativo mi ha portato dall’amministrazione d’impresa
+              alla sicurezza sul lavoro, dall’esperienza in ARTA Abruzzo alla
+              comunicazione e alla grafica pubblicitaria.
+            </p>
+          </div>
+          <div>
+            <p className="leading-relaxed text-zinc-600">
+              Esperienze che porto anche nell’impegno per L’Aquila: conoscere
+              i problemi, mettere in relazione le persone e seguire i progetti
+              con attenzione.
+            </p>
+            <Link href="/chi-sono/" className="mt-5 inline-flex items-center gap-2 font-semibold text-[#76591D] underline underline-offset-4 hover:text-[#5E4717]">
+              Conosci il mio percorso <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-zinc-950 text-white">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:gap-12 lg:px-8 lg:py-20">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#E0C273]">
+              Organizzazione di eventi
+            </p>
+            <h2 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-4xl">
+              Dalla piazza agli eventi privati.
+            </h2>
+            <p className="mt-5 max-w-xl leading-relaxed text-zinc-300">
+              Un evento prende forma molto prima che arrivi il pubblico. Nel tempo
+              ho lavorato a manifestazioni, appuntamenti nei locali e feste private,
+              mettendo insieme persone, spazi, musica e comunicazione.
+            </p>
+            <p className="mt-4 max-w-xl leading-relaxed text-zinc-300">
+              L’Aquila Città di Montagna 2026 racconta questo lavoro: una squadra,
+              la città e la montagna riunite intorno a un progetto condiviso.
+            </p>
+            <Link
+              href="/organizzazione-eventi/"
+              className="mt-7 inline-flex items-center gap-2 rounded-2xl bg-[#C8A14A] px-5 py-3 text-sm font-semibold text-zinc-950 transition-colors hover:bg-[#E0C273]"
+            >
+              Esplora gli eventi realizzati
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </div>
+          <figure className="overflow-hidden rounded-3xl border border-white/15 bg-white/5">
+            <div className="aspect-[4/3] overflow-hidden">
+              <SiteImage
+                src="/assets/eventi-aqcm-piazza-2026.jpg"
+                alt="Il pubblico in Piazza Duomo durante L’Aquila Città di Montagna 2026"
+                sizes="(max-width: 1023px) 100vw, 50vw"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <figcaption className="px-5 py-4 text-sm text-zinc-300">
+              L’Aquila Città di Montagna · Piazza Duomo · 23–25 ottobre 2026
+            </figcaption>
+          </figure>
+        </div>
+      </section>
 
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
           <SectionHeading
             eyebrow="Le attività"
-            title="Scegli il percorso che vuoi approfondire"
-            description="La homepage offre una panoramica essenziale. Da qui puoi entrare direttamente nella pagina completa di ogni attività, senza dover scorrere un’unica pagina molto lunga."
+            title="Le persone, il territorio, le mie passioni"
+            description="L’impegno per la città si intreccia con la musica, i progetti di comunicazione e la scoperta dei luoghi. Sono le esperienze attraverso cui mi racconto."
           />
 
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">

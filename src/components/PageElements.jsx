@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { absoluteUrl, SITE_EMAIL, SITE_URL } from "../lib/site";
 import SiteImage from "./SiteImage";
+import PhotoGallery from "./PhotoGallery";
 
 export function PageStructuredData({ page, type = "WebPage" }) {
   const url = absoluteUrl(page.path);
@@ -146,33 +147,7 @@ export function PhotoGrid({
   sizes = "(max-width: 639px) 100vw, (max-width: 767px) 50vw, 33vw",
 }) {
   return (
-    <div className={`mt-8 grid gap-4 sm:grid-cols-2 ${className}`}>
-      {items.map((item) => (
-        <figure
-          key={item.src}
-          className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm"
-        >
-          <div className={`${aspect} overflow-hidden bg-zinc-100`}>
-            <SiteImage
-              src={item.src.startsWith("/") ? item.src : `/assets/${item.src}`}
-              alt={item.alt || ""}
-              sizes={sizes}
-              className="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.02]"
-            />
-          </div>
-          {(item.title || item.caption) && (
-            <figcaption className="p-4">
-              {item.title && <p className="font-semibold text-zinc-950">{item.title}</p>}
-              {item.caption && (
-                <p className="mt-1 text-sm leading-relaxed text-zinc-600">
-                  {item.caption}
-                </p>
-              )}
-            </figcaption>
-          )}
-        </figure>
-      ))}
-    </div>
+    <PhotoGallery items={items} className={className} aspect={aspect} sizes={sizes} />
   );
 }
 

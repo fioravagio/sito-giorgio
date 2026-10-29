@@ -28,7 +28,6 @@ const photos = [
   { src: "territorio-legumi-negozio.jpg", title: "Prodotti e identità", caption: "Attività e produzioni che raccontano il legame con i luoghi." },
   { src: "retail-tigre-ingresso.jpg", title: "Attività commerciali", caption: "Nuove aperture e iniziative che animano l’economia locale." },
   { src: "retail-tigre-taglio-nastro.jpg", title: "Inaugurazioni", caption: "Momenti pubblici di incontro tra imprese, istituzioni e cittadini." },
-  { src: "tennis-foro-campo.jpg", title: "Sport e socialità", caption: "Lo sport come occasione di partecipazione, aggregazione e racconto." },
 ];
 
 export default function TerritorioPage() {

@@ -5,8 +5,13 @@ Sito realizzato con Next.js App Router e pubblicato su Vercel.
 ## Struttura
 
 Il progetto usa Next.js 16 con App Router. Le pagine pubbliche sono generate
-staticamente e comprendono homepage, attività civica, territorio, DJ ed eventi,
-mototurismo, YouTube, grafica, contatti e privacy.
+staticamente e comprendono homepage, biografia, attività civica, territorio,
+organizzazione di eventi, DJ, mototurismo, YouTube, grafica, contatti e privacy.
+
+Le regole editoriali vincolanti sono in `AGENTS.md`. La provenienza dei materiali
+e i criteri di selezione dell’aggiornamento di ottobre 2026 sono documentati in
+`docs/content-sources.md`. Il curriculum originale e le fotografie non selezionate
+non devono essere pubblicati.
 
 ## Sviluppo locale
 

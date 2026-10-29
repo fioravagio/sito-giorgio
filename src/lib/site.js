@@ -7,9 +7,11 @@ export const DEFAULT_SOCIAL_IMAGE = "/assets/pol-hero-gransasso.jpg";
 
 export const navigation = [
   { label: "Home", href: "/" },
+  { label: "Chi sono", href: "/chi-sono/" },
   { label: "Civica/Politica", href: "/civica/" },
   { label: "Territorio", href: "/territorio/" },
-  { label: "DJ & Eventi", href: "/dj-eventi/" },
+  { label: "Eventi", href: "/organizzazione-eventi/" },
+  { label: "DJ set", href: "/dj-eventi/" },
   { label: "Mototurismo", href: "/mototurismo/" },
   { label: "YouTube", href: "/youtube-media/" },
   { label: "Grafica", href: "/grafica-branding/" },
@@ -23,10 +25,20 @@ export const pageSeo = {
       "Sito ufficiale di Giorgio Fioravanti: attività civica per L’Aquila, eventi, DJ set, grafica, mototurismo e progetti per il territorio.",
     path: "/",
   },
+  chiSono: {
+    title: "Chi sono: formazione e percorso professionale | Giorgio Fioravanti",
+    description:
+      "Il percorso di Giorgio Fioravanti: formazione nella gestione degli eventi, esperienza d’impresa, amministrazione, sicurezza sul lavoro e comunicazione.",
+    path: "/chi-sono/",
+    image: "/assets/pol-hero-gransasso-home.jpg",
+    imageWidth: 1600,
+    imageHeight: 1200,
+    imageAlt: "Giorgio Fioravanti sul Gran Sasso",
+  },
   civica: {
     title: "Attività civica e politica | Giorgio Fioravanti",
     description:
-      "Il percorso civico e politico di Giorgio Fioravanti, oggi in Fratelli d’Italia: impegno per L’Aquila, il Gran Sasso e le aree interne.",
+      "Il percorso civico e politico di Giorgio Fioravanti, responsabile provinciale del Dipartimento Imprese di Fratelli d’Italia all’Aquila.",
     path: "/civica/",
   },
   territorio: {
@@ -49,6 +61,16 @@ export const pageSeo = {
     imageHeight: 1536,
     imageAlt: "Giorgio Fioravanti durante un DJ set",
   },
+  organizzazioneEventi: {
+    title: "Organizzazione di eventi a L’Aquila | Giorgio Fioravanti",
+    description:
+      "L’esperienza di Giorgio Fioravanti nell’organizzazione di manifestazioni, iniziative sul territorio ed eventi privati, da L’Aquila Città di Montagna ai locali.",
+    path: "/organizzazione-eventi/",
+    image: "/assets/eventi-aqcm-piazza-2026.jpg",
+    imageWidth: 2048,
+    imageHeight: 1536,
+    imageAlt: "Piazza Duomo durante L’Aquila Città di Montagna 2026",
+  },
   mototurismo: {
     title: "Mototurismo e Gran Sasso Bikers | Giorgio Fioravanti",
     description:
@@ -70,14 +92,10 @@ export const pageSeo = {
     imageAlt: "Concerto dal vivo in un anfiteatro",
   },
   graficaBranding: {
-    title: "Grafica e branding | Giorgio Fioravanti",
+    title: "Grafica e campagne pubblicitarie | Giorgio Fioravanti",
     description:
-      "Progetti grafici per eventi, attività commerciali, comunicazione territoriale, social e stampa.",
+      "Grafica, campagne pubblicitarie e comunicazione visiva di Giorgio Fioravanti: messaggi, identità e materiali coordinati per social e stampa.",
     path: "/grafica-branding/",
-    image: "/assets/grafica-dj-mamarita.jpg",
-    imageWidth: 1080,
-    imageHeight: 1080,
-    imageAlt: "Progetto grafico per la serata Mamarita",
   },
   contatti: {
     title: "Contatti | Giorgio Fioravanti",
@@ -149,6 +167,8 @@ export const personJsonLd = {
         "@type": "City",
         name: "L’Aquila",
       },
+      jobTitle: "Responsabile provinciale del Dipartimento Imprese di Fratelli d’Italia all’Aquila",
+      alumniOf: { "@type": "CollegeOrUniversity", name: "Università degli Studi di Firenze" },
       sameAs: [
         "https://www.instagram.com/fioravagio/",
         "https://www.facebook.com/giorgio.fioravanti/",

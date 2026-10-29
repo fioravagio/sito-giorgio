@@ -12,8 +12,20 @@ import {
   CardTitle,
 } from "./ui/card";
 import SiteImage from "./SiteImage";
+import { PhotoGrid } from "./PageElements";
 
 /* ---- DATI FOTO POLITICA ---- */
+
+const recentPoliticsGallery = [
+  { src: "politica-gregori-aqcm-2026.jpg", title: "Con Claudio Gregori", caption: "Ottobre 2026. Con il coordinatore provinciale di Fratelli d’Italia a L’Aquila Città di Montagna.", alt: "Giorgio Fioravanti con Claudio Gregori davanti al palco della manifestazione" },
+  { src: "politica-incontro-piazza-ottobre-2026.jpg", title: "Gli incontri in città", caption: "Un momento di incontro all’Aquila, ottobre 2026.", alt: "Giorgio Fioravanti insieme ad altri partecipanti a un’iniziativa in città" },
+  { src: "politica-bari-gruppo-2026.jpg", title: "A Bari con Fratelli d’Italia", caption: "Settembre 2026. La partecipazione all’appuntamento nazionale con la delegazione del territorio.", alt: "Giorgio Fioravanti insieme al gruppo di partecipanti all’evento di Fratelli d’Italia a Bari" },
+  { src: "politica-bari-gregori-2026.jpg", title: "Il confronto nella squadra", caption: "Bari, settembre 2026. Con Claudio Gregori durante la trasferta per l’evento del partito.", alt: "Giorgio Fioravanti con Claudio Gregori a Bari" },
+  { src: "politica-bari-incontri-2026.jpg", title: "Incontri a Bari", caption: "Settembre 2026. Relazioni e momenti di confronto durante la manifestazione.", alt: "Giorgio Fioravanti con altri partecipanti nell’area della manifestazione a Bari" },
+  { src: "politica-bari-partecipazione-2026.jpg", title: "La trasferta in Puglia", caption: "Un ricordo della partecipazione all’appuntamento di Bari, settembre 2026.", alt: "Un momento della trasferta di Giorgio Fioravanti a Bari" },
+  { src: "politica-debora-visconti-2026.jpg", title: "Con Debora Visconti", caption: "Agosto 2026. Con la sindaca di Sant’Eusanio Forconese durante una sagra.", alt: "Giorgio Fioravanti con Debora Visconti, sindaca di Sant’Eusanio Forconese" },
+  { src: "politica-raccolta-firme-sic.jpg", title: "La raccolta firme sui confini SIC", caption: "Un momento della raccolta firme dedicata alla riperimetrazione dei confini del Sito di Interesse Comunitario.", alt: "Giorgio Fioravanti e altri partecipanti al tavolo della raccolta firme sui confini SIC" },
+];
 
 const politicsGallery = [
   {
@@ -312,6 +324,34 @@ export default function CivicaPoliticaPage() {
                   </figcaption>
                 </figure>
               </div>
+            </div>
+          </section>
+
+          <section className="space-y-6">
+            <SectionTitle>Imprese e territorio: l’incarico provinciale</SectionTitle>
+            <div className="grid items-start gap-8 md:grid-cols-[1.2fr_0.8fr]">
+              <div className="space-y-4 text-sm leading-relaxed text-zinc-700 md:text-base">
+                <p>
+                  Il <time dateTime="2026-10-06">6 ottobre 2026</time> è stata
+                  annunciata la mia nomina a responsabile provinciale del
+                  Dipartimento Imprese di Fratelli d’Italia all’Aquila,
+                  nell’ambito della squadra coordinata da Claudio Gregori.
+                </p>
+                <p>
+                  È un impegno che riguarda da vicino la vita del territorio:
+                  le attività produttive, chi investe, chi lavora e chi prova
+                  a costruire nuove opportunità nella nostra provincia.
+                  Ascolto e confronto con queste realtà sono il punto di partenza
+                  del mio lavoro.
+                </p>
+                <a href="https://www.laquilaora.it/articoli/fdi-laquila-nuovi-responsabili-dipartimenti-gregori-2026/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-semibold text-[#8A6A25] underline underline-offset-4 hover:text-[#76591D]">
+                  La notizia delle nomine provinciali <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                </a>
+              </div>
+              <figure className="overflow-hidden rounded-2xl border border-zinc-200 bg-[#073148]">
+                <SiteImage src="/assets/politica-dipartimento-imprese-2026.jpg" alt="Comunicazione delle nomine dei dipartimenti provinciali di Fratelli d’Italia: Giorgio Fioravanti alle Imprese" sizes="(max-width: 767px) 100vw, 33vw" className="h-auto max-h-[520px] w-full object-contain" />
+                <figcaption className="bg-white p-4 text-sm leading-relaxed text-zinc-600">La comunicazione delle nomine del coordinamento provinciale, ottobre 2026.</figcaption>
+              </figure>
             </div>
           </section>
 
@@ -717,31 +757,13 @@ export default function CivicaPoliticaPage() {
               eventi pubblici.
             </span>
           </div>
-          <div className="mt-5 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {politicsGallery.map((item) => (
-              <Card
-                key={item.src}
-                className="rounded-2xl overflow-hidden bg-white border border-zinc-200 hover:shadow-lg transition"
-              >
-                <div className="aspect-[4/3] bg-zinc-100 overflow-hidden">
-                  <SiteImage
-                    src={`/assets/${item.src}`}
-                    alt={item.alt || ""}
-                    sizes="(max-width: 639px) 100vw, (max-width: 767px) 50vw, (max-width: 1023px) 33vw, 25vw"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardContent className="p-3">
-                  <div className="text-xs font-semibold text-zinc-900">
-                    {item.label}
-                  </div>
-                  <div className="mt-1 text-xs text-zinc-600">
-                    {item.caption}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <PhotoGrid items={recentPoliticsGallery} className="md:grid-cols-3 lg:grid-cols-4" sizes="(max-width: 639px) 100vw, (max-width: 767px) 50vw, (max-width: 1023px) 33vw, 25vw" />
+          <details className="mt-9 rounded-2xl border border-zinc-300 bg-white p-5 sm:p-6">
+            <summary className="cursor-pointer rounded-lg font-semibold text-zinc-900">
+              Archivio fotografico · campagne e attività sul territorio
+            </summary>
+            <PhotoGrid items={politicsGallery.map(({ label, ...item }) => ({ ...item, title: label }))} className="md:grid-cols-3 lg:grid-cols-4" sizes="(max-width: 639px) 100vw, (max-width: 767px) 50vw, (max-width: 1023px) 33vw, 25vw" />
+          </details>
         </div>
       </section>
 

@@ -1,5 +1,5 @@
 import { FileImage, LayoutTemplate, Printer } from "lucide-react";
-import { ContactBand, PageHero, PageStructuredData, PhotoGrid, SectionHeading } from "../../components/PageElements";
+import { ContactBand, PageHero, PageStructuredData, SectionHeading } from "../../components/PageElements";
 import { buildPageMetadata, pageSeo } from "../../lib/site";
 
 export const metadata = buildPageMetadata(pageSeo.graficaBranding);
@@ -10,25 +10,14 @@ const services = [
   { icon: Printer, title: "Materiali per la stampa", text: "Progetti adatti a volantini, grande formato e altri supporti promozionali." },
 ];
 
-const projects = [
-  { src: "grafica-dj-mamarita.jpg", title: "Mamarita", caption: "Identità visiva per una serata musicale e la sua promozione social." },
-  { src: "grafica-dj-donna-zelinda.jpg", title: "Donna Zelinda", caption: "Concept grafico coordinato per un appuntamento musicale." },
-  { src: "pol-card-sassa-scuola.jpg", title: "Comunicazione territoriale", caption: "Contenuto informativo dedicato a un progetto per la città." },
-  { src: "pol-card-candidatura-annuncio.jpg", title: "Campagna istituzionale", caption: "Messaggio e composizione visiva per una comunicazione pubblica." },
-  { src: "politica-card-campo-imperatore.jpg", title: "Campo Imperatore", caption: "Racconto visivo di una proposta legata alla montagna aquilana." },
-  { src: "pol-card-aperitivo-chiusura.jpg", title: "Invito evento", caption: "Grafica promozionale con informazioni e gerarchia visiva immediata." },
-];
-
 export default function GraficaBrandingPage() {
   return (
     <main className="min-h-screen bg-white">
-      <PageStructuredData page={pageSeo.graficaBranding} type="CollectionPage" />
+      <PageStructuredData page={pageSeo.graficaBranding} />
       <PageHero
-        eyebrow="Comunicazione visiva"
-        title="Grafica e branding"
-        description="Materiali per eventi, attività commerciali, comunicazione territoriale, social e stampa. Ogni progetto nasce per rendere il messaggio riconoscibile, leggibile e coerente."
-        image="/assets/grafica-dj-mamarita.jpg"
-        imageAlt="Locandina grafica realizzata per la serata Mamarita"
+        eyebrow="Comunicazione visiva e pubblicità"
+        title="Grafica e campagne pubblicitarie"
+        description="Nel mio lavoro la grafica parte dall’obiettivo della campagna: a chi parlare, quale messaggio far arrivare e dove comunicarlo. L’identità visiva, i contenuti e i materiali devono lavorare insieme, dal primo contatto alla riconoscibilità del progetto."
       />
 
       <section>
@@ -48,8 +37,19 @@ export default function GraficaBrandingPage() {
 
       <section className="border-y border-zinc-200 bg-[#F7F5EF]">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <SectionHeading eyebrow="Portfolio" title="Una selezione di progetti" description="Esempi di materiali realizzati per musica, eventi e comunicazione territoriale." />
-          <PhotoGrid items={projects} aspect="aspect-square" />
+          <SectionHeading eyebrow="Il metodo" title="Una campagna deve parlare con una voce sola" />
+          <div className="mt-7 grid gap-6 text-zinc-700 md:grid-cols-2 md:gap-10">
+            <p className="leading-relaxed">
+              Prima del formato viene il messaggio. Il punto di partenza è capire
+              l’attività, il pubblico e il risultato che si vuole ottenere:
+              promuovere un appuntamento, far conoscere un servizio o dare
+              riconoscibilità a un progetto.
+            </p>
+            <div className="space-y-4 leading-relaxed">
+              <p>La stessa idea deve restare chiara sui diversi supporti. Colori, immagini, parole e gerarchie visive costruiscono una comunicazione coerente, leggibile sullo schermo come sui materiali stampati.</p>
+              <p>Nel percorso professionale in FiorSì Srl, tra novembre 2024 e marzo 2025, mi sono occupato anche di grafica pubblicitaria, social media management e gestione dei processi comunicativi. CorelDRAW e Adobe Photoshop fanno parte dei miei strumenti di lavoro.</p>
+            </div>
+          </div>
         </div>
       </section>
 

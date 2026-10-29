@@ -37,6 +37,18 @@
       "width": 2048,
       "height": 1536
     },
+    "dj-consolle-2026.jpg": {
+      "sha256": "e1597db6c55e1958d14283f38e4dc253dc59837ceedb76c412469614e0e12cd1",
+      "bytes": 389184,
+      "width": 2048,
+      "height": 1536
+    },
+    "dj-estate-2026.jpg": {
+      "sha256": "cd09fcb74293b0b72fc179149395bfbc6eb319557a1da2594e01dab5042c4a8b",
+      "bytes": 89765,
+      "width": 1067,
+      "height": 1600
+    },
     "dj-indoor.jpg": {
       "sha256": "81b9ad207b249c74baa6f5119af23ae27501a6fe320ba6fcbf320a71c25ee851",
       "bytes": 124595,
@@ -61,17 +73,65 @@
       "width": 2048,
       "height": 1536
     },
-    "grafica-dj-donna-zelinda.jpg": {
-      "sha256": "817cd1f218cbea94da7692e2b58ba807b894d5bcba7a2e7f6df5f8457f0a9802",
-      "bytes": 188509,
-      "width": 1080,
-      "height": 1080
+    "eventi-aqcm-comitato-2026.jpg": {
+      "sha256": "cb99faf65da939f52c29a7b6730fe60f292c0bf6a9a1f1209e058b26ff6288a3",
+      "bytes": 514220,
+      "width": 1536,
+      "height": 2048
     },
-    "grafica-dj-mamarita.jpg": {
-      "sha256": "43f17ffd1a7acac3a0373d6bc953d28e436c930e981c8bb486de7705c135dfb7",
-      "bytes": 91502,
+    "eventi-aqcm-comunita-2026.jpg": {
+      "sha256": "ec64020f562c5d3fce8d02fa1e8ead5ca3bf61900e1e14b85f0c6730f74927e6",
+      "bytes": 431564,
+      "width": 1536,
+      "height": 2048
+    },
+    "eventi-aqcm-davide-nanni-2026.jpg": {
+      "sha256": "609279b49dd4b0cb4bd3f651648e28840cd8de96f5de22c94ef55fb308836acb",
+      "bytes": 208777,
+      "width": 1536,
+      "height": 2048
+    },
+    "eventi-aqcm-piazza-2026.jpg": {
+      "sha256": "d404a7d80c89db1f4d1abf5038eec0bf37f5268cdbd035dfa47a7cf82cd15f9a",
+      "bytes": 361365,
+      "width": 2048,
+      "height": 1536
+    },
+    "eventi-aqcm-pista-sci-2026.jpg": {
+      "sha256": "87f1cb88cc912d1ed40ff1362d03b258736a1d17435fdcf99e842f42a4dcb973",
+      "bytes": 322169,
+      "width": 2048,
+      "height": 1536
+    },
+    "eventi-aqcm-premiazione-2026.jpg": {
+      "sha256": "4dbd307c237c2ae3dbe3dc57b2b67c10e4b0db70a1825c51cfee2d6e783b8176",
+      "bytes": 142187,
       "width": 1080,
-      "height": 1080
+      "height": 1350
+    },
+    "eventi-aqcm-show-cooking-2026.jpg": {
+      "sha256": "7f2f5e94b9393993f019416aecb9e6983e6365a4d503fbda1579d8e0656d41b0",
+      "bytes": 351196,
+      "width": 2048,
+      "height": 1536
+    },
+    "eventi-break-allestimento-2026.jpg": {
+      "sha256": "e6ec4978cd2700fb1def1089fe580bebe2e071b970ca5dcab906f31a8011ce14",
+      "bytes": 497553,
+      "width": 2048,
+      "height": 1536
+    },
+    "eventi-break-ristorazione-2026.jpg": {
+      "sha256": "8de7ca91e578717284e76e97eec9128d6582a69543c32cb8b4e882f7f48d8e65",
+      "bytes": 359453,
+      "width": 2048,
+      "height": 1536
+    },
+    "eventi-yoichi-ottobre-2026.jpg": {
+      "sha256": "e6c6ec950dfe493dcb4bf1d29b712950e57a71d082abde821b21a4bc68786c5a",
+      "bytes": 291052,
+      "width": 1536,
+      "height": 2048
     },
     "hero-dj.jpg": {
       "sha256": "f2a6e3ef68a61efccaa3678a5d8497335b466ad13e1fd7041a98ee5b6bb56fdd",
@@ -91,6 +151,12 @@
       "width": 2048,
       "height": 1536
     },
+    "live-jova-estate-2026.jpg": {
+      "sha256": "7816858dccec10fd2f525bd8d609c28f552b33bc3a5633db678cc8f9fea0effc",
+      "bytes": 226191,
+      "width": 2048,
+      "height": 1536
+    },
     "live-laquila-scalinata.jpg": {
       "sha256": "aa283e22ca58d3d5efd5511ef3115f60f68dc2042c1059c63d379bdf3c0eaa95",
       "bytes": 255836,
@@ -100,6 +166,18 @@
     "live-olimpico-scale.jpg": {
       "sha256": "39f59a5ad36293464795d12c14fbaa6eec1ef0572ae31a51d7bc55c5de5013fb",
       "bytes": 448352,
+      "width": 2048,
+      "height": 1536
+    },
+    "live-partita-del-cuore.jpg": {
+      "sha256": "478fc00703223175da3c2abc564456b95a6df85f92cee17a6984fbc06df13a09",
+      "bytes": 363078,
+      "width": 2048,
+      "height": 1530
+    },
+    "live-perdonanza-2026.jpg": {
+      "sha256": "ea40240dd1dda02b302d2f115b8d78d4c6ce60710ba72677885e0a764daabd18",
+      "bytes": 397341,
       "width": 2048,
       "height": 1536
     },
@@ -121,6 +199,24 @@
       "width": 1536,
       "height": 2048
     },
+    "moto-community-2026.jpg": {
+      "sha256": "69730bbbde5c4bfbf4187d0b29a324aca6a6ee20c2b6531e54bf97ebc2e79df7",
+      "bytes": 375031,
+      "width": 2048,
+      "height": 1536
+    },
+    "moto-costiera-amalfitana-2026.jpg": {
+      "sha256": "1fe19dcd3247532a93c611972efd04f1477bdf87d97e7da48e98ac31f535bddd",
+      "bytes": 541441,
+      "width": 2048,
+      "height": 1536
+    },
+    "moto-costiera-sosta-2026.jpg": {
+      "sha256": "5cf451a94fff57fdb0ed0997955299df5ee797c8ddce26fc3152ff6aa4cb1e67",
+      "bytes": 200177,
+      "width": 1200,
+      "height": 1600
+    },
     "moto-curve.jpg": {
       "sha256": "23f19b688c8845bc177f37620ffdd37f48ceeb67fd87cb49e937d0d9847efc05",
       "bytes": 243740,
@@ -139,6 +235,24 @@
       "width": 2048,
       "height": 1536
     },
+    "moto-montagna-panorama-2026.jpg": {
+      "sha256": "dc2a8a17359c1dd09860d8fd65838c29f396e649a0c04befe16f8f35464c3ec5",
+      "bytes": 438923,
+      "width": 2040,
+      "height": 1148
+    },
+    "moto-paestum-2026.jpg": {
+      "sha256": "0161923e7e2c268dbf33c676fcf1773bb662a2086aaa99395f8d336fc13d5618",
+      "bytes": 369933,
+      "width": 2048,
+      "height": 1153
+    },
+    "moto-partenza-gruppo-2026.jpg": {
+      "sha256": "9c3796223e8048619efd5ed48d37c5fca28a0f615791661dd7f8b6b86daa950d",
+      "bytes": 406383,
+      "width": 2040,
+      "height": 1148
+    },
     "moto-selfie-montagna.jpg": {
       "sha256": "f9a0bcd3e5bb3484e0f591143db5dbdd30834e0596994442dc762c9c9730eeff",
       "bytes": 138643,
@@ -150,6 +264,12 @@
       "bytes": 433807,
       "width": 2048,
       "height": 1536
+    },
+    "moto-terminillo-2026.jpg": {
+      "sha256": "39787fc6422782928a55467f8156ed0b940e2c232e050ac331183662465cd241",
+      "bytes": 578102,
+      "width": 2048,
+      "height": 1530
     },
     "neve-altopiano-selfie.jpg": {
       "sha256": "6b4b99595e6613ee3df926c5e18fd2695767319cf708fc0f486cec8acbfdc40f",
@@ -211,6 +331,30 @@
       "width": 2048,
       "height": 1536
     },
+    "politica-bari-gregori-2026.jpg": {
+      "sha256": "c2792c56ec1875bb5ce98cbc53044acf9dd48ba9cc1fa5050d62856099a00f50",
+      "bytes": 303790,
+      "width": 2048,
+      "height": 1536
+    },
+    "politica-bari-gruppo-2026.jpg": {
+      "sha256": "4fb396fc7a8617fc576c8c0e157d3d367ddc991a7ee1236330a9e9d9e1033c64",
+      "bytes": 251118,
+      "width": 1600,
+      "height": 1200
+    },
+    "politica-bari-incontri-2026.jpg": {
+      "sha256": "7d9c1abe4858c45104d13fc37e7c56d3c231cd22afc22e5535102507649e18cf",
+      "bytes": 462779,
+      "width": 2048,
+      "height": 1536
+    },
+    "politica-bari-partecipazione-2026.jpg": {
+      "sha256": "d807bb10d4798045d37ed3b8e001b29edad3d694a96e25a212e6e2662a744b30",
+      "bytes": 387223,
+      "width": 2048,
+      "height": 1536
+    },
     "politica-camion-manifesto.jpg": {
       "sha256": "f62fe889835751906003fac47123d907bcd0efc6c9d92bf70b2987358d78fdbc",
       "bytes": 377427,
@@ -222,6 +366,18 @@
       "bytes": 218137,
       "width": 1440,
       "height": 1440
+    },
+    "politica-debora-visconti-2026.jpg": {
+      "sha256": "f9fe6291226bd352db601cbc69a39bdef5f8bf3e0ce17db586d7452e5fdcad33",
+      "bytes": 146564,
+      "width": 1200,
+      "height": 1599
+    },
+    "politica-dipartimento-imprese-2026.jpg": {
+      "sha256": "94601a1677926aeaa1420ef209a14372fe25ccaec4e6599f286d176f90536531",
+      "bytes": 124888,
+      "width": 720,
+      "height": 1280
     },
     "politica-giorgio-claudio-gregori-2026.jpg": {
       "sha256": "b00a40c08dcdaca5336217a348fc7ac843764fe185d81cd1bcbe06bacbbe7d49",
@@ -235,9 +391,21 @@
       "width": 1200,
       "height": 1600
     },
+    "politica-gregori-aqcm-2026.jpg": {
+      "sha256": "109aa95130239b0a5cf39f30a7ba6d1deaf8511b772476599e8b33324510078e",
+      "bytes": 327847,
+      "width": 1860,
+      "height": 2048
+    },
     "politica-incontro-elettorale-02.jpg": {
       "sha256": "e26482169ad5b679d3736071957e033e9a8f6912a69fbd38b9e856ddd57573b6",
       "bytes": 304011,
+      "width": 2048,
+      "height": 1536
+    },
+    "politica-incontro-piazza-ottobre-2026.jpg": {
+      "sha256": "4dd094c9a5e0c941b3e00923f6a51f2b0f46c9c57af7bca4a76ebe63ea35a490",
+      "bytes": 559506,
       "width": 2048,
       "height": 1536
     },
@@ -250,6 +418,12 @@
     "politica-montagna-sopralluogo.jpg": {
       "sha256": "541debdb44d67ff30fc53773c27e9d0f98d876eccbc4e31c0e48d273ec1719f3",
       "bytes": 86596,
+      "width": 960,
+      "height": 720
+    },
+    "politica-raccolta-firme-sic.jpg": {
+      "sha256": "9653940d26776efbf49c53a4a0e7057f436d7b9ed5736cc13b0c8bba75eb56d8",
+      "bytes": 71033,
       "width": 960,
       "height": 720
     },

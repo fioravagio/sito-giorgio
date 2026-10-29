@@ -1,5 +1,6 @@
 import { CalendarDays, Headphones, RadioTower } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { ContactBand, PageHero, PageStructuredData, PhotoGrid, SectionHeading } from "../../components/PageElements";
 import { buildPageMetadata, pageSeo } from "../../lib/site";
 
@@ -12,6 +13,8 @@ const services = [
 ];
 
 const djPhotos = [
+  { src: "dj-consolle-2026.jpg", title: "La mia consolle", caption: "Un setup che mette insieme piatti, controller e strumenti per la selezione musicale.", alt: "La consolle di Giorgio Fioravanti con piatti e controller DJ" },
+  { src: "dj-estate-2026.jpg", title: "Estate 2026", caption: "Un DJ set serale all’aperto, tra musica e atmosfera estiva.", alt: "Giorgio Fioravanti alla consolle durante una serata estiva" },
   { src: "hero-dj.jpg", title: "DJ set", caption: "Musica e atmosfera costruite per il contesto dell’evento." },
   { src: "dj-aperitivo-terrazza.jpg", title: "Aperitivo in terrazza", caption: "Un format musicale pensato per accompagnare incontro e convivialità." },
   { src: "dj-club-folla.jpg", title: "Club", caption: "Energia in pista e lettura del pubblico durante la serata." },
@@ -19,28 +22,6 @@ const djPhotos = [
   { src: "dj-indoor.jpg", title: "Indoor", caption: "Setup compatto e curato per spazi interni." },
   { src: "dj-palco-amici.jpg", title: "Palco", caption: "Eventi condivisi con artisti, organizzatori e collaboratori." },
   { src: "dj-pioneer.jpg", title: "Consolle", caption: "Esperienza tecnica maturata con setup differenti." },
-  { src: "grafica-dj-mamarita.jpg", title: "Comunicazione evento", caption: "Identità visiva coordinata con il format musicale." },
-];
-
-const archivedEvents = [
-  {
-    date: "22 novembre 2025",
-    dateTime: "2025-11-22",
-    title: "Yoichi — Vanity Friday",
-    place: "L’Aquila",
-  },
-  {
-    date: "29 novembre 2025",
-    dateTime: "2025-11-29",
-    title: "Private Event — DJ Set",
-    place: "Gran Sasso",
-  },
-  {
-    date: "14 dicembre 2025",
-    dateTime: "2025-12-14",
-    title: "Christmas Aperitivo — Live DJ",
-    place: "Centro storico",
-  },
 ];
 
 export default function DjEventiPage() {
@@ -48,7 +29,7 @@ export default function DjEventiPage() {
     <main className="min-h-screen bg-white">
       <PageStructuredData page={pageSeo.djEventi} type="CollectionPage" />
       <PageHero
-        eyebrow="Musica e organizzazione"
+        eyebrow="Selezione musicale e atmosfera"
         title="DJ ed eventi"
         description="DJ set, format musicali e gestione operativa per locali, ristoranti, eventi privati e iniziative pubbliche. Musica, tecnica e comunicazione lavorano insieme per dare identità a ogni appuntamento."
         image="/assets/hero-dj.jpg"
@@ -92,26 +73,15 @@ export default function DjEventiPage() {
       </section>
 
       <section>
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="Archivio"
-            title="Alcuni appuntamenti del 2025"
-            description="Eventi già conclusi, conservati come riferimento delle esperienze e dei format realizzati."
+            eyebrow="Oltre la consolle"
+            title="Il lavoro dietro un evento"
+            description="La musica è una parte della mia attività. Manifestazioni, appuntamenti nei locali e feste private raccontano anche il lavoro organizzativo: dalla costruzione del programma alla collaborazione con le persone coinvolte."
           />
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {archivedEvents.map(({ date, dateTime, title, place }) => (
-              <article key={title} className="rounded-2xl border border-zinc-200 p-5">
-                <time
-                  dateTime={dateTime}
-                  className="text-xs font-semibold uppercase tracking-wider text-[#8A6A25]"
-                >
-                  {date}
-                </time>
-                <h2 className="mt-2 font-bold text-zinc-950">{title}</h2>
-                <p className="mt-1 text-sm text-zinc-600">{place} · Evento concluso</p>
-              </article>
-            ))}
-          </div>
+          <Link href="/organizzazione-eventi/" className="mt-6 inline-flex rounded-2xl border border-zinc-300 px-5 py-3 text-sm font-semibold text-[#76591D] hover:border-[#8A6A25]">
+            Scopri l’organizzazione di eventi
+          </Link>
         </div>
       </section>
 

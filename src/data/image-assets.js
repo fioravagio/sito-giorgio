@@ -24,6 +24,14 @@ export const imageAssets = {
     "width": 2048,
     "height": 1536
   },
+  "dj-consolle-2026.jpg": {
+    "width": 2048,
+    "height": 1536
+  },
+  "dj-estate-2026.jpg": {
+    "width": 1067,
+    "height": 1600
+  },
   "dj-indoor.jpg": {
     "width": 1600,
     "height": 720
@@ -40,13 +48,45 @@ export const imageAssets = {
     "width": 2048,
     "height": 1536
   },
-  "grafica-dj-donna-zelinda.jpg": {
-    "width": 1080,
-    "height": 1080
+  "eventi-aqcm-comitato-2026.jpg": {
+    "width": 1536,
+    "height": 2048
   },
-  "grafica-dj-mamarita.jpg": {
+  "eventi-aqcm-comunita-2026.jpg": {
+    "width": 1536,
+    "height": 2048
+  },
+  "eventi-aqcm-davide-nanni-2026.jpg": {
+    "width": 1536,
+    "height": 2048
+  },
+  "eventi-aqcm-piazza-2026.jpg": {
+    "width": 2048,
+    "height": 1536
+  },
+  "eventi-aqcm-pista-sci-2026.jpg": {
+    "width": 2048,
+    "height": 1536
+  },
+  "eventi-aqcm-premiazione-2026.jpg": {
     "width": 1080,
-    "height": 1080
+    "height": 1350
+  },
+  "eventi-aqcm-show-cooking-2026.jpg": {
+    "width": 2048,
+    "height": 1536
+  },
+  "eventi-break-allestimento-2026.jpg": {
+    "width": 2048,
+    "height": 1536
+  },
+  "eventi-break-ristorazione-2026.jpg": {
+    "width": 2048,
+    "height": 1536
+  },
+  "eventi-yoichi-ottobre-2026.jpg": {
+    "width": 1536,
+    "height": 2048
   },
   "hero-dj.jpg": {
     "width": 2048,
@@ -60,11 +100,23 @@ export const imageAssets = {
     "width": 2048,
     "height": 1536
   },
+  "live-jova-estate-2026.jpg": {
+    "width": 2048,
+    "height": 1536
+  },
   "live-laquila-scalinata.jpg": {
     "width": 1600,
     "height": 1200
   },
   "live-olimpico-scale.jpg": {
+    "width": 2048,
+    "height": 1536
+  },
+  "live-partita-del-cuore.jpg": {
+    "width": 2048,
+    "height": 1530
+  },
+  "live-perdonanza-2026.jpg": {
     "width": 2048,
     "height": 1536
   },
@@ -80,6 +132,18 @@ export const imageAssets = {
     "width": 1536,
     "height": 2048
   },
+  "moto-community-2026.jpg": {
+    "width": 2048,
+    "height": 1536
+  },
+  "moto-costiera-amalfitana-2026.jpg": {
+    "width": 2048,
+    "height": 1536
+  },
+  "moto-costiera-sosta-2026.jpg": {
+    "width": 1200,
+    "height": 1600
+  },
   "moto-curve.jpg": {
     "width": 1151,
     "height": 1140
@@ -92,6 +156,18 @@ export const imageAssets = {
     "width": 2048,
     "height": 1536
   },
+  "moto-montagna-panorama-2026.jpg": {
+    "width": 2040,
+    "height": 1148
+  },
+  "moto-paestum-2026.jpg": {
+    "width": 2048,
+    "height": 1153
+  },
+  "moto-partenza-gruppo-2026.jpg": {
+    "width": 2040,
+    "height": 1148
+  },
   "moto-selfie-montagna.jpg": {
     "width": 960,
     "height": 720
@@ -99,6 +175,10 @@ export const imageAssets = {
   "moto-stelvio.jpg": {
     "width": 2048,
     "height": 1536
+  },
+  "moto-terminillo-2026.jpg": {
+    "width": 2048,
+    "height": 1530
   },
   "neve-altopiano-selfie.jpg": {
     "width": 2048,
@@ -140,6 +220,22 @@ export const imageAssets = {
     "width": 2048,
     "height": 1536
   },
+  "politica-bari-gregori-2026.jpg": {
+    "width": 2048,
+    "height": 1536
+  },
+  "politica-bari-gruppo-2026.jpg": {
+    "width": 1600,
+    "height": 1200
+  },
+  "politica-bari-incontri-2026.jpg": {
+    "width": 2048,
+    "height": 1536
+  },
+  "politica-bari-partecipazione-2026.jpg": {
+    "width": 2048,
+    "height": 1536
+  },
   "politica-camion-manifesto.jpg": {
     "width": 2048,
     "height": 1536
@@ -147,6 +243,14 @@ export const imageAssets = {
   "politica-card-campo-imperatore.jpg": {
     "width": 1440,
     "height": 1440
+  },
+  "politica-debora-visconti-2026.jpg": {
+    "width": 1200,
+    "height": 1599
+  },
+  "politica-dipartimento-imprese-2026.jpg": {
+    "width": 720,
+    "height": 1280
   },
   "politica-giorgio-claudio-gregori-2026.jpg": {
     "width": 1080,
@@ -156,7 +260,15 @@ export const imageAssets = {
     "width": 1200,
     "height": 1600
   },
+  "politica-gregori-aqcm-2026.jpg": {
+    "width": 1860,
+    "height": 2048
+  },
   "politica-incontro-elettorale-02.jpg": {
+    "width": 2048,
+    "height": 1536
+  },
+  "politica-incontro-piazza-ottobre-2026.jpg": {
     "width": 2048,
     "height": 1536
   },
@@ -165,6 +277,10 @@ export const imageAssets = {
     "height": 720
   },
   "politica-montagna-sopralluogo.jpg": {
+    "width": 960,
+    "height": 720
+  },
+  "politica-raccolta-firme-sic.jpg": {
     "width": 960,
     "height": 720
   },

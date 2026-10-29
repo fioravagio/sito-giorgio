@@ -1,6 +1,6 @@
 import { absoluteUrl, pageSeo } from "../lib/site";
 
-const lastModified = new Date("2026-08-25T00:00:00+02:00");
+const lastModified = new Date("2026-10-29T00:00:00+01:00");
 
 export default function sitemap() {
   return [
@@ -19,7 +19,9 @@ export default function sitemap() {
       images: [absoluteUrl("/assets/politica-card-campo-imperatore.jpg")],
     },
     ...[
+      pageSeo.chiSono,
       pageSeo.territorio,
+      pageSeo.organizzazioneEventi,
       pageSeo.djEventi,
       pageSeo.mototurismo,
       pageSeo.youtubeMedia,

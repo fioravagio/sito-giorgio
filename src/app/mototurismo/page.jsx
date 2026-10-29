@@ -11,6 +11,13 @@ const values = [
 ];
 
 const motoPhotos = [
+  { src: "moto-costiera-amalfitana-2026.jpg", title: "Costiera Amalfitana", caption: "Settembre 2026. Una sosta lungo la costa, tra mare e strade panoramiche.", alt: "Motociclisti e moto lungo la Costiera Amalfitana" },
+  { src: "moto-paestum-2026.jpg", title: "Paestum", caption: "Settembre 2026. In viaggio con il gruppo, pronti a ripartire.", alt: "Il gruppo di motociclisti in sosta a Paestum" },
+  { src: "moto-terminillo-2026.jpg", title: "Terminillo", caption: "Settembre 2026. Una tappa in quota, con le moto e gli amici di viaggio.", alt: "Giorgio Fioravanti e il gruppo di moto al Terminillo" },
+  { src: "moto-community-2026.jpg", title: "La passione condivisa", caption: "Il mototurismo è anche ritrovarsi e riconoscersi in una comunità.", alt: "Giorgio Fioravanti insieme al gruppo di motociclisti in montagna" },
+  { src: "moto-montagna-panorama-2026.jpg", title: "Sotto le cime", caption: "Una sosta panoramica durante un’uscita in montagna del 2026.", alt: "Le moto in sosta davanti a un panorama montano" },
+  { src: "moto-partenza-gruppo-2026.jpg", title: "Si riparte insieme", caption: "Le moto in fila e il tempo di condividere una sosta prima della prossima tappa.", alt: "Le moto del gruppo allineate durante una sosta" },
+  { src: "moto-costiera-sosta-2026.jpg", title: "Diario dalla Costiera", caption: "Settembre 2026. Un ricordo di viaggio sulla costa amalfitana.", alt: "Giorgio Fioravanti in sosta durante il viaggio in Costiera Amalfitana" },
   { src: "moto-appennino-strada.jpg", title: "Appennino", caption: "Strade che attraversano paesaggi aperti e borghi." },
   { src: "moto-dolomiti.jpg", title: "Dolomiti", caption: "Viaggio, montagna e grandi panorami." },
   { src: "moto-stelvio.jpg", title: "Passo dello Stelvio", caption: "Uno degli itinerari simbolo del mototurismo alpino." },
@@ -59,7 +66,7 @@ export default function MototurismoPage() {
 
       <section className="border-y border-zinc-200 bg-[#F7F5EF]">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <SectionHeading eyebrow="Galleria" title="Dall’Appennino alle Alpi" />
+          <SectionHeading eyebrow="Diario di viaggio" title="Dalla Costiera alle strade di montagna" description="Le uscite del 2026 e i ricordi dei viaggi tra Appennino, Alpi e Dolomiti." />
           <PhotoGrid
             items={motoPhotos}
             className="lg:grid-cols-4"
